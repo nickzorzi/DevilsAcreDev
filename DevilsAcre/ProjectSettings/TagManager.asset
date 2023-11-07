@@ -9,6 +9,8 @@ TagManager:
   - Purple
   - Axe
   - Bottle
+  - ShotgunBandit
+  - ShotgunShotPoint
   layers:
   - Default
   - TransparentFX
