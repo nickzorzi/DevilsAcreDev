@@ -23,6 +23,10 @@ public class ShotgunBandit : MonoBehaviour
     public int health;
     public GameObject deathEffect;
 
+    [SerializeField] private int multiShotArc = 10;
+    [SerializeField] private int bulletsBeforeCooldown = 5;
+    [SerializeField] private Transform bulletSpawnPoint;
+
     public int scoreValueOnDeath;
 
     [SerializeField] private AudioSource enemyHitSoundEffect;
@@ -53,8 +57,19 @@ public class ShotgunBandit : MonoBehaviour
         }
         else if (distanceFromPlayer <= shootingRange && nextFireTime <Time.time)
         {
-            Instantiate(shotgunBullet,shotgunShotPoint.transform.position, Quaternion.identity);
-            nextFireTime = Time.time + fireRate;
+            // Instantiate(shotgunBullet,shotgunShotPoint.transform.position, Quaternion.identity);
+            // nextFireTime = Time.time + fireRate;
+
+            int centerArc = multiShotArc / 2;
+            for (int i = 0; i < bulletsBeforeCooldown; i++)
+            {
+
+                float bulletOffset = i * (multiShotArc / bulletsBeforeCooldown) - centerArc;
+
+                Quaternion newRot = Quaternion.Euler(shotgunShotPoint.eulerAngles.x, shotgunShotPoint.eulerAngles.y, shotgunShotPoint.eulerAngles.z + bulletOffset);
+
+                GameObject bullet = Instantiate(shotgunBullet, shotgunShotPoint.position, newRot);
+            }
 
             enemyShootSoundEffect.Play();
         }
