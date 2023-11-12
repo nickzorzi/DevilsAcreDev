@@ -23,7 +23,11 @@ public class ShotgunBandit : MonoBehaviour
     public int health;
     public GameObject deathEffect;
 
-    [SerializeField] private int multiShotArc = 10;
+    public Animator animator;
+
+    public bool isShooting = false;
+
+    [SerializeField] private int multiShotArc = 20;
     [SerializeField] private int bulletsBeforeCooldown = 5;
     [SerializeField] private Transform bulletSpawnPoint;
 
@@ -44,6 +48,10 @@ public class ShotgunBandit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetFloat("Speed", Mathf.Abs(speed));
+
+        animator.SetBool("isShooting", false);
+
         //AIM WEAPON
         Vector3 displacement = shotgun.position - player.position;
         float angle = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg;
@@ -60,6 +68,8 @@ public class ShotgunBandit : MonoBehaviour
             // Instantiate(shotgunBullet,shotgunShotPoint.transform.position, Quaternion.identity);
             nextFireTime = Time.time + fireRate;
 
+            animator.SetBool("isShooting", true);
+
             int centerArc = multiShotArc / 2;
             for (int i = 0; i < bulletsBeforeCooldown; i++)
             {
@@ -72,6 +82,9 @@ public class ShotgunBandit : MonoBehaviour
             }
 
             SoundManager.Instance.PlaySound(enemyShootSoundEffect);
+
+            nextFireTime = Time.time + fireRate;
+
         }
     }
 
