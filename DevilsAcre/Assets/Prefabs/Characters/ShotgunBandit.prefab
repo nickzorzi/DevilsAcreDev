@@ -97,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 3247547829785457057}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 102632a3ed9098a4bbff80d7886fb0f8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 749aa9995855bed4287c3830f2688c7d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -126,12 +126,14 @@ MonoBehaviour:
   sprite: {fileID: 5222175295660647548}
   speed: 2
   lineOfSite: 20
-  shootingRange: 4
-  fireRate: 1
+  shootingRange: 7
+  fireRate: 3
   shotgunBullet: {fileID: 335697204513574818, guid: 9612838d1bfbdae4da50a6bf1eaab4c0, type: 3}
   health: 3
   deathEffect: {fileID: 8438092220845912813, guid: 2abeebd83d402f04b846d481c7cb77c9, type: 3}
-  multiShotArc: 10
+  animator: {fileID: 3697610420979537267}
+  isShooting: 0
+  multiShotArc: 45
   bulletsBeforeCooldown: 5
   bulletSpawnPoint: {fileID: 6500706155259070547}
   scoreValueOnDeath: 25
@@ -180,6 +182,7 @@ GameObject:
   - component: {fileID: 3220108106059506235}
   - component: {fileID: 5222175295660647548}
   - component: {fileID: 8091326565661054764}
+  - component: {fileID: 7299051850383637564}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -276,6 +279,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7299051850383637564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6488941183598821881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf935eab543e0854098437a6637b5984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8091326565661054764}
 --- !u!1 &7301593509664097864
 GameObject:
   m_ObjectHideFlags: 0

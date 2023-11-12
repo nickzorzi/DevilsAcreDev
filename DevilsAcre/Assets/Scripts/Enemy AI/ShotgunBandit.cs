@@ -43,6 +43,8 @@ public class ShotgunBandit : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         render = GetComponent<SpriteRenderer>();
+
+        isShooting = false;
     }
 
     // Update is called once per frame
@@ -50,7 +52,7 @@ public class ShotgunBandit : MonoBehaviour
     {
         animator.SetFloat("Speed", Mathf.Abs(speed));
 
-        animator.SetBool("isShooting", false);
+        isShooting = false;
 
         //AIM WEAPON
         Vector3 displacement = shotgun.position - player.position;
@@ -68,9 +70,18 @@ public class ShotgunBandit : MonoBehaviour
             // Instantiate(shotgunBullet,shotgunShotPoint.transform.position, Quaternion.identity);
             nextFireTime = Time.time + fireRate;
 
-            animator.SetBool("isShooting", true);
+            isShooting = true;
 
-            int centerArc = multiShotArc / 2;
+            StartCoroutine(ShotgunFire());
+        }
+    }
+
+    IEnumerator ShotgunFire()
+    {
+
+        yield return new WaitForSeconds(1/2);
+
+        int centerArc = multiShotArc / 2;
             for (int i = 0; i < bulletsBeforeCooldown; i++)
             {
 
@@ -84,8 +95,6 @@ public class ShotgunBandit : MonoBehaviour
             SoundManager.Instance.PlaySound(enemyShootSoundEffect);
 
             nextFireTime = Time.time + fireRate;
-
-        }
     }
 
     void FixedUpdate()

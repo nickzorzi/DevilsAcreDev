@@ -38,13 +38,21 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer render;
     public SpriteRenderer sprite;
 
-    [SerializeField] private AudioSource gunshotSoundEffect;
-    [SerializeField] private AudioSource playerHitSoundEffect;
-    [SerializeField] private AudioSource playerWalkSoundEffect;
-    [SerializeField] private AudioSource playerFastWalkSoundEffect;
-    [SerializeField] private AudioSource playerSlowWalkSoundEffect;
-    [SerializeField] private AudioSource deathSoundEffect;
-    [SerializeField] private AudioSource dashSoundEffect;
+    // [SerializeField] private AudioSource gunshotSoundEffect;
+    // [SerializeField] private AudioSource playerHitSoundEffect;
+    // [SerializeField] private AudioSource playerWalkSoundEffect;
+    // [SerializeField] private AudioSource playerFastWalkSoundEffect;
+    // [SerializeField] private AudioSource playerSlowWalkSoundEffect;
+    // [SerializeField] private AudioSource deathSoundEffect;
+    // [SerializeField] private AudioSource dashSoundEffect;
+
+    [SerializeField] private AudioClip gunshotSoundEffect;
+    [SerializeField] private AudioClip playerHitSoundEffect;
+    [SerializeField] private AudioClip playerWalkSoundEffect;
+    [SerializeField] private AudioClip playerFastWalkSoundEffect;
+    [SerializeField] private AudioClip playerSlowWalkSoundEffect;
+    [SerializeField] private AudioClip deathSoundEffect;
+    [SerializeField] private AudioClip dashSoundEffect;
 
     [Header("Dash Settings")]
     public float dashSpeed;
@@ -92,33 +100,36 @@ public class PlayerController : MonoBehaviour
         {
             if(moveDirection.magnitude > 0)
             {
-                playerWalkSoundEffect.enabled = true;
+                // playerWalkSoundEffect.enabled = true;
+                // SoundManager.Instance.PlaySound(playerWalkSoundEffect);
             }
             else
             {
-                playerWalkSoundEffect.enabled = false;
+                // playerWalkSoundEffect.enabled = false;
             }
         }
         else if (speed > 5)
         {
             if(moveDirection.magnitude > 0)
             {
-                playerFastWalkSoundEffect.enabled = true;
+                // playerFastWalkSoundEffect.enabled = true;
+                // SoundManager.Instance.PlaySound(playerFastWalkSoundEffect);
             }
             else
             {
-                playerFastWalkSoundEffect.enabled = false;
+                // playerFastWalkSoundEffect.enabled = false;
             }
         }
         else
         {
             if(moveDirection.magnitude > 0)
             {
-                playerSlowWalkSoundEffect.enabled = true;
+                // playerSlowWalkSoundEffect.enabled = true;
+                // SoundManager.Instance.PlaySound(playerSlowWalkSoundEffect);
             }
             else
             {
-                playerSlowWalkSoundEffect.enabled = false;
+                // playerSlowWalkSoundEffect.enabled = false;
             }
         }
 
@@ -132,7 +143,8 @@ public class PlayerController : MonoBehaviour
         {
             if (Time.time > nextShotTime)
             {
-                gunshotSoundEffect.Play();
+                // gunshotSoundEffect.Play();
+                SoundManager.Instance.PlaySound(gunshotSoundEffect);
 
                 nextShotTime = Time.time + timeBetweenShots;
                 Instantiate(projectile, shotPoint.position, shotPoint.rotation);
@@ -196,7 +208,8 @@ public class PlayerController : MonoBehaviour
         canDash = false;
         isDashing = true;
         animator.SetBool("isDashing", true);
-        dashSoundEffect.Play();
+        // dashSoundEffect.Play();
+        SoundManager.Instance.PlaySound(dashSoundEffect);
         rb.velocity = new Vector2(moveDirection.x * dashSpeed, moveDirection.y * dashSpeed);
         yield return new WaitForSeconds(dashDuration);
         isDashing = false;
@@ -210,7 +223,8 @@ public class PlayerController : MonoBehaviour
         {
             if (isDashing == false)
             {
-                playerHitSoundEffect.Play();
+                // playerHitSoundEffect.Play();
+                SoundManager.Instance.PlaySound(playerHitSoundEffect);
                 TakeDamage(damage);
             }
             else if (isDashing == true)
@@ -227,7 +241,8 @@ public class PlayerController : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            deathSoundEffect.Play();
+            // deathSoundEffect.Play();
+            SoundManager.Instance.PlaySound(deathSoundEffect);
             currentHealth = 0;
             Debug.Log("You're Dead!");
             OnPlayerDeath?.Invoke();

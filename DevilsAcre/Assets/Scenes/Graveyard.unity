@@ -1192,11 +1192,6 @@ Transform:
   - {fileID: 1940443020}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &372359463 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3697610420979537267, guid: d186fd4d6fc2a4f40ad9fc0bdd1a8053, type: 3}
-  m_PrefabInstance: {fileID: 1824312426}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &419986990
 GameObject:
   m_ObjectHideFlags: 0
@@ -2520,10 +2515,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShotgunBandit
       objectReference: {fileID: 0}
-    - target: {fileID: 3697610420979537267, guid: d186fd4d6fc2a4f40ad9fc0bdd1a8053, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 749aa9995855bed4287c3830f2688c7d, type: 2}
     - target: {fileID: 5735122673382499706, guid: d186fd4d6fc2a4f40ad9fc0bdd1a8053, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.2933054
@@ -2564,10 +2555,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8283641392972658668, guid: d186fd4d6fc2a4f40ad9fc0bdd1a8053, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 372359463}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
