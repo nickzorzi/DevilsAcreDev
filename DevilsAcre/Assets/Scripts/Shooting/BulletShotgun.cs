@@ -10,13 +10,13 @@ public class BulletShotgun : MonoBehaviour
 
     void Start()
     {
-        shotgun = GameObject.FindGameObjectWithTag("ShotgunShotPoint").transform;
-        bulletRB = GetComponent<Rigidbody2D>();
-        Vector2 moveDir = shotgun.right * speed;
-        bulletRB.velocity = moveDir;
-        Destroy(this.gameObject, 6);
+        Destroy(this.gameObject, 3f);
     }
 
+    private void FixedUpdate()
+    {
+        transform.Translate(speed / 50, 0, 0);
+    }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if (hitInfo.GetComponent<CapsuleCollider2D>() != null)

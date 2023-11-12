@@ -18,9 +18,9 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     public int scoreValueOnDeath;
 
-    [SerializeField] private AudioSource enemyHitSoundEffect;
-    [SerializeField] private AudioSource enemyThrowSoundEffect;
-    [SerializeField] private AudioSource enemyDeathSoundEffect;
+    [SerializeField] private AudioClip enemyHitSoundEffect;
+    [SerializeField] private AudioClip enemyThrowSoundEffect;
+    [SerializeField] private AudioClip enemyDeathSoundEffect;
     
     // Start is called before the first frame update
     void Start()
@@ -41,7 +41,7 @@ public class EnemyFollowPlayer : MonoBehaviour
             Instantiate(bullet,bulletParent.transform.position, Quaternion.identity);
             nextFireTime = Time.time + fireRate;
 
-            enemyThrowSoundEffect.Play();
+            SoundManager.Instance.PlaySound(enemyThrowSoundEffect);
         }
     }
 
@@ -55,7 +55,7 @@ public class EnemyFollowPlayer : MonoBehaviour
             //TakeDamage(other.GetComponent<Projectile>().damage);
             TakeDamage(Projectile.damage);
 
-            enemyHitSoundEffect.Play();
+            SoundManager.Instance.PlaySound(enemyHitSoundEffect);
         }
     }
 
@@ -72,7 +72,7 @@ public class EnemyFollowPlayer : MonoBehaviour
 
         if (health <= 0)
         {
-            enemyDeathSoundEffect.Play();
+            SoundManager.Instance.PlaySound(enemyDeathSoundEffect);
 
             Instantiate(deathEffect, transform.position, Quaternion.identity);
 

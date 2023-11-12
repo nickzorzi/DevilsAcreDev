@@ -29,9 +29,9 @@ public class ShotgunBandit : MonoBehaviour
 
     public int scoreValueOnDeath;
 
-    [SerializeField] private AudioSource enemyHitSoundEffect;
-    [SerializeField] private AudioSource enemyShootSoundEffect;
-    [SerializeField] private AudioSource enemyDeathSoundEffect;
+    [SerializeField] private AudioClip enemyHitSoundEffect;
+    [SerializeField] private AudioClip enemyShootSoundEffect;
+    [SerializeField] private AudioClip enemyDeathSoundEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +58,7 @@ public class ShotgunBandit : MonoBehaviour
         else if (distanceFromPlayer <= shootingRange && nextFireTime <Time.time)
         {
             // Instantiate(shotgunBullet,shotgunShotPoint.transform.position, Quaternion.identity);
-            // nextFireTime = Time.time + fireRate;
+            nextFireTime = Time.time + fireRate;
 
             int centerArc = multiShotArc / 2;
             for (int i = 0; i < bulletsBeforeCooldown; i++)
@@ -68,10 +68,10 @@ public class ShotgunBandit : MonoBehaviour
 
                 Quaternion newRot = Quaternion.Euler(shotgunShotPoint.eulerAngles.x, shotgunShotPoint.eulerAngles.y, shotgunShotPoint.eulerAngles.z + bulletOffset);
 
-                GameObject bullet = Instantiate(shotgunBullet, shotgunShotPoint.position, newRot);
+                Instantiate(shotgunBullet, shotgunShotPoint.transform.position, newRot);
             }
 
-            enemyShootSoundEffect.Play();
+            SoundManager.Instance.PlaySound(enemyShootSoundEffect);
         }
     }
 
@@ -90,7 +90,7 @@ public class ShotgunBandit : MonoBehaviour
             //TakeDamage(other.GetComponent<Projectile>().damage);
             TakeDamage(Projectile.damage);
 
-            enemyHitSoundEffect.Play();
+            SoundManager.Instance.PlaySound(enemyHitSoundEffect);
         }
     }
 
@@ -107,7 +107,7 @@ public class ShotgunBandit : MonoBehaviour
 
         if (health <= 0)
         {
-            enemyDeathSoundEffect.Play();
+            SoundManager.Instance.PlaySound(enemyDeathSoundEffect);
 
             Instantiate(deathEffect, transform.position, Quaternion.identity);
 
