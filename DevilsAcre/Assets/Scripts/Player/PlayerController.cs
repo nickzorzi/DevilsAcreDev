@@ -48,9 +48,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private AudioClip gunshotSoundEffect;
     [SerializeField] private AudioClip playerHitSoundEffect;
-    [SerializeField] private AudioClip playerWalkSoundEffect;
-    [SerializeField] private AudioClip playerFastWalkSoundEffect;
-    [SerializeField] private AudioClip playerSlowWalkSoundEffect;
+    [SerializeField] private AudioSource playerWalkSoundEffect;
+    [SerializeField] private AudioSource playerFastWalkSoundEffect;
+    [SerializeField] private AudioSource playerSlowWalkSoundEffect;
     [SerializeField] private AudioClip deathSoundEffect;
     [SerializeField] private AudioClip dashSoundEffect;
 
@@ -74,6 +74,10 @@ public class PlayerController : MonoBehaviour
         canDash = false;
 
         render = GetComponent<SpriteRenderer>();
+
+        playerWalkSoundEffect.volume = SoundManager.Instance.GetEffectVolume();
+        playerFastWalkSoundEffect.volume = SoundManager.Instance.GetEffectVolume();
+        playerSlowWalkSoundEffect.volume = SoundManager.Instance.GetEffectVolume();
     }
 
     // Update is called once per frame
@@ -100,36 +104,36 @@ public class PlayerController : MonoBehaviour
         {
             if(moveDirection.magnitude > 0)
             {
-                // playerWalkSoundEffect.enabled = true;
+                playerWalkSoundEffect.enabled = true;
                 // SoundManager.Instance.PlaySound(playerWalkSoundEffect);
             }
             else
             {
-                // playerWalkSoundEffect.enabled = false;
+                playerWalkSoundEffect.enabled = false;
             }
         }
         else if (speed > 5)
         {
             if(moveDirection.magnitude > 0)
             {
-                // playerFastWalkSoundEffect.enabled = true;
+                playerFastWalkSoundEffect.enabled = true;
                 // SoundManager.Instance.PlaySound(playerFastWalkSoundEffect);
             }
             else
             {
-                // playerFastWalkSoundEffect.enabled = false;
+                playerFastWalkSoundEffect.enabled = false;
             }
         }
         else
         {
             if(moveDirection.magnitude > 0)
             {
-                // playerSlowWalkSoundEffect.enabled = true;
+                playerSlowWalkSoundEffect.enabled = true;
                 // SoundManager.Instance.PlaySound(playerSlowWalkSoundEffect);
             }
             else
             {
-                // playerSlowWalkSoundEffect.enabled = false;
+                playerSlowWalkSoundEffect.enabled = false;
             }
         }
 
