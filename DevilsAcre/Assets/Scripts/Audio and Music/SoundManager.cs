@@ -32,7 +32,10 @@ public class SoundManager : MonoBehaviour
         _effectsSource.PlayOneShot(clip);
     }
 
-
+    public float GetEffectVolume()
+    {
+        return _effectsSource.volume;
+    }
 
     // #### OPTION CONTROLS ####
 

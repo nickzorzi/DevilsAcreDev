@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6775971220155589392}
   - component: {fileID: 9144747089004231592}
   - component: {fileID: 1791530928468916665}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ShotgunBullet
-  m_TagString: Untagged
+  m_TagString: ShotgunBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,4 +133,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8293c775337876a459a118a1f34907f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5

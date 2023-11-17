@@ -11,6 +11,13 @@ TagManager:
   - Bottle
   - ShotgunBandit
   - ShotgunShotPoint
+  - ShotgunBullet
+  - WinchesterBullet
+  - GunslingerBandit
+  - RedHearts
+  - BlueHearts
+  - Yellow Hearts
+  - Sister
   layers:
   - Default
   - TransparentFX

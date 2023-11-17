@@ -45,12 +45,14 @@ public class ShotgunBandit : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
 
         isShooting = false;
+
+        animator.SetBool("isWalking", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        animator.SetFloat("Speed", Mathf.Abs(speed));
+        animator.SetBool("isWalking", false);
 
         isShooting = false;
 
@@ -64,9 +66,13 @@ public class ShotgunBandit : MonoBehaviour
         if (distanceFromPlayer < lineOfSite && distanceFromPlayer>shootingRange)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+
+            animator.SetBool("isWalking", true);
         }
         else if (distanceFromPlayer <= shootingRange && nextFireTime <Time.time)
         {
+            animator.SetBool("isWalking", false);
+            
             // Instantiate(shotgunBullet,shotgunShotPoint.transform.position, Quaternion.identity);
             nextFireTime = Time.time + fireRate;
 
