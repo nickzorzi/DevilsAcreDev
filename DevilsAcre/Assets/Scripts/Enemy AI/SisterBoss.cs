@@ -10,7 +10,9 @@ public class SisterBoss : MonoBehaviour
     public GameObject deathEffect;
 
     private bool hasEnteredLineOfSight = false;
-    public bool canFire = false;
+    public bool canFireRed = false;
+    public bool canFireBlue = false;
+    public bool canFireYellow = false;
 
     public int scoreValueOnDeath;
 
@@ -23,6 +25,8 @@ public class SisterBoss : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        canFireBlue = false;
     }
 
     // Update is called once per frame
@@ -44,7 +48,7 @@ public class SisterBoss : MonoBehaviour
     {
         animator.SetTrigger("FinishedTransformation");
         yield return new WaitForSeconds(2);
-        canFire = true;
+        canFireRed = true;
         yield return null;
     }
 
@@ -57,6 +61,8 @@ public class SisterBoss : MonoBehaviour
 
             //TakeDamage(other.GetComponent<Projectile>().damage);
             TakeDamage(Projectile.damage);
+
+            canFireBlue = true;
 
             SoundManager.Instance.PlaySound(enemyHitSoundEffect);
         }
@@ -82,6 +88,12 @@ public class SisterBoss : MonoBehaviour
 
             //SCORE VALUE SYSTEM
             Score.scoreValue += scoreValueOnDeath;
+        }
+
+        if (health <= 38)
+        {
+            canFireRed = false;
+            canFireYellow = true;
         }
     }
 }

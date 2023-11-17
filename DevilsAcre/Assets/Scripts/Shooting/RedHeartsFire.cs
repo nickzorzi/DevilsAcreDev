@@ -24,7 +24,7 @@ public class RedHeartsFire : MonoBehaviour
 
     void Update()
     {
-        if (sisterBoss.canFire == true)
+        if (sisterBoss.canFireRed == true)
         {
             if (!isShooting)
             {
