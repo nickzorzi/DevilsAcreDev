@@ -127,7 +127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 30
+        y: 1
         width: 24
         height: 10
       alignment: 9
@@ -147,8 +147,8 @@ TextureImporter:
       name: Shotgun_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 20
+        x: 37
+        y: 1
         width: 24
         height: 10
       alignment: 9
@@ -168,8 +168,8 @@ TextureImporter:
       name: Shotgun_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 10
+        x: 74
+        y: 1
         width: 24
         height: 10
       alignment: 9
@@ -189,8 +189,8 @@ TextureImporter:
       name: Shotgun_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 111
+        y: 1
         width: 24
         height: 10
       alignment: 9
@@ -202,6 +202,48 @@ TextureImporter:
       bones: []
       spriteID: 729b8b66520a5df4686a9d7287ba28e5
       internalID: 1500811320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shotgun_4
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1
+        width: 34
+        height: 10
+      alignment: 9
+      pivot: {x: 0.3, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dcfdc0db5eaa5d44967ea2a9a99082a
+      internalID: 851145021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shotgun_5
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1
+        width: 37
+        height: 13
+      alignment: 9
+      pivot: {x: 0.3, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8f707d48f0c2b47a1b1aeab5421e5c
+      internalID: 1470786972
       vertices: []
       indices: 
       edges: []
@@ -221,6 +263,8 @@ TextureImporter:
       Shotgun_1: 1987521980
       Shotgun_2: 1294598030
       Shotgun_3: 1500811320
+      Shotgun_4: 851145021
+      Shotgun_5: 1470786972
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

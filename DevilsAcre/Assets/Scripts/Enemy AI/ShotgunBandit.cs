@@ -85,7 +85,7 @@ public class ShotgunBandit : MonoBehaviour
     IEnumerator ShotgunFire()
     {
 
-        yield return new WaitForSeconds(1/2);
+        yield return new WaitForSeconds(.4f);
 
         int centerArc = multiShotArc / 2;
             for (int i = 0; i < bulletsBeforeCooldown; i++)
