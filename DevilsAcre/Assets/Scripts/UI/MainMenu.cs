@@ -36,8 +36,32 @@ public class MainMenu : MonoBehaviour
 
       AudioListener.pause = false;
    }
+    public void PlayGame2()
+    {
+        SceneManager.LoadScene(3);
+        Score.scoreValue = 0;
 
-   public void ExitCredits()
+        Projectile.damage = 1;
+        playerController.damage = 1;
+        playerController.speed = 5f;
+        playerController.timeBetweenShots = 1f;
+
+        PauseMenu.GameIsPaused = false;
+
+        PlayerController.allowLevelMenu = true;
+        PlayerController.allowVictoryMenu = true;
+
+        playerController.canDash = false;
+
+        uiManager.shoot1xUI.SetActive(true);
+        uiManager.shoot2xUI.SetActive(false);
+        uiManager.shoot125xUI.SetActive(false);
+        uiManager.dashUI.SetActive(false);
+
+        AudioListener.pause = false;
+    }
+
+    public void ExitCredits()
    {
       SceneManager.LoadScene(0);
    }
