@@ -16,8 +16,8 @@ TagManager:
   - GunslingerBandit
   - RedHearts
   - BlueHearts
-  - Yellow Hearts
   - Sister
+  - YellowHearts
   layers:
   - Default
   - TransparentFX

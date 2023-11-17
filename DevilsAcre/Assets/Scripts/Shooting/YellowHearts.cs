@@ -9,7 +9,7 @@ public class YellowHearts : MonoBehaviour
 
     private void OnEnable()
     {
-        Invoke("Destroy", 3f);
+        Invoke("Destroy", 2f);
     }
 
     void Start()
@@ -41,7 +41,7 @@ public class YellowHearts : MonoBehaviour
     {
         if (hitInfo.GetComponent<CapsuleCollider2D>() != null)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

@@ -18,6 +18,9 @@ public class SisterBoss : MonoBehaviour
 
     public Animator animator;
 
+    public GameObject waveSB;
+    public GameObject waveGB;
+
     [SerializeField] private AudioClip enemyHitSoundEffect;
     [SerializeField] private AudioClip enemyDeathSoundEffect;
 
@@ -41,6 +44,13 @@ public class SisterBoss : MonoBehaviour
                 StartCoroutine(FinishedAnimation());
                 hasEnteredLineOfSight = true;
             }
+        }
+
+        //Waves Enabler
+        if (hasEnteredLineOfSight == true)
+        {
+            waveSB.SetActive(true);
+            waveGB.SetActive(true);
         }
     }
 
