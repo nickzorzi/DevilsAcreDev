@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5272172180707617234}
   - component: {fileID: 2435352211481805671}
   - component: {fileID: 7844944098278793978}
+  - component: {fileID: 3082133603380434865}
   m_Layer: 11
   m_Name: RedBandit
   m_TagString: Red
@@ -204,9 +205,24 @@ MonoBehaviour:
   health: 2
   deathEffect: {fileID: 8438092220845912813, guid: 2abeebd83d402f04b846d481c7cb77c9, type: 3}
   scoreValueOnDeath: 10
+  hitFlash: {fileID: 3082133603380434865}
   enemyHitSoundEffect: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
   enemyThrowSoundEffect: {fileID: 8300000, guid: 323e15cfe809e114ab92c9f4b25e8bc2, type: 3}
   enemyDeathSoundEffect: {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}
+--- !u!114 &3082133603380434865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096045685477339113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a034dc399be9bb4bbdafce7b383b95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: d4ad2b0b62e524d438493653ad8c1fda, type: 2}
+  duration: 0.125
 --- !u!1 &3320388164215558386
 GameObject:
   m_ObjectHideFlags: 0

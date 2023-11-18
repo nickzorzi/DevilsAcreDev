@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 87228672}
   - component: {fileID: 87228676}
   - component: {fileID: 87228671}
+  - component: {fileID: 87228679}
   - component: {fileID: 87228675}
   - component: {fileID: 87228678}
   - component: {fileID: 87228677}
@@ -318,6 +319,7 @@ MonoBehaviour:
   animator: {fileID: 87228672}
   waveSB: {fileID: 1911268773}
   waveGB: {fileID: 587060545}
+  hitFlash: {fileID: 87228679}
   enemyHitSoundEffect: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
   enemyDeathSoundEffect: {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}
 --- !u!95 &87228672
@@ -503,6 +505,20 @@ MonoBehaviour:
   bullet: {fileID: 5944127825614124426, guid: 1a215589208c4b2469d1d6367358d627, type: 3}
   bulletParent: {fileID: 351113408}
   isShooting: 0
+--- !u!114 &87228679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87228670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a034dc399be9bb4bbdafce7b383b95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: d4ad2b0b62e524d438493653ad8c1fda, type: 2}
+  duration: 0.125
 --- !u!1 &113199367
 GameObject:
   m_ObjectHideFlags: 0
@@ -6174,7 +6190,8 @@ PrefabInstance:
       propertyPath: abilities.Array.data[3].image
       value: 
       objectReference: {fileID: 1657685505}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8243350505261979694, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

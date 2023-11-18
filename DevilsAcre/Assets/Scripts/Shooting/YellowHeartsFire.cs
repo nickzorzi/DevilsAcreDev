@@ -30,22 +30,28 @@ public class YellowHeartsFire : MonoBehaviour
     {
         isShooting = true;
 
-        float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
-        float bulDirY = transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180f);
+        for (int i = 0; i < 50; i++)
+        {
+            float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
+            float bulDirY = transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180f);
 
-        Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
-        Vector2 bulDir = (bulMoveVector - transform.position).normalized;
+            Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
+            Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
-        GameObject bul = BulletPoolYellow.bulletPoolInstance.GetBullet();
-        bul.transform.position = transform.position;
-        bul.transform.rotation = transform.rotation;
-        bul.SetActive(true);
-        bul.GetComponent<YellowHearts>().SetMoveDirection(bulDir);
+            GameObject bul = BulletPoolYellow.bulletPoolInstance.GetBullet();
+            bul.transform.position = transform.position;
+            bul.transform.rotation = transform.rotation;
+            bul.SetActive(true);
+            bul.GetComponent<YellowHearts>().SetMoveDirection(bulDir);
 
-        angle += 20f;
+            angle += 20f;
 
-        yield return new WaitForSeconds(5/10);
+            yield return new WaitForSeconds(8/10);
+        }
+        
+        yield return new WaitForSeconds(5);
 
         isShooting = false;
     }
+
 }

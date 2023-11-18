@@ -36,6 +36,10 @@ public class BlueHeartsFire : MonoBehaviour
 
         Instantiate(bullet,bulletParent.transform.position, Quaternion.identity);
 
-        yield return null;
+        isShooting = false;
+
+        sisterBoss.canFireBlue = false;
+
+        yield return new WaitForSeconds(1);
     }
 }
