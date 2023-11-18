@@ -61,6 +61,12 @@ public class PlayerController : MonoBehaviour
     public bool isDashing;
     public bool canDash = true;
 
+    [Header("iFrames")]
+    [SerializeField] private float iFramesDuration;
+    [SerializeField] private int  numberOfFlashes;
+    private SpriteRenderer spriteRend;
+    public bool isInv = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +80,10 @@ public class PlayerController : MonoBehaviour
         canDash = false;
 
         render = GetComponent<SpriteRenderer>();
+
+        spriteRend = GetComponent<SpriteRenderer>();
+
+        isInv = false;
 
         playerWalkSoundEffect.volume = SoundManager.Instance.GetEffectVolume();
         playerFastWalkSoundEffect.volume = SoundManager.Instance.GetEffectVolume();
@@ -221,15 +231,35 @@ public class PlayerController : MonoBehaviour
         canDash = true;
     }
 
+    private IEnumerator Invulnerability()
+    {
+        isInv = true;
+        for (int i = 0; i < numberOfFlashes; i++)
+        {
+            spriteRend.color = new Color(1,1,1, 0.5f);
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+            spriteRend.color = Color.white;
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+        }
+        isInv = false;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Axe" || other.tag == "Bottle" || other.tag == "ShotgunBullet" || other.tag == "WinchesterBullet" || other.tag == "RedHearts" || other.tag == "BlueHearts" || other.tag == "YellowHearts")
         {
             if (isDashing == false)
             {
-                // playerHitSoundEffect.Play();
-                SoundManager.Instance.PlaySound(playerHitSoundEffect);
-                TakeDamage(damage);
+                if (!isInv)
+                {
+                    // playerHitSoundEffect.Play();
+                    SoundManager.Instance.PlaySound(playerHitSoundEffect);
+                    TakeDamage(damage);
+                    StartCoroutine(Invulnerability());
+                } else if (isInv)
+                {
+
+                }
             }
             else if (isDashing == true)
             {

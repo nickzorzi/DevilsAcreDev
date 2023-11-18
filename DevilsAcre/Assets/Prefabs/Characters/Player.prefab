@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 3033480189119529637}
   - component: {fileID: 5478622255913854274}
   - component: {fileID: 5476833396988485498}
+  - component: {fileID: 8243350505261979694}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -350,6 +351,9 @@ MonoBehaviour:
   dashCooldown: 0
   isDashing: 0
   canDash: 1
+  iFramesDuration: 1
+  numberOfFlashes: 4
+  isInv: 0
 --- !u!82 &8541470024153343693
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1059,6 +1063,18 @@ MonoBehaviour:
     cooldown: 1
     isCooldown: 0
     currentCooldown: 0
+--- !u!114 &8243350505261979694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3095670157194776975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f8aeec56d009b4cbe00baa627ddfcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5975796497637486644
 GameObject:
   m_ObjectHideFlags: 0

@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 87228672}
   - component: {fileID: 87228676}
   - component: {fileID: 87228671}
+  - component: {fileID: 87228679}
   - component: {fileID: 87228675}
   - component: {fileID: 87228678}
   - component: {fileID: 87228677}
@@ -316,6 +317,9 @@ MonoBehaviour:
   canFireYellow: 0
   scoreValueOnDeath: 1000
   animator: {fileID: 87228672}
+  waveSB: {fileID: 1911268773}
+  waveGB: {fileID: 587060545}
+  hitFlash: {fileID: 87228679}
   enemyHitSoundEffect: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
   enemyDeathSoundEffect: {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}
 --- !u!95 &87228672
@@ -501,6 +505,20 @@ MonoBehaviour:
   bullet: {fileID: 5944127825614124426, guid: 1a215589208c4b2469d1d6367358d627, type: 3}
   bulletParent: {fileID: 351113408}
   isShooting: 0
+--- !u!114 &87228679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87228670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a034dc399be9bb4bbdafce7b383b95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: d4ad2b0b62e524d438493653ad8c1fda, type: 2}
+  duration: 0.125
 --- !u!1 &113199367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2583,12 +2601,12 @@ GameObject:
   - component: {fileID: 587060547}
   - component: {fileID: 587060546}
   m_Layer: 0
-  m_Name: WaveSpawnSystem(GunslingerBandit)
+  m_Name: WaveGB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &587060546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2606,11 +2624,11 @@ MonoBehaviour:
   - name: Wave 1
     enemy: {fileID: 7491520526200615238, guid: acabd320c534f0c4ca60149db3413601, type: 3}
     count: 2
-    rate: 2
+    rate: 4
   - name: Wave 2
     enemy: {fileID: 7491520526200615238, guid: acabd320c534f0c4ca60149db3413601, type: 3}
     count: 3
-    rate: 2
+    rate: 4
   - name: Wave 3
     enemy: {fileID: 7491520526200615238, guid: acabd320c534f0c4ca60149db3413601, type: 3}
     count: 4
@@ -2625,8 +2643,8 @@ MonoBehaviour:
     rate: 4
   spawnPoints:
   - {fileID: 1828103269}
-  timeBetweenWaves: 5
-  waveCountdown: 3
+  timeBetweenWaves: 3
+  waveCountdown: 5
 --- !u!4 &587060547
 Transform:
   m_ObjectHideFlags: 0
@@ -3027,7 +3045,7 @@ Transform:
   m_GameObject: {fileID: 746482551}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8600001, y: 4.19, z: 0}
+  m_LocalPosition: {x: 1.8600001, y: 3.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5168,6 +5186,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1444122182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444122184}
+  - component: {fileID: 1444122183}
+  m_Layer: 0
+  m_Name: BulletPoolYellow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1444122183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444122182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48492d78fad2dc04f9362476a0f88429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledBullet: {fileID: 818802236836125314, guid: 96a7f8132397b604db73554dc8f57c41, type: 3}
+  notEnoughBulletsInPool: 1
+  amountToPool: 20
+--- !u!4 &1444122184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444122182}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.043005757, y: -0.037306383, z: -0.039813995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1454131801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6125,7 +6190,8 @@ PrefabInstance:
       propertyPath: abilities.Array.data[3].image
       value: 
       objectReference: {fileID: 1657685505}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8243350505261979694, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6649,7 +6715,7 @@ GameObject:
   - component: {fileID: 1819458327}
   - component: {fileID: 1819458326}
   m_Layer: 0
-  m_Name: BulletPool
+  m_Name: BulletPoolRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6668,6 +6734,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pooledBullet: {fileID: 5167184469592315576, guid: b28c278961c1bea409a1c7b90492e680, type: 3}
+  notEnoughBulletsInPool: 1
+  amountToPool: 20
 --- !u!4 &1819458327
 Transform:
   m_ObjectHideFlags: 0
@@ -6708,7 +6776,7 @@ Transform:
   m_GameObject: {fileID: 1828103268}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8600001, y: 4.19, z: 0}
+  m_LocalPosition: {x: 1.8600001, y: 3.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6932,12 +7000,12 @@ GameObject:
   - component: {fileID: 1911268774}
   - component: {fileID: 1911268775}
   m_Layer: 0
-  m_Name: WaveSpawnSystem(ShotgunBandit)
+  m_Name: WaveSB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1911268774
 Transform:
   m_ObjectHideFlags: 0
@@ -6990,8 +7058,8 @@ MonoBehaviour:
     rate: 5
   spawnPoints:
   - {fileID: 746482552}
-  timeBetweenWaves: 5
-  waveCountdown: 3
+  timeBetweenWaves: 3
+  waveCountdown: 5
 --- !u!1 &1922360730
 GameObject:
   m_ObjectHideFlags: 0
@@ -10296,5 +10364,6 @@ SceneRoots:
   - {fileID: 1911268774}
   - {fileID: 587060547}
   - {fileID: 1819458327}
+  - {fileID: 1444122184}
   - {fileID: 1835897698}
   - {fileID: 144226932}

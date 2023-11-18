@@ -33,6 +33,8 @@ public class ShotgunBandit : MonoBehaviour
 
     public int scoreValueOnDeath;
 
+    [SerializeField] private HitFlash hitFlash;
+
     [SerializeField] private AudioClip enemyHitSoundEffect;
     [SerializeField] private AudioClip enemyShootSoundEffect;
     [SerializeField] private AudioClip enemyDeathSoundEffect;
@@ -117,6 +119,8 @@ public class ShotgunBandit : MonoBehaviour
 
             //TakeDamage(other.GetComponent<Projectile>().damage);
             TakeDamage(Projectile.damage);
+
+            hitFlash.Flash();
 
             SoundManager.Instance.PlaySound(enemyHitSoundEffect);
         }

@@ -18,6 +18,8 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     public int scoreValueOnDeath;
 
+    [SerializeField] private HitFlash hitFlash;
+
     [SerializeField] private AudioClip enemyHitSoundEffect;
     [SerializeField] private AudioClip enemyThrowSoundEffect;
     [SerializeField] private AudioClip enemyDeathSoundEffect;
@@ -54,6 +56,8 @@ public class EnemyFollowPlayer : MonoBehaviour
 
             //TakeDamage(other.GetComponent<Projectile>().damage);
             TakeDamage(Projectile.damage);
+
+            hitFlash.Flash();
 
             SoundManager.Instance.PlaySound(enemyHitSoundEffect);
         }

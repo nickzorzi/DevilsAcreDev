@@ -297,8 +297,10 @@ GameObject:
   - component: {fileID: 7491520526200615238}
   - component: {fileID: 8172909526903625781}
   - component: {fileID: 8216748706655889517}
+  - component: {fileID: 541830079684785360}
   - component: {fileID: 3621744593624282504}
   - component: {fileID: 985656470073232998}
+  - component: {fileID: 5318873476525502613}
   m_Layer: 11
   m_Name: GunslingerBandit
   m_TagString: GunslingerBandit
@@ -396,6 +398,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &541830079684785360
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8903800940227172648}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &3621744593624282504
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -467,6 +496,21 @@ MonoBehaviour:
   animator: {fileID: 8216748706655889517}
   isShooting: 0
   scoreValueOnDeath: 50
+  hitFlash: {fileID: 5318873476525502613}
   enemyHitSoundEffect: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
   enemyShootSoundEffect: {fileID: 8300000, guid: fe0948e710dd8434e82b48052bf08fd3, type: 3}
   enemyDeathSoundEffect: {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}
+--- !u!114 &5318873476525502613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8903800940227172648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a034dc399be9bb4bbdafce7b383b95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: d4ad2b0b62e524d438493653ad8c1fda, type: 2}
+  duration: 0.125

@@ -18,6 +18,11 @@ public class SisterBoss : MonoBehaviour
 
     public Animator animator;
 
+    public GameObject waveSB;
+    public GameObject waveGB;
+
+    [SerializeField] private HitFlash hitFlash;
+
     [SerializeField] private AudioClip enemyHitSoundEffect;
     [SerializeField] private AudioClip enemyDeathSoundEffect;
 
@@ -42,6 +47,13 @@ public class SisterBoss : MonoBehaviour
                 hasEnteredLineOfSight = true;
             }
         }
+
+        //Waves Enabler
+        if (hasEnteredLineOfSight == true)
+        {
+            waveSB.SetActive(true);
+            waveGB.SetActive(true);
+        }
     }
 
     private IEnumerator FinishedAnimation()
@@ -54,13 +66,15 @@ public class SisterBoss : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Projectile")
+        if (other.tag == "Projectile" && canFireRed == true)
         {
             Debug.Log("Collision with Projectile detected!");
             Debug.Log("Collided with: " + other.gameObject.name);
 
             //TakeDamage(other.GetComponent<Projectile>().damage);
             TakeDamage(Projectile.damage);
+
+            hitFlash.Flash();
 
             canFireBlue = true;
 
@@ -90,7 +104,7 @@ public class SisterBoss : MonoBehaviour
             Score.scoreValue += scoreValueOnDeath;
         }
 
-        if (health <= 38)
+        if (health <= 35)
         {
             canFireRed = false;
             canFireYellow = true;

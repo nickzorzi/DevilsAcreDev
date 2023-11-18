@@ -33,6 +33,8 @@ public class GunslingerBandit : MonoBehaviour
 
     public int scoreValueOnDeath;
 
+    [SerializeField] private HitFlash hitFlash;
+
     [SerializeField] private AudioClip enemyHitSoundEffect;
     [SerializeField] private AudioClip enemyShootSoundEffect;
     [SerializeField] private AudioClip enemyDeathSoundEffect;
@@ -119,6 +121,8 @@ public class GunslingerBandit : MonoBehaviour
 
             //TakeDamage(other.GetComponent<Projectile>().damage);
             TakeDamage(Projectile.damage);
+
+            hitFlash.Flash();
 
             SoundManager.Instance.PlaySound(enemyHitSoundEffect);
         }

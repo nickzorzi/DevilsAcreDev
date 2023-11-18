@@ -9,7 +9,7 @@ public class RedHearts : MonoBehaviour
 
     private void OnEnable()
     {
-        Invoke("Destroy", 3f);
+        Invoke("Destroy", 2f);
     }
 
     void Start()
@@ -41,7 +41,7 @@ public class RedHearts : MonoBehaviour
     {
         if (hitInfo.GetComponent<CapsuleCollider2D>() != null)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
