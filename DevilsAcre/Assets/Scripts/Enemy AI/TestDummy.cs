@@ -38,7 +38,6 @@ public class TestDummy : MonoBehaviour
         if (other.CompareTag("Projectile")) 
         {
             SoundManager.Instance.PlaySound(enemyHitSoundEffect);
-            CinemachineShake.Instance.ShakeCamera(3f, .1f); //Camera Shake
             hitFlash.Flash();
             StartCoroutine(ShakeOnHit());
         }
