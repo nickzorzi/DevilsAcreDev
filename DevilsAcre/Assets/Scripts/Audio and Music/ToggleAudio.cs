@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class ToggleAudio : MonoBehaviour
 {
-    [SerializeField] private bool _toggleMusic, _toggleEffects;
-
+    public enum toggles
+    {
+        Master,
+        Music,
+        Effects
+    }
+    [SerializeField] private toggles toggleThis;
 
     // Toggles Music or Effects depending on what the game object sets for its boolean
     // (Can be both if you are crazy)
     public void Toggle()
     {
-        if(_toggleEffects) SoundManager.Instance.ToggleEffects();
-        if(_toggleMusic) SoundManager.Instance.ToggleMusic();
+        if (toggleThis == toggles.Effects) SoundManager.Instance.ToggleEffects();
+        else if (toggleThis == toggles.Music) SoundManager.Instance.ToggleMusic();
+        else SoundManager.Instance.ToggleMaster();
     }
 
 }

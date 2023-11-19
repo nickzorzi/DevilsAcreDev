@@ -37,27 +37,59 @@ public class SoundManager : MonoBehaviour
         return _effectsSource.volume;
     }
 
-    // #### OPTION CONTROLS ####
-
-    // slider function to change all audio volumes
-    // can be used by button as well
-    public void ChangeMasterVolume(float value)
+    public bool CheckForMute()
     {
-        AudioListener.volume = value;
+        return _effectsSource.mute;
+    }
+
+    public float GetMusicVolume()
+    {
+        return _musicSource.volume;
+    }
+
+    public float GetMasterVolume()
+    {
+        return AudioListener.volume;
     }
 
 
-    // Mutes or Unmutes audio for Effects
+    #region #### SLIDER CONTROLS ####
+
+    // slider function to change all audio volumes
+    public void MasterVolumeSlider(float value)
+    {
+        AudioListener.volume = value;
+    }
+    public void MusicVolumeSlider(float value)
+    {
+        _musicSource.volume = value;
+
+    }
+    public void EffectsVolumeSlider(float value)
+    {
+        _effectsSource.volume = value;
+    }
+
+    #endregion
+
+    #region #### BUTTON CONTROLS ####
+    
+    // Mutes or Unmutes audios
+    public void ToggleMaster()
+    {
+        ToggleEffects();
+        ToggleMusic();
+    }
+    public void ToggleMusic()
+    {
+        _musicSource.mute = !_musicSource.mute;
+    }
     public void ToggleEffects()
     {
         _effectsSource.mute = !_effectsSource.mute;
     }
 
-    // Music
-    public void ToggleMusic()
-    {
-        _musicSource.mute = !_musicSource.mute;
-    }
+    #endregion
 
     public void gamePaused()
     {

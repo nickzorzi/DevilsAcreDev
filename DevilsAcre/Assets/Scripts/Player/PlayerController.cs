@@ -85,15 +85,19 @@ public class PlayerController : MonoBehaviour
 
         isInv = false;
 
-        playerWalkSoundEffect.volume = SoundManager.Instance.GetEffectVolume();
-        playerFastWalkSoundEffect.volume = SoundManager.Instance.GetEffectVolume();
-        playerSlowWalkSoundEffect.volume = SoundManager.Instance.GetEffectVolume();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isDashing)
+        playerWalkSoundEffect.volume = SoundManager.Instance.GetEffectVolume();
+        playerFastWalkSoundEffect.volume = SoundManager.Instance.GetEffectVolume();
+        playerSlowWalkSoundEffect.volume = SoundManager.Instance.GetEffectVolume();
+        playerWalkSoundEffect.mute = SoundManager.Instance.CheckForMute();
+        playerFastWalkSoundEffect.mute = SoundManager.Instance.CheckForMute();
+        playerSlowWalkSoundEffect.mute = SoundManager.Instance.CheckForMute();
+
+        if (isDashing)
         {
             return;
         }
