@@ -255,6 +255,9 @@ public class PlayerController : MonoBehaviour
                     // playerHitSoundEffect.Play();
                     SoundManager.Instance.PlaySound(playerHitSoundEffect);
                     TakeDamage(damage);
+
+                    CinemachineShake.Instance.ShakeCamera(3f, .1f); //Camera Shake
+
                     StartCoroutine(Invulnerability());
                 } else if (isInv)
                 {
