@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8713537861553080753}
   - component: {fileID: 6466144369848290315}
   - component: {fileID: 749500780060481089}
+  - component: {fileID: 1862547962185129428}
   - component: {fileID: 3568345152971431533}
   - component: {fileID: 149764895848455292}
   - component: {fileID: 268101870049194262}
@@ -20,7 +21,6 @@ GameObject:
   - component: {fileID: 8863386003934257707}
   - component: {fileID: 8482116710643657819}
   - component: {fileID: 4194964651214099848}
-  - component: {fileID: 1862547962185129428}
   - component: {fileID: 6416885462554154600}
   - component: {fileID: 3327198103782686624}
   m_Layer: 5
@@ -148,6 +148,21 @@ MonoBehaviour:
   victorySound: {fileID: 3568345152971431533}
   levelUpSound: {fileID: 149764895848455292}
   gameOverSound: {fileID: 6180049821405084009}
+--- !u!114 &1862547962185129428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290764288925830374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1a0abe21c43804091ea34797f418cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 7555052908434850168}
+  pauseSound: {fileID: 6416885462554154600}
+  unpauseSound: {fileID: 3327198103782686624}
 --- !u!82 &3568345152971431533
 AudioSource:
   m_ObjectHideFlags: 0
@@ -820,21 +835,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1862547962185129428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290764288925830374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d1a0abe21c43804091ea34797f418cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 7555052908434850168}
-  pauseSound: {fileID: 6416885462554154600}
-  unpauseSound: {fileID: 3327198103782686624}
 --- !u!82 &6416885462554154600
 AudioSource:
   m_ObjectHideFlags: 0
