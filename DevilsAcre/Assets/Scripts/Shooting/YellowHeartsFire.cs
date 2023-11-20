@@ -5,6 +5,7 @@ using UnityEngine;
 public class YellowHeartsFire : MonoBehaviour
 {
     private float angle = 0f;
+    public float fireRate = 0.025f;
 
     public SisterBoss sisterBoss;
 
@@ -47,7 +48,7 @@ public class YellowHeartsFire : MonoBehaviour
 
             angle += 20f;
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(fireRate);
         }
         
         yield return new WaitForSeconds(3);

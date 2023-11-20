@@ -79,6 +79,20 @@ public class SisterBoss : MonoBehaviour
             canFireBlue = true;
 
             SoundManager.Instance.PlaySound(enemyHitSoundEffect);
+        } 
+        else if ((other.tag == "Projectile" && canFireYellow == true))
+        {
+            Debug.Log("Collision with Projectile detected!");
+            Debug.Log("Collided with: " + other.gameObject.name);
+
+            //TakeDamage(other.GetComponent<Projectile>().damage);
+            TakeDamage(Projectile.damage);
+
+            hitFlash.Flash();
+
+            canFireBlue = true;
+
+            SoundManager.Instance.PlaySound(enemyHitSoundEffect);
         }
     }
 
@@ -109,6 +123,21 @@ public class SisterBoss : MonoBehaviour
         if (health <= 35)
         {
             canFireRed = false;
+            canFireYellow = true;
+        }
+        else if (health <= 25)
+        {
+            canFireRed = true;
+            canFireYellow = false;
+        }
+        else if (health <= 15)
+        {
+            canFireRed = false;
+            canFireYellow = true;
+        }
+        else if (health <=5)
+        {
+            canFireRed = true;
             canFireYellow = true;
         }
     }
