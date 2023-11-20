@@ -122,6 +122,8 @@ public class GunslingerBandit : MonoBehaviour
             //TakeDamage(other.GetComponent<Projectile>().damage);
             TakeDamage(Projectile.damage);
 
+            CinemachineShake.Instance.ShakeCamera(3f, .1f); //Camera Shake
+
             hitFlash.Flash();
 
             SoundManager.Instance.PlaySound(enemyHitSoundEffect);
