@@ -22,6 +22,7 @@ public class YellowHeartsFire : MonoBehaviour
             if (!isShooting)
             {
                 StartCoroutine(FireYellowHearts());
+                CinemachineShake.Instance.ShakeCamera(2f, 1f); //Camera Shake
             }
         }
     }
