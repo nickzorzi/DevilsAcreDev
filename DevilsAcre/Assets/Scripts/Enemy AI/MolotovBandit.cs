@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunslingerBandit : MonoBehaviour
+public class MolotovBandit : MonoBehaviour
 {
     private Transform player;
 
-    public Transform winchester;
-    public float winchesterOffset;
+    public Transform molotov;
+    public float molotovOffset;
 
-    public Transform winchesterShotPoint;
+    public Transform molotovShotPoint;
 
     private SpriteRenderer render;
     public SpriteRenderer sprite;
@@ -19,13 +19,11 @@ public class GunslingerBandit : MonoBehaviour
     public float shootingRange;
     public float fireRate = 1f;
     private float nextFireTime;
-    public GameObject winchesterBullet;
+    public GameObject molotovBottle;
     public int health;
     public GameObject deathEffect;
 
     public Animator animator;
-
-    public bool isShooting = false;
 
     // [SerializeField] private int multiShotArc = 20;
     // [SerializeField] private int bulletsBeforeCooldown = 5;
@@ -46,8 +44,6 @@ public class GunslingerBandit : MonoBehaviour
 
         render = GetComponent<SpriteRenderer>();
 
-        isShooting = false;
-
         animator.SetBool("isWalking", false);
     }
 
@@ -55,13 +51,6 @@ public class GunslingerBandit : MonoBehaviour
     void Update()
     {
         animator.SetBool("isWalking", false);
-
-        isShooting = false;
-
-        //AIM WEAPON
-        Vector3 displacement = winchester.position - player.position;
-        float angle = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg;
-        winchester.rotation = Quaternion.Euler(0f, 0f, angle + winchesterOffset);
 
         //MOVE TOWARDS PLAYER (AND FIRE)
         float distanceFromPlayer = Vector2.Distance(player.position,transform.position);
@@ -74,37 +63,12 @@ public class GunslingerBandit : MonoBehaviour
         else if (distanceFromPlayer <= shootingRange && nextFireTime <Time.time)
         {
             animator.SetBool("isWalking", false);
+
+            Instantiate(molotovBottle, transform.position, Quaternion.identity);
             
-            // Instantiate(winchesterBullet,winchesterShotPoint.transform.position, Quaternion.identity);
             nextFireTime = Time.time + fireRate;
 
-            isShooting = true;
-
-            StartCoroutine(WinchesterFire());
         }
-    }
-
-    IEnumerator WinchesterFire()
-    {
-
-        yield return new WaitForSeconds(0.4f);
-
-        // int centerArc = multiShotArc / 2;
-        //     for (int i = 0; i < bulletsBeforeCooldown; i++)
-        //     {
-
-        //         // float bulletOffset = i * (multiShotArc / bulletsBeforeCooldown) - centerArc;
-
-        //         // Quaternion newRot = Quaternion.Euler(winchesterShotPoint.eulerAngles.x, winchesterShotPoint.eulerAngles.y, winchesterShotPoint.eulerAngles.z + bulletOffset);
-
-        //         Instantiate(winchesterBullet, winchesterShotPoint.transform.position, newRot);
-        //     }
-
-            Instantiate(winchesterBullet,winchesterShotPoint.transform.position, Quaternion.identity);
-
-            SoundManager.Instance.PlaySound(enemyShootSoundEffect);
-
-            nextFireTime = Time.time + fireRate;
     }
 
     void FixedUpdate()
@@ -154,4 +118,3 @@ public class GunslingerBandit : MonoBehaviour
         }
     }
 }
-
