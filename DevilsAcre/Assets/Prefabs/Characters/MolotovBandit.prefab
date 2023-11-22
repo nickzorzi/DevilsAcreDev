@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 2942429935691386127}
   - component: {fileID: 318225846994659049}
   - component: {fileID: 5531596186274178510}
+  - component: {fileID: 7542650164666930604}
   m_Layer: 11
   m_Name: MolotovBandit
   m_TagString: MolotovBandit
@@ -253,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   lineOfSite: 20
-  shootingRange: 6
+  shootingRange: 8
   fireRate: 8
   molotovBottle: {fileID: 6696436899035595338, guid: 5422c8a054cc5114a9e88d1e2a826944, type: 3}
   bulletParent: {fileID: 3168446572384382822}
@@ -279,6 +280,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: d4ad2b0b62e524d438493653ad8c1fda, type: 2}
   duration: 0.125
+--- !u!114 &7542650164666930604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2537691481137671675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d0d88537e4c794e9cf70c263a55b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySprite: {fileID: 7721027319350063322}
 --- !u!1 &3168446572384382822
 GameObject:
   m_ObjectHideFlags: 0

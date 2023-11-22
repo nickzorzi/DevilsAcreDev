@@ -10,6 +10,8 @@ public class BulletMolotov : MonoBehaviour
 
     public GameObject flames;
 
+    [SerializeField] private AudioClip shatterEffect;
+
     void Start()
     {
         bulletRB = GetComponent<Rigidbody2D>();
@@ -25,6 +27,8 @@ public class BulletMolotov : MonoBehaviour
 
         Instantiate(flames, transform.position, Quaternion.identity);
 
+        SoundManager.Instance.PlaySound(shatterEffect);
+
         Destroy(this.gameObject);
     }
 
@@ -34,6 +38,9 @@ public class BulletMolotov : MonoBehaviour
         if (hitInfo.GetComponent<CapsuleCollider2D>() != null)
         {
             Instantiate(flames, transform.position, Quaternion.identity);
+
+            SoundManager.Instance.PlaySound(shatterEffect);
+
             Destroy(gameObject);
         }
     }

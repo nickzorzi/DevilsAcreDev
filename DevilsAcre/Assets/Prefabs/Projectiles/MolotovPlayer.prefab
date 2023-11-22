@@ -185,3 +185,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   flames: {fileID: 6811865346186084209, guid: ec490df6fa6cabb4cbf117ce4f5db2a7, type: 3}
+  shatterEffect: {fileID: 8300000, guid: 140db229e5434c04db366bd3d885386c, type: 3}

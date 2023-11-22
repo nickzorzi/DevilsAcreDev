@@ -23,11 +23,19 @@ public class Projectile : MonoBehaviour
         {
             
         }
+        else if (hitInfo.CompareTag("MolotovE"))
+        {
+
+        }
+        else if (hitInfo.CompareTag("MolotovSpread"))
+        {
+            
+        }
         else if (hitInfo.GetComponent<BoxCollider2D>() != null)
         {
-        Instantiate(impactEffect, transform.position, transform.rotation);
+            Instantiate(impactEffect, transform.position, transform.rotation);
 
-        Destroy(gameObject);
+            Destroy(gameObject);
         } 
         else if (hitInfo.GetComponent<CircleCollider2D>() != null)
         {
