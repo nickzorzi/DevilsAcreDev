@@ -476,6 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63dc4c5994481d74d998d58a60d63472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireRate: 0.05
   sisterBoss: {fileID: 0}
   isShooting: 0
 --- !u!114 &87228678
@@ -4777,12 +4778,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main UI
       objectReference: {fileID: 0}
+    - target: {fileID: 465037888262770638, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2872383705920404649, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2872383705920404649, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871910716746070522, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7176995124420023370, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
