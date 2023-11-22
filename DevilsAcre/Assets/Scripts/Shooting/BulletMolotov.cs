@@ -16,7 +16,16 @@ public class BulletMolotov : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
         Vector2 moveDir = (target.transform.position - transform.position).normalized * speed;
         bulletRB.velocity = new Vector2(moveDir.x, moveDir.y);
-        Destroy(this.gameObject,2);
+        StartCoroutine(MolotovLand());
+    }
+
+    IEnumerator MolotovLand()
+    {
+        yield return new WaitForSeconds(2);
+
+        Instantiate(flames, transform.position, Quaternion.identity);
+
+        Destroy(this.gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)

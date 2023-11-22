@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 003b35d7cba340e4cbb069aff230e35b
+guid: 0f13891611fef2d4b9781029dc41a500
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,127 +123,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Molotov_0
+      name: Molotov Fire 1B_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 23
-        width: 17
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 16
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c9e22f45b686c540b2acc95fd396fa8
-      internalID: 1117378344
+      spriteID: 65dde2c3634dce54ea020a6d168a9771
+      internalID: 1791984591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Molotov_1
+      name: Molotov Fire 1B_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 23
-        width: 17
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 12
+        y: 16
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee7f4628e70667d4aa33d46ca2eb3924
-      internalID: 1229142608
+      spriteID: e44e76f3af33835468650500ae89f477
+      internalID: -167671880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Molotov_2
+      name: Molotov Fire 1B_2
       rect:
         serializedVersion: 2
-        x: 34
-        y: 23
-        width: 17
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 24
+        y: 16
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9dd821fa52f8704998553c0c6a184a2
-      internalID: -265505238
+      spriteID: d8c95f34b05d13f488c44d131d46a789
+      internalID: -2085134629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Molotov_3
+      name: Molotov Fire 1B_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 17
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e594c5a2fb341fa4ba22a07b2e801807
-      internalID: 228152148
+      spriteID: 460bc2fe0c5239941a0c90e2df22ca80
+      internalID: -1867988900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Molotov_4
+      name: Molotov Fire 1B_4
       rect:
         serializedVersion: 2
-        x: 17
+        x: 12
         y: 0
-        width: 17
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ee7f0df9943ccb439509f5c1b23a95e
-      internalID: 1844652687
+      spriteID: 0c8922f2227e08e4da4efeadc6527fe1
+      internalID: 1626132487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Molotov_5
+      name: Molotov Fire 1B_5
       rect:
         serializedVersion: 2
-        x: 34
+        x: 24
         y: 0
-        width: 17
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7ee2540549face4fb5a2e761be3d23f
-      internalID: 264471228
+      spriteID: 23b466a530e8b694298b73ea562c752e
+      internalID: -856721826
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Molotov_0: 1117378344
-      Molotov_1: 1229142608
-      Molotov_2: -265505238
-      Molotov_3: 228152148
-      Molotov_4: 1844652687
-      Molotov_5: 264471228
+      Molotov Fire 1B_0: 1791984591
+      Molotov Fire 1B_1: -167671880
+      Molotov Fire 1B_2: -2085134629
+      Molotov Fire 1B_3: -1867988900
+      Molotov Fire 1B_4: 1626132487
+      Molotov Fire 1B_5: -856721826
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

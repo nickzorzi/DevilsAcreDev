@@ -18,6 +18,10 @@ TagManager:
   - BlueHearts
   - Sister
   - YellowHearts
+  - MolotovBandit
+  - MolotovP
+  - MolotovE
+  - MolotovSpread
   layers:
   - Default
   - TransparentFX

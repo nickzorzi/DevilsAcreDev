@@ -4,45 +4,31 @@ using UnityEngine;
 
 public class MolotovBandit : MonoBehaviour
 {
-    private Transform player;
-
-    public Transform molotov;
-    public float molotovOffset;
-
-    public Transform molotovShotPoint;
-
-    private SpriteRenderer render;
-    public SpriteRenderer sprite;
-
     public float speed;
     public float lineOfSite;
     public float shootingRange;
     public float fireRate = 1f;
     private float nextFireTime;
     public GameObject molotovBottle;
+    public GameObject bulletParent;
+    private Transform player;
     public int health;
     public GameObject deathEffect;
-
-    public Animator animator;
-
-    // [SerializeField] private int multiShotArc = 20;
-    // [SerializeField] private int bulletsBeforeCooldown = 5;
-    // [SerializeField] private Transform bulletSpawnPoint;
 
     public int scoreValueOnDeath;
 
     [SerializeField] private HitFlash hitFlash;
 
+    public Animator animator;
+
     [SerializeField] private AudioClip enemyHitSoundEffect;
-    [SerializeField] private AudioClip enemyShootSoundEffect;
+    [SerializeField] private AudioClip enemyThrowSoundEffect;
     [SerializeField] private AudioClip enemyDeathSoundEffect;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
-        render = GetComponent<SpriteRenderer>();
 
         animator.SetBool("isWalking", false);
     }
@@ -65,20 +51,17 @@ public class MolotovBandit : MonoBehaviour
             animator.SetBool("isWalking", false);
 
             Instantiate(molotovBottle, transform.position, Quaternion.identity);
+
+            SoundManager.Instance.PlaySound(enemyThrowSoundEffect);
             
             nextFireTime = Time.time + fireRate;
 
         }
     }
 
-    void FixedUpdate()
-    {
-        render.flipX = sprite.flipY;
-    }
-
      void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Projectile")
+        if (other.tag == "Projectile" || other.tag == "MolotovSpread")
         {
             Debug.Log("Collision with Projectile detected!");
             Debug.Log("Collided with: " + other.gameObject.name);

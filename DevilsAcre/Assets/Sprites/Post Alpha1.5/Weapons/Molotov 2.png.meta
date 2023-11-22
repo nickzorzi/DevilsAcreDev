@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 003b35d7cba340e4cbb069aff230e35b
+guid: f095b5eeca11baa44a0e684f0bfc23ae
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Molotov_0
+      name: Molotov 2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c9e22f45b686c540b2acc95fd396fa8
-      internalID: 1117378344
+      spriteID: eb1dd97cb97fb5448b8c56f232485090
+      internalID: -173117170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Molotov_1
+      name: Molotov 2_1
       rect:
         serializedVersion: 2
         x: 17
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee7f4628e70667d4aa33d46ca2eb3924
-      internalID: 1229142608
+      spriteID: e2efe910c3ff8fd4cb4bd575d5070c69
+      internalID: 1568438811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Molotov_2
+      name: Molotov 2_2
       rect:
         serializedVersion: 2
         x: 34
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9dd821fa52f8704998553c0c6a184a2
-      internalID: -265505238
+      spriteID: 7f3698f9034134140b0d2a5772acd9ab
+      internalID: 716740644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Molotov_3
+      name: Molotov 2_3
       rect:
         serializedVersion: 2
         x: 0
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e594c5a2fb341fa4ba22a07b2e801807
-      internalID: 228152148
+      spriteID: c82172e4661c7fa4cb33fa5b6edc03b1
+      internalID: 655277520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Molotov_4
+      name: Molotov 2_4
       rect:
         serializedVersion: 2
         x: 17
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ee7f0df9943ccb439509f5c1b23a95e
-      internalID: 1844652687
+      spriteID: 6bffb253b18c64a42a3916eb36fe039f
+      internalID: -262624252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Molotov_5
+      name: Molotov 2_5
       rect:
         serializedVersion: 2
         x: 34
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7ee2540549face4fb5a2e761be3d23f
-      internalID: 264471228
+      spriteID: 1656cb4fa6303dc48abff96919d91a27
+      internalID: 2069634758
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Molotov_0: 1117378344
-      Molotov_1: 1229142608
-      Molotov_2: -265505238
-      Molotov_3: 228152148
-      Molotov_4: 1844652687
-      Molotov_5: 264471228
+      Molotov 2_0: -173117170
+      Molotov 2_1: 1568438811
+      Molotov 2_2: 716740644
+      Molotov 2_3: 655277520
+      Molotov 2_4: -262624252
+      Molotov 2_5: 2069634758
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

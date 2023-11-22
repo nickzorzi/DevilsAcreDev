@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 003b35d7cba340e4cbb069aff230e35b
+guid: ba67f4b73dccb2349bcc3ab9aff3a4ed
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Molotov_0
+      name: SaloonWall_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 23
-        width: 17
-        height: 23
+        x: 108
+        y: 137
+        width: 576
+        height: 304
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,113 +137,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c9e22f45b686c540b2acc95fd396fa8
-      internalID: 1117378344
+      spriteID: 5a834a9b92f2d6646bf6db7ae56ba049
+      internalID: -863103912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Molotov_1
+      name: SaloonWall_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 23
-        width: 17
-        height: 23
+        x: 108
+        y: 121
+        width: 576
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee7f4628e70667d4aa33d46ca2eb3924
-      internalID: 1229142608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Molotov_2
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 23
-        width: 17
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9dd821fa52f8704998553c0c6a184a2
-      internalID: -265505238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Molotov_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 17
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e594c5a2fb341fa4ba22a07b2e801807
-      internalID: 228152148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Molotov_4
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 0
-        width: 17
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ee7f0df9943ccb439509f5c1b23a95e
-      internalID: 1844652687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Molotov_5
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 0
-        width: 17
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7ee2540549face4fb5a2e761be3d23f
-      internalID: 264471228
+      spriteID: 5e90eb351b29beb4f9dc75fb58744d3d
+      internalID: 1838054022
       vertices: []
       indices: 
       edges: []
@@ -259,12 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Molotov_0: 1117378344
-      Molotov_1: 1229142608
-      Molotov_2: -265505238
-      Molotov_3: 228152148
-      Molotov_4: 1844652687
-      Molotov_5: 264471228
+      SaloonWall_0: -863103912
+      SaloonWall_1: 1838054022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
