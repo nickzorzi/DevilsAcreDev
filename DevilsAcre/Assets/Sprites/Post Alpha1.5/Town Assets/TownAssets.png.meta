@@ -127,7 +127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 10
-        y: 159
+        y: 431
         width: 75
         height: 91
       alignment: 0
@@ -148,7 +148,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 158
-        y: 58
+        y: 330
         width: 126
         height: 162
       alignment: 9
@@ -196,8 +196,8 @@ TextureImporter:
       name: TownAssets_2
       rect:
         serializedVersion: 2
-        x: 289
-        y: 59
+        x: 290
+        y: 331
         width: 118
         height: 174
       alignment: 9
@@ -260,7 +260,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 464
-        y: 89
+        y: 361
         width: 272
         height: 209
       alignment: 0
@@ -308,7 +308,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11
-        y: 72
+        y: 344
         width: 68
         height: 80
       alignment: 0
@@ -329,7 +329,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 164
-        y: 58
+        y: 330
         width: 4
         height: 34
       alignment: 7
@@ -354,7 +354,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 223
-        y: 58
+        y: 330
         width: 4
         height: 34
       alignment: 7
@@ -379,7 +379,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 594
-        y: 106
+        y: 378
         width: 38
         height: 12
       alignment: 0
@@ -391,6 +391,27 @@ TextureImporter:
       bones: []
       spriteID: dca06e855d0b56844afe6a152cbfd122
       internalID: -984187830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownAssets_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 576
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bbbdf53246ac34483aa4b22694f105
+      internalID: 824281609
       vertices: []
       indices: 
       edges: []
@@ -414,6 +435,7 @@ TextureImporter:
       TownAssets_5: -513376011
       TownAssets_6: -87486931
       TownAssets_7: -984187830
+      TownAssets_8: 824281609
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
