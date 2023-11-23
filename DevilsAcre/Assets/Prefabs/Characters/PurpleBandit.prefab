@@ -292,6 +292,7 @@ MonoBehaviour:
   health: 2
   deathEffect: {fileID: 8438092220845912813, guid: 2abeebd83d402f04b846d481c7cb77c9, type: 3}
   scoreValueOnDeath: 15
+  coinValueOnDeath: 1
   hitFlash: {fileID: 5506360700917794994}
   enemyHitSoundEffect: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
   enemyThrowSoundEffect: {fileID: 8300000, guid: 323e15cfe809e114ab92c9f4b25e8bc2, type: 3}

@@ -13,11 +13,14 @@ public class UIManager : MonoBehaviour
     public GameObject shoot2xUI;
     public GameObject shoot125xUI;
     public GameObject dashUI;
+    public GameObject axeUI;
+    public GameObject molotovUI;
 
     public Projectile projectile;
     public PlayerController playerController;
 
     private Score scoreManager;
+    private Coin coinManager;
 
     [SerializeField] private AudioSource victorySound;
     [SerializeField] private AudioSource levelUpSound;
@@ -26,6 +29,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         scoreManager = FindObjectOfType<Score>();
+        coinManager = FindObjectOfType<Coin>();
         playerController = FindObjectOfType<PlayerController>();
         projectile = FindObjectOfType<Projectile>();
 
@@ -84,6 +88,7 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         Score.scoreValue = 0;
+        Coin.coinValue = 0;
 
         Projectile.damage = 1;
         playerController.damage = 1;
@@ -107,6 +112,8 @@ public class UIManager : MonoBehaviour
         shoot2xUI.SetActive(false);
         shoot125xUI.SetActive(false);
         dashUI.SetActive(false);
+        axeUI.SetActive(false);
+        molotovUI.SetActive(false);
     }
 
     public void GoToMainMenu()
@@ -186,6 +193,32 @@ public class UIManager : MonoBehaviour
             dashUI.SetActive(true);
 
             AudioListener.pause = false;
+        }
+    }
+
+    public void PlayerAxe()
+    {
+        if (playerController != null)
+        {
+            axeUI.SetActive(true);
+            playerController.canAxe = true;
+        }
+    }
+
+    public void PlayerMolotov()
+    {
+        if (playerController != null)
+        {
+            molotovUI.SetActive(true);
+            playerController.canMolotov = true;
+        }
+    }
+
+    public void PlayerHeal()
+    {
+        if (playerController != null)
+        {
+            playerController.currentHealth = 5;
         }
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 629223438872344276}
   - component: {fileID: 8845290097275025647}
   - component: {fileID: 8370202712710726658}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MolotovFire1Player (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 6610194399099499776}
   - component: {fileID: 7851659164203294721}
   - component: {fileID: 5316469471546370780}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Molotov Fire 2B_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 470679905817272431}
   - component: {fileID: 7653098333207551762}
   - component: {fileID: 1923163986409298965}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MolotovFire1Player (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 2039544581218221645}
   - component: {fileID: 8414061359881825154}
   - component: {fileID: 6445132921020910731}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MolotovFire1Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3676357866893142412}
   - component: {fileID: 7613800823308026033}
-  - component: {fileID: 2962025846120014221}
+  - component: {fileID: 7001481882412543127}
   - component: {fileID: -895637839187737406}
   m_Layer: 12
   m_Name: MolotovSpreadPlayer
@@ -516,8 +516,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!58 &2962025846120014221
-CircleCollider2D:
+--- !u!70 &7001481882412543127
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -548,9 +548,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.8
+  m_Offset: {x: 0, y: 0.3}
+  m_Size: {x: 1.8, y: 0.8}
+  m_Direction: 1
 --- !u!114 &-895637839187737406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 7177618798246227169}
   - component: {fileID: 6820672846884234772}
   - component: {fileID: 1477862938331667478}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Molotov Fire 2B_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,7 +681,7 @@ GameObject:
   - component: {fileID: 2943129250092636984}
   - component: {fileID: 2909757445607513130}
   - component: {fileID: 542800374374460738}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Molotov Fire 2B_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

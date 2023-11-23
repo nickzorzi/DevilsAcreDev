@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7771673298990788942}
   - component: {fileID: 5794219217525299250}
   - component: {fileID: 4349134616607902552}
+  - component: {fileID: 2905862459299815965}
+  - component: {fileID: 3970632441339903515}
   - component: {fileID: 2674065153527924655}
   m_Layer: 12
   m_Name: MolotovSpread
@@ -124,9 +126,79 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 0.4
+--- !u!58 &2905862459299815965
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685725560166880639}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.6, y: 0.3}
+  serializedVersion: 2
+  m_Radius: 0.3
+--- !u!58 &3970632441339903515
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685725560166880639}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.6, y: 0.3}
+  serializedVersion: 2
+  m_Radius: 0.2
 --- !u!114 &2674065153527924655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +223,7 @@ GameObject:
   - component: {fileID: 541464914933999206}
   - component: {fileID: 3253463078950670456}
   - component: {fileID: 6698747916842184467}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MolotovFire1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +329,7 @@ GameObject:
   - component: {fileID: 3536322924655482736}
   - component: {fileID: 674558245017379558}
   - component: {fileID: 8357299889794063456}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MolotovFire2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +435,7 @@ GameObject:
   - component: {fileID: 1384553804530698298}
   - component: {fileID: 5635566483209648564}
   - component: {fileID: 558056784192709477}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MolotovFire1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +541,7 @@ GameObject:
   - component: {fileID: 7130798155023776896}
   - component: {fileID: 1888010814358388389}
   - component: {fileID: 7975445251191295898}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MolotovFire1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +647,7 @@ GameObject:
   - component: {fileID: 511622919828332490}
   - component: {fileID: 3252564320169433684}
   - component: {fileID: 8840065886422112006}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MolotovFire2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,7 +753,7 @@ GameObject:
   - component: {fileID: 3666004657811683245}
   - component: {fileID: 3185843625782442838}
   - component: {fileID: 5258613727972276350}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MolotovFire2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

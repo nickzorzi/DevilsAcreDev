@@ -16,6 +16,7 @@ public class EnemyFollowPlayer : MonoBehaviour
     public GameObject deathEffect;
 
     public int scoreValueOnDeath;
+    public int coinValueOnDeath;
 
     [SerializeField] private HitFlash hitFlash;
 
@@ -85,6 +86,7 @@ public class EnemyFollowPlayer : MonoBehaviour
 
             //SCORE VALUE SYSTEM
             Score.scoreValue += scoreValueOnDeath;
+            Coin.coinValue += coinValueOnDeath;
         }
     }
 }

@@ -339,12 +339,17 @@ MonoBehaviour:
   animator: {fileID: 5970200966216865416}
   sprite: {fileID: 8212391085249444533}
   gunshotSoundEffect: {fileID: 8300000, guid: a308777478004e540bd009ec2075bfd5, type: 3}
+  throwSoundEffect: {fileID: 8300000, guid: 323e15cfe809e114ab92c9f4b25e8bc2, type: 3}
   playerHitSoundEffect: {fileID: 8300000, guid: fd25a15f9797641458336cccfb445343, type: 3}
   playerWalkSoundEffect: {fileID: 2261641538290729744}
   playerFastWalkSoundEffect: {fileID: 549396501122786362}
   playerSlowWalkSoundEffect: {fileID: 8257878246401913603}
   deathSoundEffect: {fileID: 8300000, guid: 8ff2a2d7e79f81c40ac447512f879374, type: 3}
   dashSoundEffect: {fileID: 8300000, guid: 4e349dc959014a845b9aa317d1c2b7f0, type: 3}
+  playerAxe: {fileID: 3938020771325188288, guid: d4cf808afb1b1eb40bd2ca387f78688d, type: 3}
+  canAxe: 0
+  playerMolotov: {fileID: 2848521465471244836, guid: bff278bef3ba6f24f8eab0814d13ca90, type: 3}
+  canMolotov: 0
   dashSpeed: 0
   dashDuration: 0
   dashCooldown: 0
@@ -1060,6 +1065,18 @@ MonoBehaviour:
     text: {fileID: 0}
     key: 32
     cooldown: 1
+    isCooldown: 0
+    currentCooldown: 0
+  - image: {fileID: 0}
+    text: {fileID: 0}
+    key: 101
+    cooldown: 10
+    isCooldown: 0
+    currentCooldown: 0
+  - image: {fileID: 0}
+    text: {fileID: 0}
+    key: 102
+    cooldown: 8
     isCooldown: 0
     currentCooldown: 0
 --- !u!1 &5975796497637486644
