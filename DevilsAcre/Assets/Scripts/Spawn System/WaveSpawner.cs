@@ -101,7 +101,7 @@ public class WaveSpawner : MonoBehaviour
             searchCountdown = 1f;
 
             // Check if any objects with the specified tags exist
-            if (GameObject.FindGameObjectsWithTag("Red").Length == 0 && GameObject.FindGameObjectsWithTag("Purple").Length == 0 && GameObject.FindGameObjectsWithTag("ShotgunBandit").Length == 0 && GameObject.FindGameObjectsWithTag("GunslingerBandit").Length == 0)
+            if (GameObject.FindGameObjectsWithTag("Red").Length == 0 && GameObject.FindGameObjectsWithTag("Purple").Length == 0 && GameObject.FindGameObjectsWithTag("ShotgunBandit").Length == 0 && GameObject.FindGameObjectsWithTag("GunslingerBandit").Length == 0 && GameObject.FindGameObjectsWithTag("MolotovBandit").Length == 0)
             {
                 return false;
             }

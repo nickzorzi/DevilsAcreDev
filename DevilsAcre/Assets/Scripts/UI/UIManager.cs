@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
     public PlayerController playerController;
 
     private Score scoreManager;
-    private Coin coinManager;
+    public Coin coinManager;
 
     [SerializeField] private AudioSource victorySound;
     [SerializeField] private AudioSource levelUpSound;
@@ -198,27 +198,39 @@ public class UIManager : MonoBehaviour
 
     public void PlayerAxe()
     {
-        if (playerController != null)
+        if (Coin.coinValue >= 15)
         {
-            axeUI.SetActive(true);
-            playerController.canAxe = true;
+            if (playerController != null)
+            {
+                axeUI.SetActive(true);
+                playerController.canAxe = true;
+                Coin.coinValue -= 15;
+            }
         }
     }
 
     public void PlayerMolotov()
     {
-        if (playerController != null)
+        if (Coin.coinValue >= 15)
         {
-            molotovUI.SetActive(true);
-            playerController.canMolotov = true;
+            if (playerController != null)
+            {
+                molotovUI.SetActive(true);
+                playerController.canMolotov = true;
+                Coin.coinValue -= 15;
+            }
         }
     }
 
     public void PlayerHeal()
     {
-        if (playerController != null)
+        if (Coin.coinValue >= 15)
         {
-            playerController.currentHealth = 5;
+            if (playerController != null)
+            {
+                playerController.currentHealth = 5;
+                Coin.coinValue -= 15;
+            }
         }
     }
 

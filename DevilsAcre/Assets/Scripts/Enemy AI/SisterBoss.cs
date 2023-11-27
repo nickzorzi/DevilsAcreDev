@@ -10,9 +10,12 @@ public class SisterBoss : MonoBehaviour
     public GameObject deathEffect;
 
     private bool hasEnteredLineOfSight = false;
+    private bool transformationFinished = false;
     public bool canFireRed = false;
     public bool canFireBlue = false;
     public bool canFireYellow = false;
+    // public bool canRedCross = false;
+    // public bool canYellowCross = false;
 
     public int scoreValueOnDeath;
 
@@ -20,6 +23,9 @@ public class SisterBoss : MonoBehaviour
 
     public GameObject waveSB;
     public GameObject waveGB;
+
+    public BossHealthBar bossHealthBar;
+    public GameObject displayHealthBar;
 
     [SerializeField] private HitFlash hitFlash;
 
@@ -30,6 +36,10 @@ public class SisterBoss : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        bossHealthBar.UpdateHealthBar(health);
+
+        displayHealthBar.SetActive(false);
 
         canFireBlue = false;
     }
@@ -60,39 +70,48 @@ public class SisterBoss : MonoBehaviour
     {
         animator.SetTrigger("FinishedTransformation");
         yield return new WaitForSeconds(2);
+        transformationFinished = true;
+        displayHealthBar.SetActive(true);
         canFireRed = true;
         yield return null;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Projectile" || other.tag == "MolotovSpread" && canFireRed == true)
+        if (!transformationFinished)
         {
-            Debug.Log("Collision with Projectile detected!");
-            Debug.Log("Collided with: " + other.gameObject.name);
-
-            //TakeDamage(other.GetComponent<Projectile>().damage);
-            TakeDamage(Projectile.damage);
-
-            hitFlash.Flash();
-
-            canFireBlue = true;
-
-            SoundManager.Instance.PlaySound(enemyHitSoundEffect);
-        } 
-        else if ((other.tag == "Projectile" || other.tag == "MolotovSpread" && canFireYellow == true))
+            
+        }
+        if (transformationFinished)
         {
-            Debug.Log("Collision with Projectile detected!");
-            Debug.Log("Collided with: " + other.gameObject.name);
+            if (other.tag == "Projectile" || other.tag == "MolotovSpread" && canFireRed == true)
+            {
+                Debug.Log("Collision with Projectile detected!");
+                Debug.Log("Collided with: " + other.gameObject.name);
 
-            //TakeDamage(other.GetComponent<Projectile>().damage);
-            TakeDamage(Projectile.damage);
+                //TakeDamage(other.GetComponent<Projectile>().damage);
+                TakeDamage(Projectile.damage);
 
-            hitFlash.Flash();
+                hitFlash.Flash();
 
-            canFireBlue = true;
+                canFireBlue = true;
 
-            SoundManager.Instance.PlaySound(enemyHitSoundEffect);
+                SoundManager.Instance.PlaySound(enemyHitSoundEffect);
+            } 
+            else if ((other.tag == "Projectile" || other.tag == "MolotovSpread" && canFireYellow == true))
+            {
+                Debug.Log("Collision with Projectile detected!");
+                Debug.Log("Collided with: " + other.gameObject.name);
+
+                //TakeDamage(other.GetComponent<Projectile>().damage);
+                TakeDamage(Projectile.damage);
+
+                hitFlash.Flash();
+
+                canFireBlue = true;
+
+                SoundManager.Instance.PlaySound(enemyHitSoundEffect);
+            }
         }
     }
 
@@ -105,6 +124,8 @@ public class SisterBoss : MonoBehaviour
     void TakeDamage(int damageAmount)
     {
         health -= damageAmount; 
+
+        bossHealthBar.UpdateHealthBar(health);
 
         if (health <= 0)
         {
@@ -129,11 +150,15 @@ public class SisterBoss : MonoBehaviour
         {
             canFireRed = true;
             canFireYellow = false;
+            animator.SetTrigger("Phase2");
+            // canRedCross = true;
         }
         else if (health <= 15)
         {
             canFireRed = false;
             canFireYellow = true;
+            animator.SetTrigger("Phase3");
+            // canYellowCross = true;
         }
         else if (health <=5)
         {
