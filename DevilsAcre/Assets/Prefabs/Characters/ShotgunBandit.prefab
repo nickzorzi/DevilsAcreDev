@@ -295,7 +295,7 @@ MonoBehaviour:
   deathEffect: {fileID: 8438092220845912813, guid: 2abeebd83d402f04b846d481c7cb77c9, type: 3}
   animator: {fileID: 3697610420979537267}
   isShooting: 0
-  multiShotArc: 45
+  multiShotArc: 40
   bulletsBeforeCooldown: 5
   bulletSpawnPoint: {fileID: 6500706155259070547}
   scoreValueOnDeath: 25
