@@ -447,6 +447,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TownAssets_9
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 79
+        width: 90
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6f67f2c4f754246a8bab246196ff65
+      internalID: 1373378032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownAssets_10
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 0
+        width: 317
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58752d240f04ae245b19d9f675f4a871
+      internalID: 1589635967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 132
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8859c1edd9a605f49a19a5b116a95f02
+      internalID: 1575278489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -458,8 +521,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Gate: 1575278489
       TownAssets_0: 1380234082
       TownAssets_1: -165430834
+      TownAssets_10: 1589635967
       TownAssets_2: 15483423
       TownAssets_3: -1954877850
       TownAssets_4: 817951187
@@ -467,6 +532,7 @@ TextureImporter:
       TownAssets_6: -87486931
       TownAssets_7: -984187830
       TownAssets_8: 824281609
+      TownAssets_9: 1373378032
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
