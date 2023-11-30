@@ -18,6 +18,11 @@ public class WaveManager : MonoBehaviour
 
     public Score scoreManager;
 
+    public GameObject gKey;
+    public bool keyGrab = false;
+
+    public GameObject loadZone;
+
     void Start()
     {
         rWave1.SetActive(true);
@@ -31,11 +36,17 @@ public class WaveManager : MonoBehaviour
         mWave1.SetActive(true);
         mWave2.SetActive(false);
         mWave3.SetActive(false);
+
+        gKey.SetActive(false);
+        
+        keyGrab = false;
+
+        loadZone.SetActive(false);
     }
 
     void Update()
     {
-        if (Score.scoreValue == 860)
+        if (Score.scoreValue == 35)
         {
             rWave1.SetActive(false);
             rWave2.SetActive(true);
@@ -45,6 +56,13 @@ public class WaveManager : MonoBehaviour
 
             mWave1.SetActive(false);
             mWave2.SetActive(true);
+
+            gKey.SetActive(true);
+
+            if (keyGrab)
+            {
+                loadZone.SetActive(true);
+            }
         }
         else if (Score.scoreValue == 1720)
         {

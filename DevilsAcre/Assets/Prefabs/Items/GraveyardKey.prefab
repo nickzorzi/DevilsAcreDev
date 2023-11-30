@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9079624334023945503}
   - component: {fileID: 638584852820988829}
   - component: {fileID: 4311049614275803960}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GraveyardKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14806597c66b458499e6b1c4d29534b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveManager: {fileID: 0}
 --- !u!61 &4311049614275803960
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -135,7 +136,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

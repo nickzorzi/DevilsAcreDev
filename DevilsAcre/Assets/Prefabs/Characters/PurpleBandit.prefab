@@ -286,7 +286,7 @@ MonoBehaviour:
   speed: 2
   lineOfSite: 20
   shootingRange: 7.5
-  fireRate: 4
+  fireRate: 5
   bullet: {fileID: 8124904434976789515, guid: 75cfb346781ece74aacf289bfb31d049, type: 3}
   bulletParent: {fileID: 8132233839585351489}
   health: 2
