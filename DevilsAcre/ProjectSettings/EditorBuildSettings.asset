@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 1466ede62511b0f4f98f65168f7bb34c
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: 005a6dbc44bb3784787ac2307a32bb0c
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 6853b8c56306c834091b0503d084d6de
   m_configObjects: {}
