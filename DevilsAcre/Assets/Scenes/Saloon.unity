@@ -6300,13 +6300,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 638584852820988829, guid: 7902018dee86fe34c861845586419968, type: 3}
+      propertyPath: waveManager
+      value: 
+      objectReference: {fileID: 2047108702}
     - target: {fileID: 4388857809235133462, guid: 7902018dee86fe34c861845586419968, type: 3}
       propertyPath: m_Name
       value: GraveyardKey
       objectReference: {fileID: 0}
     - target: {fileID: 4388857809235133462, guid: 7902018dee86fe34c861845586419968, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5227957422902818187, guid: 7902018dee86fe34c861845586419968, type: 3}
       propertyPath: m_LocalPosition.x

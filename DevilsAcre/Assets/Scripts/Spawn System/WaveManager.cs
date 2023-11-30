@@ -57,11 +57,14 @@ public class WaveManager : MonoBehaviour
             mWave1.SetActive(false);
             mWave2.SetActive(true);
 
-            gKey.SetActive(true);
 
             if (keyGrab)
             {
                 loadZone.SetActive(true);
+            }
+            else
+            {
+            gKey.SetActive(true);
             }
         }
         else if (Score.scoreValue == 1720)
