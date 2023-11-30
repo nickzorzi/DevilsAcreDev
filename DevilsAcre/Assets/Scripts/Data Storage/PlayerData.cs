@@ -16,7 +16,7 @@ public class PlayerData : MonoBehaviour
     [Space(10)]
     [Header("Other Data")]
     public string lastScene;
-    
+    public int lastWave = 0;
 
     private void Awake()
     {
