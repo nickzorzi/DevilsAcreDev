@@ -6,14 +6,22 @@ using UnityEngine;
 
 public class BensSpawner : MonoBehaviour
 {
+    [Header("Add Scene Objects")]
     [SerializeField] private TextMeshProUGUI waveCountText;
     [SerializeField] private GameObject key;
+    [SerializeField] private GameObject loadZone;
     [SerializeField] private Transform[] spawnPoints;
+    [Space(10)]
+    [Header("Wave config")]
+    [SerializeField] private float waveWaitTime = 2;
+    [SerializeField] private float keyWaveWaitTime = 5;
+
     [SerializeField] private WaveData[] waveData;
 
     
-    private List<Transform> aliveEnemies;
+    [SerializeField] private List<Transform> aliveEnemies;
     private int currentWave;
+    private bool wavePaused = true;
 
     private void Start()
     {
@@ -24,11 +32,42 @@ public class BensSpawner : MonoBehaviour
         {
             Debug.LogError("No Spawn Points");
         }
+        if(waveCountText != null)
+        {
+            waveCountText.text = "Wave: " + (currentWave+1);
+        }
     }
 
     private void Update()
     {
-        Spawner();
+        if(wavePaused && waveData[currentWave].isKeyWave)
+        {
+            StartCoroutine(waveCoolDown(keyWaveWaitTime));
+        }
+        else if (wavePaused)
+        {
+            StartCoroutine(waveCoolDown(waveWaitTime));
+        }
+        if (!wavePaused)
+        {
+            if(loadZone != null)
+            {
+                loadZone.SetActive(false);
+            }
+            Spawner();  
+        }
+        if (waveData[currentWave].isKeyWave && key != null)
+        {
+            key.SetActive(true);
+        }
+        if(currentWave+1 > waveData.Length - 1 && loadZone != null)
+        {
+            loadZone.SetActive(true) ;
+        }
+        else if (wavePaused && PlayerData.Instance.hasKey && loadZone != null)
+        {
+            loadZone.SetActive(true);
+        }
     }
 
 
@@ -37,33 +76,39 @@ public class BensSpawner : MonoBehaviour
     // Goes to next wave once spawning is done and enemies are cleared
     private void Spawner()
     {
-        if (!waveData[currentWave].isPauseWave) // don't spawn if Pause Wave bool is active
+
+        bool allCleared = true;
+        for (int i = 0; i < waveData[currentWave].Enemies.Length; i++)
         {
+            var enemy = waveData[currentWave].Enemies[i];
 
-            bool allCleared = true;
-            for (int i = 0; i < waveData[currentWave].Enemies.Length; i++)
+
+            if (!enemy.spawnCoolDown && enemy.spawnCount > 0)
             {
-                var enemy = waveData[currentWave].Enemies[i];
-
-
-                if (!enemy.spawnCoolDown && enemy.spawnCount > 0)
-                {
-                    allCleared = false;
-                    StartCoroutine(enemySpawning(i));
-                }
-                else if (enemy.spawnCount > 0)
-                {
-                    allCleared = false;
-                }
-
+                allCleared = false;
+                StartCoroutine(enemySpawning(i));
             }
-            if (allCleared && aliveEnemies.Count == 0 && currentWave < waveData.Length - 1)
+            else if (enemy.spawnCount > 0)
             {
-                Debug.Log("Next Wave");
-                currentWave++;
+                allCleared = false;
             }
 
         }
+        if (allCleared && aliveEnemies.Count == 0 && currentWave < waveData.Length - 1)
+        {
+            Debug.Log("Next Wave");
+            currentWave++;
+            wavePaused = true;
+            // SINGLETON DEPENDENCE
+            PlayerData.Instance.lastWave = currentWave;
+            
+            if(waveCountText != null)
+            {
+                waveCountText.text = "Wave: " + (currentWave+1);
+            }
+        }
+
+        
         for (int i = 0; i < aliveEnemies.Count; i++)
         {
             if (aliveEnemies[i] == null)
@@ -95,13 +140,17 @@ public class BensSpawner : MonoBehaviour
     }
 
 
-
+    private IEnumerator waveCoolDown(float time)
+    {
+        yield return new WaitForSeconds(time);
+        wavePaused = false;
+    }
 
     [System.Serializable]
     public struct WaveData
     {
         public string name;
-        public bool isPauseWave;
+        public bool isKeyWave;
         public EnemyData[] Enemies;
 
     }

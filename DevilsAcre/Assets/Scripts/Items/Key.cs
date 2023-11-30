@@ -4,20 +4,12 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    public WaveManager waveManager;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        waveManager = FindObjectOfType<WaveManager>();
-        waveManager.keyGrab = false;
-    }
-
+    
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.GetComponent<CapsuleCollider2D>() != null)
+        if (hitInfo.CompareTag("Player"))
         {
-            waveManager.keyGrab = true;
+            PlayerData.Instance.hasKey = true;
             Destroy(gameObject);
         }
     }
