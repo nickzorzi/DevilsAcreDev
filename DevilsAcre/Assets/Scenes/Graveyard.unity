@@ -312,7 +312,10 @@ MonoBehaviour:
   displayHealthBar: {fileID: 2011068081}
   hitFlash: {fileID: 87228679}
   enemyHitSoundEffect: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
-  enemyDeathSoundEffect: {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}
+  enemyDeathSoundEffect: {fileID: 8300000, guid: aa7527f19fed0494a80612b33a37bad9, type: 3}
+  transformEffect: {fileID: 8300000, guid: 3d2f2e1f38a116d488fe0099bd250c37, type: 3}
+  phase2Effect: {fileID: 8300000, guid: 7dbc38b5716ce7e438036d01f5caa2ad, type: 3}
+  phase3Effect: {fileID: 8300000, guid: 7dbc38b5716ce7e438036d01f5caa2ad, type: 3}
 --- !u!95 &87228672
 Animator:
   serializedVersion: 5
@@ -421,6 +424,7 @@ MonoBehaviour:
   sisterBoss: {fileID: 0}
   fireCooldown: 2
   isShooting: 0
+  redShootEffect: {fileID: 8300000, guid: 705ed9e4a42076648acab917b074c817, type: 3}
 --- !u!61 &87228676
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -481,6 +485,7 @@ MonoBehaviour:
   fireRate: 0.05
   sisterBoss: {fileID: 0}
   isShooting: 0
+  yellowShootEffect: {fileID: 8300000, guid: 8f1ab2f3823b9ea418fe393e69a54f2a, type: 3}
 --- !u!114 &87228678
 MonoBehaviour:
   m_ObjectHideFlags: 0

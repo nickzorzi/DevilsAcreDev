@@ -32,6 +32,10 @@ public class SisterBoss : MonoBehaviour
     [SerializeField] private AudioClip enemyHitSoundEffect;
     [SerializeField] private AudioClip enemyDeathSoundEffect;
 
+    [SerializeField] private AudioClip transformEffect;
+    [SerializeField] private AudioClip phase2Effect;
+    [SerializeField] private AudioClip phase3Effect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +56,7 @@ public class SisterBoss : MonoBehaviour
         {
             if (!hasEnteredLineOfSight)
             {
+                SoundManager.Instance.PlaySound(transformEffect);
                 animator.SetTrigger("Entry");
                 StartCoroutine(FinishedAnimation());
                 hasEnteredLineOfSight = true;
@@ -151,6 +156,8 @@ public class SisterBoss : MonoBehaviour
             canFireRed = true;
             canFireYellow = false;
             animator.SetTrigger("Phase2");
+
+            SoundManager.Instance.PlaySound(phase2Effect);
             // canRedCross = true;
         }
         else if (health <= 15)
@@ -158,6 +165,8 @@ public class SisterBoss : MonoBehaviour
             canFireRed = false;
             canFireYellow = true;
             animator.SetTrigger("Phase3");
+
+            SoundManager.Instance.PlaySound(phase3Effect);
             // canYellowCross = true;
         }
         else if (health <=5)

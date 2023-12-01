@@ -16,6 +16,8 @@ public class RedHeartsFire : MonoBehaviour
 
     public bool isShooting;
 
+    [SerializeField] private AudioClip redShootEffect;
+
     void Start()
     {
         // InvokeRepeating("Fire", 0f, 2f);
@@ -36,6 +38,8 @@ public class RedHeartsFire : MonoBehaviour
     private IEnumerator FireRedHearts()
     {
         isShooting = true;
+
+        SoundManager.Instance.PlaySound(redShootEffect);
 
         float angleStep = (endAngle - startAngle) / bulletsAmount;
         float angle = startAngle;

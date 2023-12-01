@@ -11,6 +11,8 @@ public class YellowHeartsFire : MonoBehaviour
 
     public bool isShooting = false;
 
+    [SerializeField] private AudioClip yellowShootEffect;
+
     void Start()
     {
         sisterBoss = GetComponent<SisterBoss>();
@@ -31,6 +33,8 @@ public class YellowHeartsFire : MonoBehaviour
     private IEnumerator FireYellowHearts()
     {
         isShooting = true;
+
+        SoundManager.Instance.PlaySound(yellowShootEffect);
 
         for (int i = 0; i < 50; i++)
         {

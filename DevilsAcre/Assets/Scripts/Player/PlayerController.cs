@@ -234,7 +234,7 @@ public class PlayerController : MonoBehaviour
             allowLevelMenu = false;
         }
 
-        if (Score.scoreValue >= 1290 && allowVictoryMenu == true) //1090 default
+        if (Score.scoreValue >= 2000 && allowVictoryMenu == true) //1090 default
         {
             // Invoke the Victory event
             OnVictory?.Invoke();
