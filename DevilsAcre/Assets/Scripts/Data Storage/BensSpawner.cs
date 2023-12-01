@@ -40,6 +40,7 @@ public class BensSpawner : MonoBehaviour
 
     private void Update()
     {
+        // Wave Cool Down
         if(wavePaused && waveData[currentWave].isKeyWave)
         {
             StartCoroutine(waveCoolDown(keyWaveWaitTime));
@@ -48,7 +49,9 @@ public class BensSpawner : MonoBehaviour
         {
             StartCoroutine(waveCoolDown(waveWaitTime));
         }
-        if (!wavePaused)
+
+        // Wave Spawning
+        if (!wavePaused) 
         {
             if(loadZone != null)
             {
@@ -56,10 +59,14 @@ public class BensSpawner : MonoBehaviour
             }
             Spawner();  
         }
+
+        // Key activate
         if (waveData[currentWave].isKeyWave && key != null)
         {
             key.SetActive(true);
         }
+
+        // Zone Loading
         if(currentWave+1 > waveData.Length - 1 && loadZone != null)
         {
             loadZone.SetActive(true) ;
