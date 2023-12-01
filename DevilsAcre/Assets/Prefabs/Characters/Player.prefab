@@ -327,7 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   weapon: {fileID: 482034276125020835}
-  offset: -180
+  offset: -183
   rb: {fileID: 5228063551813382762}
   shotPoint: {fileID: 5786654219464240884}
   projectile: {fileID: 229954896343132167, guid: 9712f2c21c0c74e418936e4204080b1d, type: 3}
