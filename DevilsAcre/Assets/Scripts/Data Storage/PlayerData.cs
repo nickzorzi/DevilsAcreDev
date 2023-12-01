@@ -30,7 +30,7 @@ public class PlayerData : MonoBehaviour
         }
         else
         {
-            Debug.Log("Duplicate AudioManager Detected -- Deleting Duplicate...");
+            Debug.Log("Duplicate PlayerData Detected -- Deleting Duplicate...");
             Destroy(gameObject);
         }
         #endregion
