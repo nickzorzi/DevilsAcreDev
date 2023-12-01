@@ -90,6 +90,8 @@ public class UIManager : MonoBehaviour
         Score.scoreValue = 0;
         Coin.coinValue = 0;
 
+        PlayerData.Instance.lastWave = 0;
+
         Projectile.damage = 1;
         playerController.damage = 1;
         playerController.speed = 5f;
@@ -198,39 +200,54 @@ public class UIManager : MonoBehaviour
 
     public void PlayerAxe()
     {
-        if (Coin.coinValue >= 15)
+        if (Coin.coinValue >= 14)
         {
             if (playerController != null)
             {
                 axeUI.SetActive(true);
                 playerController.canAxe = true;
-                Coin.coinValue -= 15;
+                Coin.coinValue -= 14;
+                Debug.Log("Bought Axe");
             }
+        }
+        else
+        {
+            Debug.Log("Not Enough Money");
         }
     }
 
     public void PlayerMolotov()
     {
-        if (Coin.coinValue >= 15)
+        if (Coin.coinValue >= 14)
         {
             if (playerController != null)
             {
                 molotovUI.SetActive(true);
                 playerController.canMolotov = true;
-                Coin.coinValue -= 15;
+                Coin.coinValue -= 14;
+                Debug.Log("Bought Molotov");
             }
+        }
+        else
+        {
+            Debug.Log("Not Enough Money");
         }
     }
 
     public void PlayerHeal()
     {
-        if (Coin.coinValue >= 15)
+        if (Coin.coinValue >= 12)
         {
             if (playerController != null)
             {
                 playerController.currentHealth = 5;
-                Coin.coinValue -= 15;
+                Coin.coinValue -= 12;
+                Debug.Log("Bought Heal");
             }
+        }
+        else
+        {
+            Debug.Log("Not Enough Money");
         }
     }
 

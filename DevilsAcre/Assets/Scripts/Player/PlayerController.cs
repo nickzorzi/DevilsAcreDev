@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public Transform shotPoint;
     public GameObject projectile;
 
+    public bool noShooting = false;
+
     public float timeBetweenShots;
     private float nextShotTime;
 
@@ -174,45 +176,48 @@ public class PlayerController : MonoBehaviour
         float angle = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg;
         weapon.rotation = Quaternion.Euler(0f, 0f, angle + offset);
 
-        // Shooting
-        if (Input.GetMouseButtonDown(0))
+        if (!noShooting)
         {
-            if (Time.time > nextShotTime)
+            // Shooting
+            if (Input.GetMouseButtonDown(0))
             {
-                // gunshotSoundEffect.Play();
-                SoundManager.Instance.PlaySound(gunshotSoundEffect);
-
-                nextShotTime = Time.time + timeBetweenShots;
-                Instantiate(projectile, shotPoint.position, shotPoint.rotation);
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (!canAxe)
-            {
-                
-            }
-            else if (canAxe)
-            {
-                if (Time.time > axeShotTime)
+                if (Time.time > nextShotTime)
                 {
-                    SoundManager.Instance.PlaySound(throwSoundEffect);
-                    Instantiate(playerAxe, shotPoint.position, shotPoint.rotation);
+                    // gunshotSoundEffect.Play();
+                    SoundManager.Instance.PlaySound(gunshotSoundEffect);
+
+                    nextShotTime = Time.time + timeBetweenShots;
+                    Instantiate(projectile, shotPoint.position, shotPoint.rotation);
                 }
             }
-        }
-        else if (Input.GetKeyDown(KeyCode.F))
-        {
-            if (!canMolotov)
+            else if (Input.GetKeyDown(KeyCode.E))
             {
-                
-            }
-            else if (canMolotov)
-            {
-                if (Time.time > molotovShotTime)
+                if (!canAxe)
                 {
-                    SoundManager.Instance.PlaySound(throwSoundEffect);
-                    Instantiate(playerMolotov, shotPoint.position, shotPoint.rotation);
+                    
+                }
+                else if (canAxe)
+                {
+                    if (Time.time > axeShotTime)
+                    {
+                        SoundManager.Instance.PlaySound(throwSoundEffect);
+                        Instantiate(playerAxe, shotPoint.position, shotPoint.rotation);
+                    }
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (!canMolotov)
+                {
+                    
+                }
+                else if (canMolotov)
+                {
+                    if (Time.time > molotovShotTime)
+                    {
+                        SoundManager.Instance.PlaySound(throwSoundEffect);
+                        Instantiate(playerMolotov, shotPoint.position, shotPoint.rotation);
+                    }
                 }
             }
         }

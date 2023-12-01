@@ -9449,7 +9449,7 @@ MonoBehaviour:
       spawnSpeed: 5
       spawnCoolDown: 0
   - name: Wave 6
-    isKeyWave: 1
+    isKeyWave: 0
     Enemies:
     - EnemyPrefab: {fileID: 1518571484595856347, guid: fc71c8dca17b3224aba3e69eaa798fbc, type: 3}
       spawnCount: 3
@@ -9464,7 +9464,7 @@ MonoBehaviour:
       spawnSpeed: 5
       spawnCoolDown: 0
   - name: Wave 7
-    isKeyWave: 0
+    isKeyWave: 1
     Enemies:
     - EnemyPrefab: {fileID: 1518571484595856347, guid: fc71c8dca17b3224aba3e69eaa798fbc, type: 3}
       spawnCount: 4
