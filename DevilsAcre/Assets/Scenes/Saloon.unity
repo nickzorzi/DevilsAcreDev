@@ -9374,15 +9374,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e507b99c1676e4785eb735b671ccca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveCountText: {fileID: 0}
-  key: {fileID: 0}
+  waveCountText: {fileID: 574642958}
+  key: {fileID: 671385613}
+  loadZone: {fileID: 1620953210}
   spawnPoints:
   - {fileID: 1326330618}
   - {fileID: 1774835322}
   - {fileID: 1795933926}
+  waveWaitTime: 3
+  keyWaveWaitTime: 6
   waveData:
   - name: Wave 1
-    isPauseWave: 0
+    isKeyWave: 0
     Enemies:
     - EnemyPrefab: {fileID: 1518571484595856347, guid: fc71c8dca17b3224aba3e69eaa798fbc, type: 3}
       spawnCount: 2
@@ -9393,7 +9396,7 @@ MonoBehaviour:
       spawnSpeed: 4
       spawnCoolDown: 0
   - name: Wave 2
-    isPauseWave: 0
+    isKeyWave: 1
     Enemies:
     - EnemyPrefab: {fileID: 1518571484595856347, guid: fc71c8dca17b3224aba3e69eaa798fbc, type: 3}
       spawnCount: 1
@@ -9408,7 +9411,7 @@ MonoBehaviour:
       spawnSpeed: 10
       spawnCoolDown: 0
   - name: Wave 3
-    isPauseWave: 0
+    isKeyWave: 0
     Enemies:
     - EnemyPrefab: {fileID: 1518571484595856347, guid: fc71c8dca17b3224aba3e69eaa798fbc, type: 3}
       spawnCount: 5
@@ -9418,6 +9421,7 @@ MonoBehaviour:
       spawnCount: 10
       spawnSpeed: 3.5
       spawnCoolDown: 0
+  aliveEnemies: []
 --- !u!4 &1416040410
 Transform:
   m_ObjectHideFlags: 0
@@ -12201,7 +12205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4435911920865676691, guid: 383a47d6ed0020e4b841c2f0c2041ca5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6871865628161736589, guid: 383a47d6ed0020e4b841c2f0c2041ca5, type: 3}
       propertyPath: loadScene
@@ -12213,7 +12217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7450659107670291317, guid: 383a47d6ed0020e4b841c2f0c2041ca5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.779
+      value: -4.727
       objectReference: {fileID: 0}
     - target: {fileID: 7450659107670291317, guid: 383a47d6ed0020e4b841c2f0c2041ca5, type: 3}
       propertyPath: m_LocalPosition.z

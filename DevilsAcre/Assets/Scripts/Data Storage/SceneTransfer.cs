@@ -19,14 +19,19 @@ public class SceneTransfer : MonoBehaviour
     }
 
     [SerializeField] private SceneNames loadScene;
-
+    [SerializeField] private bool updatePlayerHealth = true;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            if(updatePlayerHealth)
+            {
+                var temp = collision.GetComponent<PlayerController>();
+                PlayerData.Instance.currentHealth = temp.currentHealth;
+            }
+
             PlayerData.Instance.lastScene = SceneManager.GetActiveScene().name;
-            // Debug.Log(loadScene.ToString());
             SceneManager.LoadScene(loadScene.ToString());
         }
     }

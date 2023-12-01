@@ -89,7 +89,12 @@ public class PlayerController : MonoBehaviour
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth((maxHealth));
-
+        
+        if(PlayerData.Instance.currentHealth > 0)
+        {
+            currentHealth = PlayerData.Instance.currentHealth;
+            healthBar.SetHealth((currentHealth));
+        }
         canDash = false;
 
         render = GetComponent<SpriteRenderer>();

@@ -13,6 +13,7 @@ public class PlayerData : MonoBehaviour
 
     [Header("Player Info")]
     public int currentHealth;
+    public bool hasKey = false;
     [Space(10)]
     [Header("Other Data")]
     public string lastScene;
