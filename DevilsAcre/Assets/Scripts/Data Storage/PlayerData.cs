@@ -14,6 +14,11 @@ public class PlayerData : MonoBehaviour
     [Header("Player Info")]
     public int currentHealth;
     public bool hasKey = false;
+    public bool canDash;
+    public bool canAxe;
+    public bool canMolotov;
+    public bool canDoubleEdged;
+    public bool canQuickfire;
     [Space(10)]
     [Header("Other Data")]
     public string lastScene;
@@ -36,7 +41,15 @@ public class PlayerData : MonoBehaviour
         #endregion
     }
 
-
+    public void ResetBools()
+    {
+        hasKey = false;
+        canDash = false;
+        canAxe = false;
+        canMolotov = false;
+        canDoubleEdged = false;
+        canQuickfire = false;
+    }
 
 
 }

@@ -36,6 +36,27 @@ public class UIManager : MonoBehaviour
         victorySound.ignoreListenerPause = true;
         levelUpSound.ignoreListenerPause = true;
         gameOverSound.ignoreListenerPause = true;
+
+        if(PlayerData.Instance.canDash)
+        {
+            CurseRapidSprint();
+        }
+        else if(PlayerData.Instance.canDoubleEdged)
+        {
+            CurseDoubleEdged();
+        }
+        else if(PlayerData.Instance.canQuickfire)
+        {
+            CurseQuickfire();
+        }
+        else if(PlayerData.Instance.canAxe)
+        {
+            PlayerAxe();
+        }
+        else if(PlayerData.Instance.canMolotov)
+        {
+            PlayerMolotov();
+        }
     }
     
     private void OnEnable()
@@ -81,7 +102,7 @@ public class UIManager : MonoBehaviour
         victoryMenu.SetActive(true);
         AudioListener.pause = true;
 
-        victorySound.Play();      
+        victorySound.Play();   
     }
 
     public void RestartLevel()
@@ -92,6 +113,7 @@ public class UIManager : MonoBehaviour
 
         PlayerData.Instance.lastWave = 0;
         PlayerData.Instance.hasKey = false;
+        PlayerData.Instance.ResetBools();
 
         Projectile.damage = 1;
         playerController.damage = 1;
@@ -123,6 +145,9 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         AudioListener.pause = false;
+
+        PlayerData.Instance.lastWave = 0;
+        PlayerData.Instance.hasKey = false;
     }
 
     public void GoToCredits()
@@ -147,6 +172,8 @@ public class UIManager : MonoBehaviour
             DisableLevelUpMenu();
             Debug.Log("Curse of Double Edged Selected");
 
+            PlayerData.Instance.canDoubleEdged = true;
+
             shoot1xUI.SetActive(true);
             shoot2xUI.SetActive(false);
             shoot125xUI.SetActive(false);
@@ -165,6 +192,8 @@ public class UIManager : MonoBehaviour
 
             DisableLevelUpMenu();
             Debug.Log("Curse of Quickfire Selected");
+
+            PlayerData.Instance.canQuickfire = true;
 
             shoot1xUI.SetActive(false);
             shoot2xUI.SetActive(true);
@@ -189,6 +218,7 @@ public class UIManager : MonoBehaviour
             Debug.Log("Curse of Rapid Sprint Selected");
 
             playerController.canDash = true;
+            PlayerData.Instance.canDash = true;
 
             shoot1xUI.SetActive(false);
             shoot2xUI.SetActive(false);
@@ -201,38 +231,46 @@ public class UIManager : MonoBehaviour
 
     public void PlayerAxe()
     {
-        if (Coin.coinValue >= 14)
+        if (Coin.coinValue >= 14 && !playerController.canAxe)
         {
             if (playerController != null)
             {
                 axeUI.SetActive(true);
                 playerController.canAxe = true;
+                PlayerData.Instance.canAxe = true;
                 Coin.coinValue -= 14;
                 Debug.Log("Bought Axe");
             }
         }
-        else
+        else if(PlayerData.Instance.canAxe)
         {
-            Debug.Log("Not Enough Money");
+            axeUI.SetActive(true);
+            playerController.canAxe = true;
+            return;
         }
+            Debug.Log("Not Enough Money");
     }
 
     public void PlayerMolotov()
     {
-        if (Coin.coinValue >= 14)
+        if (Coin.coinValue >= 14 && !playerController.canMolotov)
         {
             if (playerController != null)
             {
                 molotovUI.SetActive(true);
                 playerController.canMolotov = true;
+                PlayerData.Instance.canMolotov = true;
                 Coin.coinValue -= 14;
                 Debug.Log("Bought Molotov");
             }
         }
-        else
+        else if(PlayerData.Instance.canMolotov)
         {
-            Debug.Log("Not Enough Money");
+            molotovUI.SetActive(true);
+            playerController.canMolotov = true;
+            return;
         }
+            Debug.Log("Not Enough Money");
     }
 
     public void PlayerHeal()
