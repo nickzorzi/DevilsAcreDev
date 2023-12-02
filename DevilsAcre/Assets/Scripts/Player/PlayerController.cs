@@ -58,14 +58,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip dashSoundEffect;
 
     [Header("Axe")]
-    private float axeShotTime;
     public GameObject playerAxe;
     public bool canAxe = false;
+    public bool axeFire = true;
 
     [Header("Molotov")]
-    private float molotovShotTime;
     public GameObject playerMolotov;
     public bool canMolotov = false;
+    public bool molotovFire = true;
 
     [Header("Dash Settings")]
     public float dashSpeed;
@@ -86,8 +86,6 @@ public class PlayerController : MonoBehaviour
         EnablePlayerMovement();
         
         nextShotTime = 0f; // Initialize nextShotTime
-        molotovShotTime = 8f;
-        axeShotTime = 10f;
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth((maxHealth));
@@ -199,10 +197,9 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (canAxe)
                 {
-                    if (Time.time > axeShotTime)
+                    if (axeFire)
                     {
-                        SoundManager.Instance.PlaySound(throwSoundEffect);
-                        Instantiate(playerAxe, shotPoint.position, shotPoint.rotation);
+                        StartCoroutine(Axe());
                     }
                 }
             }
@@ -214,10 +211,9 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (canMolotov)
                 {
-                    if (Time.time > molotovShotTime)
+                    if (molotovFire)
                     {
-                        SoundManager.Instance.PlaySound(throwSoundEffect);
-                        Instantiate(playerMolotov, shotPoint.position, shotPoint.rotation);
+                        StartCoroutine(Molotov());
                     }
                 }
             }
@@ -300,6 +296,24 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
         isInv = false;
+    }
+
+    private IEnumerator Axe()
+    {
+        axeFire = false;
+        SoundManager.Instance.PlaySound(throwSoundEffect);
+        Instantiate(playerAxe, shotPoint.position, shotPoint.rotation);
+        yield return new WaitForSeconds(10);
+        axeFire = true;
+    }
+
+    private IEnumerator Molotov()
+    {
+        molotovFire = false;
+        SoundManager.Instance.PlaySound(throwSoundEffect);
+        Instantiate(playerMolotov, shotPoint.position, shotPoint.rotation);
+        yield return new WaitForSeconds(8);
+        molotovFire = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)

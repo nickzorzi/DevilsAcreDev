@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7755321849296462216}
   - component: {fileID: 3663293084305698516}
   - component: {fileID: 2738103130967742901}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PlayerAxe
-  m_TagString: Untagged
+  m_TagString: PlayerAxe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,6 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb8896886d7136459c9c8dcf46aeb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 6
   rb: {fileID: 0}
   impactEffect: {fileID: 4512155590976432275, guid: a65545e2633c5fe4b80b23f51f837c33, type: 3}

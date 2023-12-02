@@ -112,7 +112,7 @@ public class ShotgunBandit : MonoBehaviour
 
      void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Projectile" || other.tag == "MolotovSpread")
+        if (other.tag == "Projectile" || other.tag == "MolotovSpread" || other.tag == "PlayerAxe" || other.tag == "MolotovP")
         {
             Debug.Log("Collision with Projectile detected!");
             Debug.Log("Collided with: " + other.gameObject.name);

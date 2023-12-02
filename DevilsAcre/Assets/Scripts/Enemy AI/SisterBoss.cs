@@ -89,7 +89,7 @@ public class SisterBoss : MonoBehaviour
         }
         if (transformationFinished)
         {
-            if (other.tag == "Projectile" || other.tag == "MolotovSpread" && canFireRed == true)
+            if (other.tag == "Projectile" || other.tag == "MolotovSpread" || other.tag == "PlayerAxe" || other.tag == "MolotovP" && canFireRed == true)
             {
                 Debug.Log("Collision with Projectile detected!");
                 Debug.Log("Collided with: " + other.gameObject.name);
@@ -103,7 +103,7 @@ public class SisterBoss : MonoBehaviour
 
                 SoundManager.Instance.PlaySound(enemyHitSoundEffect);
             } 
-            else if ((other.tag == "Projectile" || other.tag == "MolotovSpread" && canFireYellow == true))
+            else if ((other.tag == "Projectile" || other.tag == "MolotovSpread" || other.tag == "PlayerAxe" || other.tag == "MolotovP" && canFireYellow == true))
             {
                 Debug.Log("Collision with Projectile detected!");
                 Debug.Log("Collided with: " + other.gameObject.name);
