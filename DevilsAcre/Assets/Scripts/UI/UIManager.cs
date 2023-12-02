@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+
+
     public GameObject gameOverMenu;
     public GameObject levelUpMenu;
     public GameObject victoryMenu;
@@ -75,6 +77,7 @@ public class UIManager : MonoBehaviour
 
     public void EnableGameOverMenu()
     {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         gameOverMenu.SetActive(true);
         AudioListener.pause = true;
 
