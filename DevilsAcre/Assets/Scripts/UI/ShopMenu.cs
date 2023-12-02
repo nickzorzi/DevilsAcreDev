@@ -5,8 +5,10 @@ using UnityEngine;
 public class ShopMenu : MonoBehaviour
 {
     public static bool ShopIsOpen = false;
+    public static bool inRange = false;
 
     public GameObject shopMenuUI;
+    public GameObject shopNotiUI;
 
     [SerializeField] private AudioSource shopOpenSound;
     [SerializeField] private AudioSource shopCloseSound;
@@ -18,16 +20,41 @@ public class ShopMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (inRange)
         {
-            if (ShopIsOpen)
+            shopNotiUI.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.R))
             {
-                CloseShop();
+                if (ShopIsOpen)
+                {
+                    CloseShop();
+                }
+                else
+                {
+                    OpenShop();
+                }
             }
-            else
-            {
-                OpenShop();
-            }
+        }
+        if (!inRange)
+        {
+            shopNotiUI.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            inRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            inRange = false;
         }
     }
 
@@ -35,7 +62,7 @@ public class ShopMenu : MonoBehaviour
     {
         shopMenuUI.SetActive(false);
         ShopIsOpen = false;
-
+        Time.timeScale = 1f;
         shopCloseSound.Play();
     }
 
@@ -43,7 +70,7 @@ public class ShopMenu : MonoBehaviour
     {
         shopMenuUI.SetActive(true);
         ShopIsOpen = true;
-
+        Time.timeScale = 0f;
         shopOpenSound.Play();
     }
 }
