@@ -40,6 +40,10 @@ public class BensSpawner : MonoBehaviour
 
     private void Update()
     {
+        if(currentWave >= waveData.Length)
+        {
+            return;
+        }
         // Wave Cool Down
         if(wavePaused && waveData[currentWave].isKeyWave)
         {
@@ -101,7 +105,7 @@ public class BensSpawner : MonoBehaviour
             }
 
         }
-        if (allCleared && aliveEnemies.Count == 0 && currentWave < waveData.Length - 1)
+        if (allCleared && aliveEnemies.Count == 0 && currentWave < waveData.Length)
         {
             Debug.Log("Next Wave");
             currentWave++;

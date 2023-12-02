@@ -86,7 +86,7 @@ public class UIManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Tutorial");
         Score.scoreValue = 0;
         Coin.coinValue = 0;
 
@@ -236,12 +236,14 @@ public class UIManager : MonoBehaviour
 
     public void PlayerHeal()
     {
-        if (Coin.coinValue >= 12)
+        if (Coin.coinValue >= 3 && playerController.currentHealth < playerController.maxHealth)
         {
             if (playerController != null)
             {
-                playerController.currentHealth = 5;
-                Coin.coinValue -= 12;
+                playerController.currentHealth ++;
+                playerController.healthBar.SetHealth(playerController.currentHealth);
+
+                Coin.coinValue -= 3;
                 Debug.Log("Bought Heal");
             }
         }

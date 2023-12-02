@@ -57,7 +57,7 @@ public class RedHeartsFire : MonoBehaviour
             bul.transform.rotation = transform.rotation;
             bul.SetActive(true);
             bul.GetComponent<RedHearts>().SetMoveDirection(bulDir);
-
+            /*bul.transform.right = bulMoveVector;*/
             angle += angleStep;
         }
 
