@@ -1331,6 +1331,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   hasKey: 0
+  canDash: 0
+  canAxe: 0
+  canMolotov: 0
+  canDoubleEdged: 0
+  canQuickfire: 0
   lastScene: 2
   lastWave: 0
 --- !u!1 &8978946142223855595
@@ -1475,7 +1480,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7256899676002316318}
-  - component: {fileID: 3176824152872500357}
+  - component: {fileID: 2094307610325042541}
   m_Layer: 0
   m_Name: DontDestroy
   m_TagString: Untagged
@@ -1501,7 +1506,7 @@ Transform:
   - {fileID: 2073016319614527767}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3176824152872500357
+--- !u!114 &2094307610325042541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

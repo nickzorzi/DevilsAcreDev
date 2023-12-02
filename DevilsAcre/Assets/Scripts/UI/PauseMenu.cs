@@ -10,9 +10,14 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] private AudioSource pauseSound;
     [SerializeField] private AudioSource unpauseSound;
-
+    [Space(15)]
+    [SerializeField] private Texture2D customCursor;
+    private Vector2 cursorOffset;
     void Start()
     {
+        // Crosshair
+        cursorOffset = new Vector2(customCursor.width / 2, customCursor.height / 2);
+        Cursor.SetCursor(customCursor, cursorOffset, CursorMode.Auto);
         pauseSound.ignoreListenerPause = true;
         unpauseSound.ignoreListenerPause = true;
     }
@@ -34,6 +39,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        Cursor.SetCursor(customCursor, cursorOffset, CursorMode.Auto);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -45,6 +51,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
