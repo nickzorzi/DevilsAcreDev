@@ -412,6 +412,7 @@ MonoBehaviour:
   molotovUI: {fileID: 3754324651311663467}
   projectile: {fileID: 0}
   playerController: {fileID: 0}
+  coinManager: {fileID: 0}
   victorySound: {fileID: 3970082953395404584}
   levelUpSound: {fileID: 8232079650771404971}
   gameOverSound: {fileID: 2069587628732240663}
@@ -6935,7 +6936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5134898259526599592
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7855,10 +7856,10 @@ RectTransform:
   - {fileID: 5097139772576316776}
   m_Father: {fileID: 2263757461097912963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190, y: -95}
-  m_SizeDelta: {x: 350, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1775714012678328614
 CanvasRenderer:
@@ -9288,10 +9289,10 @@ RectTransform:
   - {fileID: 6041141603457350435}
   m_Father: {fileID: 2263757461097912963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190, y: -235}
-  m_SizeDelta: {x: 350, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &706974739261655944
 CanvasRenderer:
@@ -9433,10 +9434,10 @@ RectTransform:
   - {fileID: 7929016005591852498}
   m_Father: {fileID: 2263757461097912963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190, y: -305}
-  m_SizeDelta: {x: 350, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2850228655196993453
 CanvasRenderer:
@@ -10239,10 +10240,10 @@ RectTransform:
   - {fileID: 5096867545299814853}
   m_Father: {fileID: 2263757461097912963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190, y: -165}
-  m_SizeDelta: {x: 350, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &462548793077814322
 CanvasRenderer:

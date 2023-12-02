@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
             healthBar.SetHealth((currentHealth));
         }
 
-        canDash = false;
+        
 
         render = GetComponent<SpriteRenderer>();
 

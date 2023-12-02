@@ -41,19 +41,19 @@ public class UIManager : MonoBehaviour
         {
             CurseRapidSprint();
         }
-        else if(PlayerData.Instance.canDoubleEdged)
+        if(PlayerData.Instance.canDoubleEdged)
         {
             CurseDoubleEdged();
         }
-        else if(PlayerData.Instance.canQuickfire)
+        if(PlayerData.Instance.canQuickfire)
         {
             CurseQuickfire();
         }
-        else if(PlayerData.Instance.canAxe)
+        if(PlayerData.Instance.canAxe)
         {
             PlayerAxe();
         }
-        else if(PlayerData.Instance.canMolotov)
+        if(PlayerData.Instance.canMolotov)
         {
             PlayerMolotov();
         }
@@ -148,6 +148,7 @@ public class UIManager : MonoBehaviour
 
         PlayerData.Instance.lastWave = 0;
         PlayerData.Instance.hasKey = false;
+        PlayerData.Instance.ResetBools();
     }
 
     public void GoToCredits()
@@ -246,6 +247,7 @@ public class UIManager : MonoBehaviour
         {
             axeUI.SetActive(true);
             playerController.canAxe = true;
+            Debug.Log("Data Successfully Transfered");
             return;
         }
             Debug.Log("Not Enough Money");
@@ -268,6 +270,7 @@ public class UIManager : MonoBehaviour
         {
             molotovUI.SetActive(true);
             playerController.canMolotov = true;
+            Debug.Log("Data Successfully Transfered");
             return;
         }
             Debug.Log("Not Enough Money");
