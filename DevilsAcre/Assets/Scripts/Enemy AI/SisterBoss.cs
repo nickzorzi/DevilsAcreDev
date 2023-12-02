@@ -146,19 +146,10 @@ public class SisterBoss : MonoBehaviour
             Score.scoreValue += scoreValueOnDeath;
         }
 
-        if (health <= 35)
-        {
-            canFireRed = false;
-            canFireYellow = true;
-        }
-        else if (health <= 25)
+        if (health <=5)
         {
             canFireRed = true;
-            canFireYellow = false;
-            animator.SetTrigger("Phase2");
-
-            SoundManager.Instance.PlaySound(phase2Effect);
-            // canRedCross = true;
+            canFireYellow = true;
         }
         else if (health <= 15)
         {
@@ -169,9 +160,18 @@ public class SisterBoss : MonoBehaviour
             SoundManager.Instance.PlaySound(phase3Effect);
             // canYellowCross = true;
         }
-        else if (health <=5)
+        else if (health <= 25)
         {
             canFireRed = true;
+            canFireYellow = false;
+            animator.SetTrigger("Phase2");
+
+            SoundManager.Instance.PlaySound(phase2Effect);
+            // canRedCross = true;
+        }
+        else if (health <= 35)
+        {
+            canFireRed = false;
             canFireYellow = true;
         }
     }
