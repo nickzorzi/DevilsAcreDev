@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueDisplay : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class DialogueDisplay : MonoBehaviour
     public float delay = 0.1f;
 
     [SerializeField] private TextMeshProUGUI DisplayText;
+    [SerializeField] private TextMeshProUGUI NameText;
+    [SerializeField] private GameObject characterIcon;
     [SerializeField] private GameObject DialogueUI;
     
     private DialogueEntry currentEntry;
@@ -41,6 +44,7 @@ public class DialogueDisplay : MonoBehaviour
         currentEntry = entry;
         currentlyReading = 0;
         currentText = "";
+        checkForImageAndName();
         StartCoroutine(ShowText());
     }
     
@@ -53,9 +57,9 @@ public class DialogueDisplay : MonoBehaviour
     {
         textIsRunning = true;
         speed = delay;
-        for(int i = 0; i < currentEntry.entries[currentlyReading].Length+1; i++)
+        for(int i = 0; i < currentEntry.entries[currentlyReading].description.Length+1; i++)
         {
-            currentText = currentEntry.entries[currentlyReading].Substring(0, i);
+            currentText = currentEntry.entries[currentlyReading].description.Substring(0, i);
             DisplayText.text = currentText;
             yield return new WaitForSeconds(speed);
 
@@ -79,6 +83,29 @@ public class DialogueDisplay : MonoBehaviour
             CloseDialogue();
             return;
         }
+        checkForImageAndName();
         StartCoroutine(ShowText());
+    }
+
+    private void checkForImageAndName()
+    {
+        if(currentEntry.entries[currentlyReading].name != "")
+        {
+            NameText.text = currentEntry.entries[currentlyReading].name;
+        }
+        else
+        {
+            NameText.text = "Narrator";
+        }
+        if(currentEntry.entries[currentlyReading].icon != null)
+        {
+            characterIcon.SetActive(true);
+            characterIcon.GetComponent<RawImage>().texture = currentEntry.entries[currentlyReading].icon;
+        }
+        else
+        {
+            characterIcon.SetActive(false);
+        }
+        
     }
 }

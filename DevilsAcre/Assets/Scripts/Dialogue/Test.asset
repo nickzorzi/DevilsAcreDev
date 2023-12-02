@@ -13,14 +13,12 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   entries:
-  - 'asdasd
-
-    asdasd
-
-    asdasd
-
-    asd
-
-'
-  - Next Item
-  - Hi thier
+  - name: Barrel
+    icon: {fileID: 2800000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
+    description: Hello I am Barrel How are you
+  - name: Player
+    icon: {fileID: 2800000, guid: 8c50d90fbb711f14787d3f63cbb6d222, type: 3}
+    description: I will Destroy you
+  - name: 
+    icon: {fileID: 0}
+    description: The Player Ended up Destroying the Barrel
