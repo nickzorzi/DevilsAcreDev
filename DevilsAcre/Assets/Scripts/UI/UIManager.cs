@@ -91,6 +91,7 @@ public class UIManager : MonoBehaviour
         Coin.coinValue = 0;
 
         PlayerData.Instance.lastWave = 0;
+        PlayerData.Instance.hasKey = false;
 
         Projectile.damage = 1;
         playerController.damage = 1;
