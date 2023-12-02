@@ -6647,6 +6647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main UI
       objectReference: {fileID: 0}
+    - target: {fileID: 465037888262770638, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1624105928835132919, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
       propertyPath: playerController
       value: 
@@ -6756,6 +6760,10 @@ PrefabInstance:
       value: -95
       objectReference: {fileID: 0}
     - target: {fileID: 3754324651311663467, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871910716746070522, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -9960,8 +9968,8 @@ MonoBehaviour:
   - {fileID: 1326330618}
   - {fileID: 1774835322}
   - {fileID: 1795933926}
-  waveWaitTime: 3
-  keyWaveWaitTime: 6
+  waveWaitTime: 4
+  keyWaveWaitTime: 8
   waveData:
   - name: Wave 1
     isKeyWave: 0
