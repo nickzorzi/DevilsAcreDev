@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1f160fb69f6029d4f9d2fc6b0b95025f
+guid: 004e06cf9bdf2e64e9694459a5b86549
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,97 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icons_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac561a3ddd8f69043bfda14f9212f0e4
-      internalID: -1553697399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80011cdc52cbe7944bdd38d5d3aea756
-      internalID: -1063734652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0bb50155909f40b449297655d1bf0f07
-      internalID: -366958752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_3
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89ce3ed7e8511ad45bc111e1ae1a403f
-      internalID: -470892571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_4
+      name: Wild Western Icons_0
       rect:
         serializedVersion: 2
         x: 32
-        y: 16
-        width: 16
-        height: 16
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,71 +137,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5182d0a3b6ab2f444a4cdf45103a969b
-      internalID: 643634207
+      spriteID: 97c673dd9156def4fa2691836cbf1556
+      internalID: 1091428993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_5
+      name: Wild Western Icons_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 2
-        width: 12
-        height: 12
+        x: 0
+        y: 0
+        width: 96
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 32, y: 0, z: 32, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c692392a9ecb4734e88623c95917983b
+      internalID: 948783110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wild Western Icons_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 83
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99a89ee5e9964ef45a659a306ce2b093
-      internalID: 882559540
+      spriteID: 7cf94cc6b8b5dea47bab2f2a748ad571
+      internalID: 1886187004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_6
+      name: Wild Western Icons_3
       rect:
         serializedVersion: 2
-        x: 50
-        y: 4
-        width: 12
-        height: 8
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 6, y: 0, z: 0, w: 0}
+        x: 96
+        y: 67
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 11, y: 13, z: 11, w: 12}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f202aef7bf64f3b4b87633fd002b9a21
-      internalID: -1584614505
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_7
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 4
-        width: 16
-        height: 8
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 4, y: 0, z: 4, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca6e74c8fdc83d1449c0954bc8adc840
-      internalID: 207995131
+      spriteID: 8b903b7c552abeb4d846de32db9eade6
+      internalID: 1718249
       vertices: []
       indices: 
       edges: []
@@ -301,14 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Icons_0: -1553697399
-      Icons_1: -1063734652
-      Icons_2: -366958752
-      Icons_3: -470892571
-      Icons_4: 643634207
-      Icons_5: 882559540
-      Icons_6: -1584614505
-      Icons_7: 207995131
+      Wild Western Icons_0: 1091428993
+      Wild Western Icons_1: 948783110
+      Wild Western Icons_2: 1886187004
+      Wild Western Icons_3: 1718249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

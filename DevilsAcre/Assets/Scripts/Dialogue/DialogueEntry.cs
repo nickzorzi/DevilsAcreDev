@@ -16,7 +16,7 @@ public class DialogueEntry : ScriptableObject
     public struct entryData
     {
         public string name;
-        public Texture icon;
+        public Sprite icon;
         [TextArea(2, 6)]
         public string description;
     }

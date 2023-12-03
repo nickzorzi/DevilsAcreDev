@@ -100,7 +100,7 @@ public class DialogueDisplay : MonoBehaviour
         if(currentEntry.entries[currentlyReading].icon != null)
         {
             characterIcon.SetActive(true);
-            characterIcon.GetComponent<RawImage>().texture = currentEntry.entries[currentlyReading].icon;
+            characterIcon.GetComponent<Image>().sprite = currentEntry.entries[currentlyReading].icon;
         }
         else
         {
