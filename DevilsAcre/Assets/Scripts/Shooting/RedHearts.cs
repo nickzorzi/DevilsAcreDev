@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RedHearts : MonoBehaviour
 {
-    private Vector2 moveDirection;
+    private Vector2 moveDirection = -Vector2.up;
     private float moveSpeed;
 
     private void OnEnable()

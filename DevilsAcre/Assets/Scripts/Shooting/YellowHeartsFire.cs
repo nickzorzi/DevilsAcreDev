@@ -38,18 +38,11 @@ public class YellowHeartsFire : MonoBehaviour
 
         for (int i = 0; i < 50; i++)
         {
-            float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
-            float bulDirY = transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180f);
-
-            Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
-            Vector2 bulDir = (bulMoveVector - transform.position).normalized;
-
             GameObject bul = BulletPoolYellow.bulletPoolInstance.GetBullet();
             bul.transform.position = transform.position;
             bul.transform.rotation = transform.rotation;
             bul.SetActive(true);
-            bul.GetComponent<YellowHearts>().SetMoveDirection(bulDir);
-
+            bul.transform.rotation = Quaternion.Euler(0, 0, angle);
             angle += 20f;
 
             yield return new WaitForSeconds(fireRate);

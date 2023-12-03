@@ -89,23 +89,29 @@ public class DialogueDisplay : MonoBehaviour
 
     private void checkForImageAndName()
     {
-        if(currentEntry.entries[currentlyReading].name != "")
+        if(NameText != null)
         {
-            NameText.text = currentEntry.entries[currentlyReading].name;
+            if(currentEntry.entries[currentlyReading].name != "")
+            {
+                NameText.text = currentEntry.entries[currentlyReading].name;
+            }
+            else
+            {
+                NameText.text = "Narrator";
+            }
         }
-        else
+
+        if(characterIcon != null)
         {
-            NameText.text = "Narrator";
-        }
-        if(currentEntry.entries[currentlyReading].icon != null)
-        {
-            characterIcon.SetActive(true);
-            characterIcon.GetComponent<Image>().sprite = currentEntry.entries[currentlyReading].icon;
-        }
-        else
-        {
-            characterIcon.SetActive(false);
-        }
-        
+            if(currentEntry.entries[currentlyReading].icon != null)
+            {
+                characterIcon.SetActive(true);
+                characterIcon.GetComponent<Image>().sprite = currentEntry.entries[currentlyReading].icon;
+            }
+            else
+            {
+                characterIcon.SetActive(false);
+            }
+        }     
     }
 }

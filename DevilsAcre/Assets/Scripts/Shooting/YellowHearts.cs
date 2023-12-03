@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class YellowHearts : MonoBehaviour
 {
-    private Vector2 moveDirection;
+    private Vector2 moveDirection = Vector2.down;
     private float moveSpeed;
 
     private void OnEnable()
