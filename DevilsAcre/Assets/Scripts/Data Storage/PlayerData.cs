@@ -43,6 +43,7 @@ public class PlayerData : MonoBehaviour
 
     public void ResetBools()
     {
+        currentHealth = 0;
         hasKey = false;
         canDash = false;
         canAxe = false;

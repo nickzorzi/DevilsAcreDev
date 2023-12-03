@@ -173,7 +173,7 @@ TextureImporter:
         width: 8
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
         width: 64
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 11, y: 13, z: 11, w: 12}
       outline: []
       physicsShape: []
@@ -202,6 +202,27 @@ TextureImporter:
       bones: []
       spriteID: 8b903b7c552abeb4d846de32db9eade6
       internalID: 1718249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wild Western Icons_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 19
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 16, y: 14, z: 14, w: 13}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4511dd4e5a7c50f4e944f9e6bd70895d
+      internalID: 221922700
       vertices: []
       indices: 
       edges: []
@@ -221,6 +242,7 @@ TextureImporter:
       Wild Western Icons_1: 948783110
       Wild Western Icons_2: 1886187004
       Wild Western Icons_3: 1718249
+      Wild Western Icons_4: 221922700
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
