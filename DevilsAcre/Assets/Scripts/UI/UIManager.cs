@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
 
-
+    [Header("Menu UI Objects")]
     public GameObject gameOverMenu;
     public GameObject levelUpMenu;
     public GameObject victoryMenu;
 
+    [Header("UI Objects")]
     public GameObject shoot1xUI;
     public GameObject shoot2xUI;
     public GameObject shoot125xUI;
@@ -18,17 +19,22 @@ public class UIManager : MonoBehaviour
     public GameObject axeUI;
     public GameObject molotovUI;
 
+    [Header("Player Items")]
     public Projectile projectile;
     public PlayerController playerController;
 
+    [Header("Player Objects")]
     private Score scoreManager;
     public Coin coinManager;
-
+    [Space(20)]
+    [Header("Audio Clips")]
     [SerializeField] private AudioClip victorySound;
     [SerializeField] private AudioClip levelUpSound;
     [SerializeField] private AudioClip gameOverSound;
     [SerializeField] private AudioClip selectSound;
-
+    [SerializeField] private AudioClip confirmSound;
+    [Header("Audio Source")]
+    [SerializeField] private AudioSource menuSounds;
     private void Start()
     {
         scoreManager = FindObjectOfType<Score>();
@@ -36,8 +42,12 @@ public class UIManager : MonoBehaviour
         playerController = FindObjectOfType<PlayerController>();
         projectile = FindObjectOfType<Projectile>();
 
+        menuSounds.volume = SoundManager.Instance.GetEffectVolume();
+        menuSounds.ignoreListenerPause = true;
 
-        if(PlayerData.Instance.canDash)
+
+        #region Update Data Between Scenes
+        if (PlayerData.Instance.canDash)
         {
             CurseRapidSprint();
         }
@@ -57,8 +67,25 @@ public class UIManager : MonoBehaviour
         {
             PlayerMolotov();
         }
+        #endregion
     }
-    
+
+    public void playEffect(AudioClip sound)
+    {
+        menuSounds.volume = SoundManager.Instance.GetEffectVolume();
+        menuSounds.mute = SoundManager.Instance.CheckForMute();
+        menuSounds.PlayOneShot(sound);
+    }
+
+    public void playEffectSlider(AudioClip clip)
+    {
+        menuSounds.volume = SoundManager.Instance.GetEffectVolume();
+        if(!SoundManager.Instance.CheckForMute() && !menuSounds.isPlaying)
+        {
+            menuSounds.PlayOneShot(clip);
+        }
+    }
+
     private void OnEnable()
     {
         PlayerController.OnPlayerDeath += EnableGameOverMenu;
@@ -79,7 +106,7 @@ public class UIManager : MonoBehaviour
         gameOverMenu.SetActive(true);
         AudioListener.pause = true;
 
-        SoundManager.Instance.PlaySound(gameOverSound);
+        playEffect(gameOverSound);
     }
 
     public void EnableLevelUpMenu()
@@ -87,7 +114,7 @@ public class UIManager : MonoBehaviour
         levelUpMenu.SetActive(true);
         AudioListener.pause = true;
 
-        SoundManager.Instance.PlaySound(levelUpSound);
+        playEffect(levelUpSound);
     }
 
     public void DisableLevelUpMenu()
@@ -103,7 +130,7 @@ public class UIManager : MonoBehaviour
         victoryMenu.SetActive(true);
         AudioListener.pause = true;
 
-        SoundManager.Instance.PlaySound(victorySound);  
+        playEffect(victorySound);  
     }
 
     public void RestartLevel()
@@ -133,7 +160,7 @@ public class UIManager : MonoBehaviour
         playerController.canDash = false;
 
         AudioListener.pause = false;
-
+        SoundManager.Instance.PlaySound(confirmSound);
         shoot1xUI.SetActive(true);
         shoot2xUI.SetActive(false);
         shoot125xUI.SetActive(false);
@@ -146,6 +173,7 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         AudioListener.pause = false;
+        SoundManager.Instance.PlaySound(confirmSound);
 
         PlayerData.Instance.lastWave = 0;
         PlayerData.Instance.hasKey = false;
@@ -154,6 +182,7 @@ public class UIManager : MonoBehaviour
 
     public void GoToCredits()
     {
+        SoundManager.Instance.PlaySound(confirmSound);
         SceneManager.LoadScene(2);
     }
 

@@ -6,14 +6,13 @@ public class ShowAndHide : MonoBehaviour
 {
 
     [SerializeField] private GameObject targetUI;
-    [SerializeField] private AudioClip buttonSFX;
+
+    private AudioSource effectSource;
+
 
     public void ShowAndHideUI()
     {
-        if(buttonSFX != null)
-        {
-            SoundManager.Instance.PlaySound(buttonSFX);
-        }
+
         targetUI.SetActive(!targetUI.activeSelf);
     }
 

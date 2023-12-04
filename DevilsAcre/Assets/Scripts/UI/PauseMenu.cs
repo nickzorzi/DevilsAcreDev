@@ -13,8 +13,11 @@ public class PauseMenu : MonoBehaviour
     [Space(15)]
     [SerializeField] private Texture2D customCursor;
     private Vector2 cursorOffset;
+
+    private AudioSource soundSource;
     void Start()
     {
+        soundSource = GetComponent<AudioSource>();
         // Crosshair
         cursorOffset = new Vector2(customCursor.width / 2, customCursor.height / 2);
         Cursor.SetCursor(customCursor, cursorOffset, CursorMode.Auto);
@@ -40,11 +43,12 @@ public class PauseMenu : MonoBehaviour
         Cursor.SetCursor(customCursor, cursorOffset, CursorMode.Auto);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        /*Time.fixedDeltaTime = 0.02f;*/
         GameIsPaused = false;
 
         AudioListener.pause = false;
 
-        SoundManager.Instance.PlaySound(unpauseSound);
+        soundSource.PlayOneShot(unpauseSound);
     }
 
     void Pause()
@@ -52,10 +56,11 @@ public class PauseMenu : MonoBehaviour
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        /*Time.fixedDeltaTime = 0f;*/
         GameIsPaused = true;
+        soundSource.PlayOneShot(pauseSound);
 
         AudioListener.pause = true;
 
-        SoundManager.Instance.PlaySound(pauseSound);
     }
 }
