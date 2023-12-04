@@ -24,9 +24,10 @@ public class UIManager : MonoBehaviour
     private Score scoreManager;
     public Coin coinManager;
 
-    [SerializeField] private AudioSource victorySound;
-    [SerializeField] private AudioSource levelUpSound;
-    [SerializeField] private AudioSource gameOverSound;
+    [SerializeField] private AudioClip victorySound;
+    [SerializeField] private AudioClip levelUpSound;
+    [SerializeField] private AudioClip gameOverSound;
+    [SerializeField] private AudioClip selectSound;
 
     private void Start()
     {
@@ -35,9 +36,6 @@ public class UIManager : MonoBehaviour
         playerController = FindObjectOfType<PlayerController>();
         projectile = FindObjectOfType<Projectile>();
 
-        victorySound.ignoreListenerPause = true;
-        levelUpSound.ignoreListenerPause = true;
-        gameOverSound.ignoreListenerPause = true;
 
         if(PlayerData.Instance.canDash)
         {
@@ -81,7 +79,7 @@ public class UIManager : MonoBehaviour
         gameOverMenu.SetActive(true);
         AudioListener.pause = true;
 
-        gameOverSound.Play();
+        SoundManager.Instance.PlaySound(gameOverSound);
     }
 
     public void EnableLevelUpMenu()
@@ -89,7 +87,7 @@ public class UIManager : MonoBehaviour
         levelUpMenu.SetActive(true);
         AudioListener.pause = true;
 
-        levelUpSound.Play();
+        SoundManager.Instance.PlaySound(levelUpSound);
     }
 
     public void DisableLevelUpMenu()
@@ -105,7 +103,7 @@ public class UIManager : MonoBehaviour
         victoryMenu.SetActive(true);
         AudioListener.pause = true;
 
-        victorySound.Play();   
+        SoundManager.Instance.PlaySound(victorySound);  
     }
 
     public void RestartLevel()
@@ -184,6 +182,8 @@ public class UIManager : MonoBehaviour
             dashUI.SetActive(false);
 
             AudioListener.pause = false;
+
+            SoundManager.Instance.PlaySound(selectSound);
         }
     }
 
@@ -205,6 +205,8 @@ public class UIManager : MonoBehaviour
             dashUI.SetActive(false);
 
             AudioListener.pause = false;
+
+            SoundManager.Instance.PlaySound(selectSound);
         }
     }
 
@@ -230,6 +232,8 @@ public class UIManager : MonoBehaviour
             dashUI.SetActive(true);
 
             AudioListener.pause = false;
+
+            SoundManager.Instance.PlaySound(selectSound);
         }
     }
 
@@ -244,6 +248,8 @@ public class UIManager : MonoBehaviour
                 PlayerData.Instance.canAxe = true;
                 Coin.coinValue -= 14;
                 Debug.Log("Bought Axe");
+
+                SoundManager.Instance.PlaySound(selectSound);
             }
         }
         else if(PlayerData.Instance.canAxe)
@@ -267,6 +273,8 @@ public class UIManager : MonoBehaviour
                 PlayerData.Instance.canMolotov = true;
                 Coin.coinValue -= 14;
                 Debug.Log("Bought Molotov");
+
+                SoundManager.Instance.PlaySound(selectSound);
             }
         }
         else if(PlayerData.Instance.canMolotov)
@@ -290,6 +298,8 @@ public class UIManager : MonoBehaviour
 
                 Coin.coinValue -= 3;
                 Debug.Log("Bought Heal");
+
+                SoundManager.Instance.PlaySound(selectSound);
             }
         }
         else
