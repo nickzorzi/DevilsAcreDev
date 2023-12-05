@@ -14,6 +14,7 @@ public class RedHeartsFire : MonoBehaviour
 
     [Space(10)]
     [SerializeField] private AudioClip redShootEffect;
+    [SerializeField] private AudioClip redLaunchEffect;
 
     [HideInInspector] public bool isShooting;
     private SisterBoss sisterBoss;
@@ -74,6 +75,7 @@ public class RedHeartsFire : MonoBehaviour
         }
 
         pivot.DetachChildren();
+        SoundManager.Instance.PlaySound(redLaunchEffect);
         yield return new WaitForSeconds(fireCooldown);
         isShooting = false;
     }

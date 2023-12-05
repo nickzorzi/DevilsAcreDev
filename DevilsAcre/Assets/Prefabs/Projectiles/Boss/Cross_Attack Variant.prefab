@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8012854208588533303, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
       propertyPath: m_TagString
-      value: YellowCross
+      value: RedCross
       objectReference: {fileID: 0}
     - target: {fileID: 8124304233303867664, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
       propertyPath: dropTime
@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8124304233303867664, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8124304233303867664, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
       propertyPath: redVersion

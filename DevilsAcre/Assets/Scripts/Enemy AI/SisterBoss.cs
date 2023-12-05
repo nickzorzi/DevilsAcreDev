@@ -15,6 +15,8 @@ public class SisterBoss : MonoBehaviour
     [HideInInspector] public bool canFireRed = false;
     [HideInInspector] public bool canFireBlue = false;
     [HideInInspector] public bool canFireYellow = false;
+    [HideInInspector] public bool phase2Triggered = false;
+    [HideInInspector] public bool phase3Triggered = false;
     private bool canFireYellowCross = false;
     private bool canFireRedCross = false;
     private bool canFireLinePattern = false;
@@ -199,10 +201,13 @@ public class SisterBoss : MonoBehaviour
             canFireRed = false;
             canFireYellow = true;
             canFireLinePattern = true;
-            animator.SetTrigger("Phase3");
-
-            SoundManager.Instance.PlaySound(phase3Effect);
-            // canYellowCross = true;
+            
+            if (!phase3Triggered)
+            {
+                animator.SetTrigger("Phase3");
+                SoundManager.Instance.PlaySound(phase3Effect);
+                phase3Triggered = true;
+            }
         }
         else if(health <= 20)
         {
@@ -215,10 +220,13 @@ public class SisterBoss : MonoBehaviour
             canFireYellow = false;
 
             canFireLinePattern = false;
-            animator.SetTrigger("Phase2");
 
-            SoundManager.Instance.PlaySound(phase2Effect);
-            // canRedCross = true;
+            if (!phase2Triggered)
+            {
+                animator.SetTrigger("Phase2");
+                SoundManager.Instance.PlaySound(phase2Effect);
+                phase2Triggered = true;
+            }
         }
         else if (health <= 30)
         {

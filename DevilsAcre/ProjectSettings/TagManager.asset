@@ -24,6 +24,7 @@ TagManager:
   - MolotovSpread
   - PlayerAxe
   - YellowCross
+  - RedCross
   layers:
   - Default
   - TransparentFX

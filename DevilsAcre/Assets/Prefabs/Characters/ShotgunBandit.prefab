@@ -289,7 +289,7 @@ MonoBehaviour:
   speed: 2
   lineOfSite: 20
   shootingRange: 5
-  fireRate: 3
+  fireRate: 4
   shotgunBullet: {fileID: 335697204513574818, guid: 9612838d1bfbdae4da50a6bf1eaab4c0, type: 3}
   health: 3
   deathEffect: {fileID: 8438092220845912813, guid: 2abeebd83d402f04b846d481c7cb77c9, type: 3}

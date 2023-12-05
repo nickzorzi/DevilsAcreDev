@@ -10197,14 +10197,60 @@ MonoBehaviour:
       spawnSpeed: 3
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 3096045685477339113, guid: 54ce056ca8a914d418b11a2ff87d057f, type: 3}
-      spawnCount: 4
+      spawnCount: 3
       spawnSpeed: 2
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 8903800940227172648, guid: acabd320c534f0c4ca60149db3413601, type: 3}
+      spawnCount: 1
+      spawnSpeed: 7
       spawnCoolDown: 0
   - name: Wave 4
     isKeyWave: 0
     Enemies:
     - EnemyPrefab: {fileID: 1518571484595856347, guid: fc71c8dca17b3224aba3e69eaa798fbc, type: 3}
       spawnCount: 2
+      spawnSpeed: 3
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 3096045685477339113, guid: 54ce056ca8a914d418b11a2ff87d057f, type: 3}
+      spawnCount: 4
+      spawnSpeed: 2
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 2537691481137671675, guid: c7ddd1bd8fff0904f99e6b0efc7e3576, type: 3}
+      spawnCount: 1
+      spawnSpeed: 5
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 8903800940227172648, guid: acabd320c534f0c4ca60149db3413601, type: 3}
+      spawnCount: 1
+      spawnSpeed: 7
+      spawnCoolDown: 0
+  - name: Wave 5
+    isKeyWave: 0
+    Enemies:
+    - EnemyPrefab: {fileID: 1518571484595856347, guid: fc71c8dca17b3224aba3e69eaa798fbc, type: 3}
+      spawnCount: 3
+      spawnSpeed: 3
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 3096045685477339113, guid: 54ce056ca8a914d418b11a2ff87d057f, type: 3}
+      spawnCount: 4
+      spawnSpeed: 2
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 2537691481137671675, guid: c7ddd1bd8fff0904f99e6b0efc7e3576, type: 3}
+      spawnCount: 1
+      spawnSpeed: 5
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 8903800940227172648, guid: acabd320c534f0c4ca60149db3413601, type: 3}
+      spawnCount: 1
+      spawnSpeed: 7
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 3247547829785457057, guid: d186fd4d6fc2a4f40ad9fc0bdd1a8053, type: 3}
+      spawnCount: 1
+      spawnSpeed: 11
+      spawnCoolDown: 0
+  - name: Wave 6
+    isKeyWave: 0
+    Enemies:
+    - EnemyPrefab: {fileID: 1518571484595856347, guid: fc71c8dca17b3224aba3e69eaa798fbc, type: 3}
+      spawnCount: 3
       spawnSpeed: 3
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 3096045685477339113, guid: 54ce056ca8a914d418b11a2ff87d057f, type: 3}
@@ -10215,11 +10261,19 @@ MonoBehaviour:
       spawnCount: 1
       spawnSpeed: 5
       spawnCoolDown: 0
-  - name: Wave 5
-    isKeyWave: 0
+    - EnemyPrefab: {fileID: 8903800940227172648, guid: acabd320c534f0c4ca60149db3413601, type: 3}
+      spawnCount: 1
+      spawnSpeed: 7
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 3247547829785457057, guid: d186fd4d6fc2a4f40ad9fc0bdd1a8053, type: 3}
+      spawnCount: 1
+      spawnSpeed: 11
+      spawnCoolDown: 0
+  - name: Wave 7
+    isKeyWave: 1
     Enemies:
     - EnemyPrefab: {fileID: 1518571484595856347, guid: fc71c8dca17b3224aba3e69eaa798fbc, type: 3}
-      spawnCount: 3
+      spawnCount: 4
       spawnSpeed: 3
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 3096045685477339113, guid: 54ce056ca8a914d418b11a2ff87d057f, type: 3}
@@ -10230,35 +10284,13 @@ MonoBehaviour:
       spawnCount: 1
       spawnSpeed: 5
       spawnCoolDown: 0
-  - name: Wave 6
-    isKeyWave: 0
-    Enemies:
-    - EnemyPrefab: {fileID: 1518571484595856347, guid: fc71c8dca17b3224aba3e69eaa798fbc, type: 3}
-      spawnCount: 3
-      spawnSpeed: 3
-      spawnCoolDown: 0
-    - EnemyPrefab: {fileID: 3096045685477339113, guid: 54ce056ca8a914d418b11a2ff87d057f, type: 3}
-      spawnCount: 7
-      spawnSpeed: 2
-      spawnCoolDown: 0
-    - EnemyPrefab: {fileID: 2537691481137671675, guid: c7ddd1bd8fff0904f99e6b0efc7e3576, type: 3}
+    - EnemyPrefab: {fileID: 8903800940227172648, guid: acabd320c534f0c4ca60149db3413601, type: 3}
       spawnCount: 1
-      spawnSpeed: 5
+      spawnSpeed: 7
       spawnCoolDown: 0
-  - name: Wave 7
-    isKeyWave: 1
-    Enemies:
-    - EnemyPrefab: {fileID: 1518571484595856347, guid: fc71c8dca17b3224aba3e69eaa798fbc, type: 3}
-      spawnCount: 4
-      spawnSpeed: 3
-      spawnCoolDown: 0
-    - EnemyPrefab: {fileID: 3096045685477339113, guid: 54ce056ca8a914d418b11a2ff87d057f, type: 3}
-      spawnCount: 8
-      spawnSpeed: 2
-      spawnCoolDown: 0
-    - EnemyPrefab: {fileID: 2537691481137671675, guid: c7ddd1bd8fff0904f99e6b0efc7e3576, type: 3}
+    - EnemyPrefab: {fileID: 3247547829785457057, guid: d186fd4d6fc2a4f40ad9fc0bdd1a8053, type: 3}
       spawnCount: 1
-      spawnSpeed: 5
+      spawnSpeed: 11
       spawnCoolDown: 0
   - name: Wave 8
     isKeyWave: 0
@@ -10268,12 +10300,20 @@ MonoBehaviour:
       spawnSpeed: 3
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 3096045685477339113, guid: 54ce056ca8a914d418b11a2ff87d057f, type: 3}
-      spawnCount: 9
+      spawnCount: 7
       spawnSpeed: 2
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 2537691481137671675, guid: c7ddd1bd8fff0904f99e6b0efc7e3576, type: 3}
       spawnCount: 2
       spawnSpeed: 5
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 8903800940227172648, guid: acabd320c534f0c4ca60149db3413601, type: 3}
+      spawnCount: 1
+      spawnSpeed: 7
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 3247547829785457057, guid: d186fd4d6fc2a4f40ad9fc0bdd1a8053, type: 3}
+      spawnCount: 1
+      spawnSpeed: 11
       spawnCoolDown: 0
   - name: Wave 9
     isKeyWave: 0
@@ -10283,12 +10323,20 @@ MonoBehaviour:
       spawnSpeed: 3
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 3096045685477339113, guid: 54ce056ca8a914d418b11a2ff87d057f, type: 3}
-      spawnCount: 10
+      spawnCount: 8
       spawnSpeed: 2
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 2537691481137671675, guid: c7ddd1bd8fff0904f99e6b0efc7e3576, type: 3}
       spawnCount: 2
       spawnSpeed: 5
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 8903800940227172648, guid: acabd320c534f0c4ca60149db3413601, type: 3}
+      spawnCount: 1
+      spawnSpeed: 7
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 3247547829785457057, guid: d186fd4d6fc2a4f40ad9fc0bdd1a8053, type: 3}
+      spawnCount: 1
+      spawnSpeed: 11
       spawnCoolDown: 0
   - name: Wave 10
     isKeyWave: 0
@@ -10298,12 +10346,20 @@ MonoBehaviour:
       spawnSpeed: 3
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 3096045685477339113, guid: 54ce056ca8a914d418b11a2ff87d057f, type: 3}
-      spawnCount: 10
+      spawnCount: 8
       spawnSpeed: 2
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 2537691481137671675, guid: c7ddd1bd8fff0904f99e6b0efc7e3576, type: 3}
       spawnCount: 2
       spawnSpeed: 5
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 8903800940227172648, guid: acabd320c534f0c4ca60149db3413601, type: 3}
+      spawnCount: 1
+      spawnSpeed: 7
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 3247547829785457057, guid: d186fd4d6fc2a4f40ad9fc0bdd1a8053, type: 3}
+      spawnCount: 1
+      spawnSpeed: 11
       spawnCoolDown: 0
   - name: Wave 11
     isKeyWave: 0
@@ -10313,12 +10369,20 @@ MonoBehaviour:
       spawnSpeed: 3
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 3096045685477339113, guid: 54ce056ca8a914d418b11a2ff87d057f, type: 3}
-      spawnCount: 10
+      spawnCount: 8
       spawnSpeed: 2
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 2537691481137671675, guid: c7ddd1bd8fff0904f99e6b0efc7e3576, type: 3}
       spawnCount: 2
       spawnSpeed: 5
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 8903800940227172648, guid: acabd320c534f0c4ca60149db3413601, type: 3}
+      spawnCount: 1
+      spawnSpeed: 7
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 3247547829785457057, guid: d186fd4d6fc2a4f40ad9fc0bdd1a8053, type: 3}
+      spawnCount: 1
+      spawnSpeed: 11
       spawnCoolDown: 0
   - name: Wave 12
     isKeyWave: 0
@@ -10328,12 +10392,20 @@ MonoBehaviour:
       spawnSpeed: 3
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 3096045685477339113, guid: 54ce056ca8a914d418b11a2ff87d057f, type: 3}
-      spawnCount: 10
+      spawnCount: 8
       spawnSpeed: 2
       spawnCoolDown: 0
     - EnemyPrefab: {fileID: 2537691481137671675, guid: c7ddd1bd8fff0904f99e6b0efc7e3576, type: 3}
       spawnCount: 2
       spawnSpeed: 5
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 8903800940227172648, guid: acabd320c534f0c4ca60149db3413601, type: 3}
+      spawnCount: 1
+      spawnSpeed: 7
+      spawnCoolDown: 0
+    - EnemyPrefab: {fileID: 3247547829785457057, guid: d186fd4d6fc2a4f40ad9fc0bdd1a8053, type: 3}
+      spawnCount: 1
+      spawnSpeed: 11
       spawnCoolDown: 0
   aliveEnemies: []
 --- !u!4 &1416040410

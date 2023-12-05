@@ -306,6 +306,8 @@ MonoBehaviour:
   canFireRed: 0
   canFireBlue: 0
   canFireYellow: 0
+  phase2Triggered: 0
+  phase3Triggered: 0
   yellowCross: {fileID: 8012854208588533303, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
   yellowCrossCount: 3
   yellowCrossCoolDown: 2.5
@@ -432,7 +434,8 @@ MonoBehaviour:
   fireCooldown: 2
   HeartDistance: 1.2
   pivot: {fileID: 351113409}
-  redShootEffect: {fileID: 8300000, guid: 705ed9e4a42076648acab917b074c817, type: 3}
+  redShootEffect: {fileID: 8300000, guid: d4675d20e8e408c48a14b9879c108f71, type: 3}
+  redLaunchEffect: {fileID: 8300000, guid: 705ed9e4a42076648acab917b074c817, type: 3}
   isShooting: 0
 --- !u!61 &87228676
 BoxCollider2D:
@@ -541,6 +544,8 @@ MonoBehaviour:
   LeftPivot: {fileID: 131558222}
   RightPivot: {fileID: 1154857167}
   warningLine: {fileID: 7379141399087799229, guid: e9cb557bef9b7964c865faa802d2b57d, type: 3}
+  redShootEffect: {fileID: 8300000, guid: b04e5b8b2b344144d861d289a6ca0011, type: 3}
+  redLaunchEffect: {fileID: 8300000, guid: 705ed9e4a42076648acab917b074c817, type: 3}
 --- !u!1 &113199367
 GameObject:
   m_ObjectHideFlags: 0
@@ -5854,7 +5859,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2434759510410868014, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
       propertyPath: damage
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2434759510410868014, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
       propertyPath: healthBar

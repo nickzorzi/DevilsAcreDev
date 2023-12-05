@@ -207,9 +207,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundedCross: {fileID: -1857542448, guid: 9305fc3286fdde548a1cb67eb37ee4ec, type: 3}
   childPos: {fileID: 7622163826264579764}
-  speed: 15
+  speed: 2
   dropTime: 2
+  moveSpeed: 6
+  redVersion: 0
   Startclip: {fileID: 8300000, guid: 745c6c86b437ed841a4c0d49c7856c25, type: 3}
+  Impactclip: {fileID: 8300000, guid: b7b5a6156961bac44a67504d42ce6fcf, type: 3}
 --- !u!58 &2464695406423902268
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -224,7 +224,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(speedValue));
 
         //Level Up Checker
-        if (Score.scoreValue >= 150 && allowLevelMenu == true) //150 default
+        if (Score.scoreValue >= 170 && allowLevelMenu == true) //150 default
         {
             // Invoke the OnLevelUp event
             OnLevelUp?.Invoke();
@@ -318,7 +318,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Axe" || other.tag == "Bottle" || other.tag == "ShotgunBullet" || other.tag == "WinchesterBullet" || other.tag == "RedHearts" || other.tag == "BlueHearts" || other.tag == "YellowHearts" || other.tag == "MolotovSpread" || other.tag == "YellowCross")
+        if (other.tag == "Axe" || other.tag == "Bottle" || other.tag == "ShotgunBullet" || other.tag == "WinchesterBullet" || other.tag == "RedHearts" || other.tag == "BlueHearts" || other.tag == "YellowHearts" || other.tag == "MolotovSpread" || other.tag == "YellowCross" || other.tag == "RedCross")
         {
             if (isDashing == false)
             {

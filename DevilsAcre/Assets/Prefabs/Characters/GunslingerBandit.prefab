@@ -489,13 +489,13 @@ MonoBehaviour:
   speed: 3
   lineOfSite: 20
   shootingRange: 7
-  fireRate: 2
+  fireRate: 3
   winchesterBullet: {fileID: 7414349554264200973, guid: 6318c3890b80c0046883739671b74d3e, type: 3}
   health: 2
   deathEffect: {fileID: 8438092220845912813, guid: 2abeebd83d402f04b846d481c7cb77c9, type: 3}
   animator: {fileID: 8216748706655889517}
   isShooting: 0
-  scoreValueOnDeath: 50
+  scoreValueOnDeath: 30
   hitFlash: {fileID: 5318873476525502613}
   enemyHitSoundEffect: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
   enemyShootSoundEffect: {fileID: 8300000, guid: fe0948e710dd8434e82b48052bf08fd3, type: 3}

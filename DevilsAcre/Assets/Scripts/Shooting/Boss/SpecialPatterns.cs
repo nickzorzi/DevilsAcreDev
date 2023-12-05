@@ -16,6 +16,10 @@ public class SpecialPatterns : MonoBehaviour
     [SerializeField] private Transform RightPivot;
     [SerializeField] private GameObject warningLine;
 
+    [Space(10)]
+    [SerializeField] private AudioClip redShootEffect;
+    [SerializeField] private AudioClip redLaunchEffect;
+
     private bool isFiring;
     public void intiatePattern(patterns selectedPattern, int amount, float inBetweenDelay)
     {
@@ -42,6 +46,7 @@ public class SpecialPatterns : MonoBehaviour
         {
             int topLine = Random.Range(0, 2); // 0 or 2
             List<GameObject> hearts = new List<GameObject>();
+            SoundManager.Instance.PlaySound(redShootEffect);
 
             if (topLine == 0) // top line
             {
@@ -78,6 +83,7 @@ public class SpecialPatterns : MonoBehaviour
             {
                 bullet.GetComponent<RedHearts>().isMoving = true;
             }
+            SoundManager.Instance.PlaySound(redLaunchEffect);
             yield return new WaitForSeconds(inBetweenDelay);
         }
         yield return new WaitForSeconds(3f); // cool down
