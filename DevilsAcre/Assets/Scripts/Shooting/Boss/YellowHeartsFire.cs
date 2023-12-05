@@ -48,7 +48,7 @@ public class YellowHeartsFire : MonoBehaviour
             yield return new WaitForSeconds(fireRate);
         }
         
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(Random.Range(6,9));
 
         isShooting = false;
     }
