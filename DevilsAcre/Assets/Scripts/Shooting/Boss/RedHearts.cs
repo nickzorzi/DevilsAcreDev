@@ -35,6 +35,7 @@ public class RedHearts : MonoBehaviour
     }
  
 
+
     private void Destroy()
     {
         gameObject.SetActive(false);

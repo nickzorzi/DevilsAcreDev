@@ -9,14 +9,13 @@ public class RedHeartsFire : MonoBehaviour
 
     public float fireCooldown = 2f;
     public float HeartDistance = 1.2f;
-
-    [HideInInspector]
-    public bool isShooting;
-
+    [Space(10)]
     [SerializeField] private Transform pivot;
+
     [Space(10)]
     [SerializeField] private AudioClip redShootEffect;
 
+    [HideInInspector] public bool isShooting;
     private SisterBoss sisterBoss;
     void Start()
     {

@@ -5,16 +5,11 @@ using UnityEngine;
 public class YellowHearts : MonoBehaviour
 {
     private Vector2 moveDirection = Vector2.down;
-    private float moveSpeed;
+    private float moveSpeed = 4f;
 
     private void OnEnable()
     {
         Invoke("Destroy", 2f);
-    }
-
-    void Start()
-    {
-        moveSpeed = 5f;
     }
 
     void Update()

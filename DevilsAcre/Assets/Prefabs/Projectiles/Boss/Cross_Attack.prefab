@@ -209,6 +209,7 @@ MonoBehaviour:
   childPos: {fileID: 7622163826264579764}
   speed: 15
   dropTime: 2
+  Startclip: {fileID: 8300000, guid: 745c6c86b437ed841a4c0d49c7856c25, type: 3}
 --- !u!58 &2464695406423902268
 CircleCollider2D:
   m_ObjectHideFlags: 0
