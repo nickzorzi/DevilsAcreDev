@@ -10051,6 +10051,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cross_Attack
       objectReference: {fileID: 0}
+    - target: {fileID: 8012854208588533303, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012854208588533303, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
+      propertyPath: m_TagString
+      value: YellowCross
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

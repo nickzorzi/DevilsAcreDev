@@ -118,9 +118,9 @@ GameObject:
   - component: {fileID: 7873926743410617678}
   - component: {fileID: 8124304233303867664}
   - component: {fileID: 2464695406423902268}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cross_Attack
-  m_TagString: Untagged
+  m_TagString: YellowCross
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

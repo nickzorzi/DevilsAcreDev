@@ -318,7 +318,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Axe" || other.tag == "Bottle" || other.tag == "ShotgunBullet" || other.tag == "WinchesterBullet" || other.tag == "RedHearts" || other.tag == "BlueHearts" || other.tag == "YellowHearts" || other.tag == "MolotovSpread")
+        if (other.tag == "Axe" || other.tag == "Bottle" || other.tag == "ShotgunBullet" || other.tag == "WinchesterBullet" || other.tag == "RedHearts" || other.tag == "BlueHearts" || other.tag == "YellowHearts" || other.tag == "MolotovSpread" || other.tag == "YellowCross")
         {
             if (isDashing == false)
             {
