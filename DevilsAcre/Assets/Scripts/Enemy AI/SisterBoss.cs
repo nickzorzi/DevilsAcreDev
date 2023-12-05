@@ -1,41 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SisterBoss : MonoBehaviour
 {
     public float lineOfSight;
-    private Transform player;
     public int health;
     public GameObject deathEffect;
 
-    private bool hasEnteredLineOfSight = false;
-    private bool transformationFinished = false;
+
     public bool canFireRed = false;
     public bool canFireBlue = false;
     public bool canFireYellow = false;
+    
     // public bool canRedCross = false;
-    // public bool canYellowCross = false;
-
+    private bool canYellowCross = true;
+    [Space(10)]
+    [SerializeField] private GameObject yellowCross;
+    [SerializeField] private int yellowCrossCount = 3;
+    [SerializeField] private float crossCoolDown = 2.5f;
+    [Space(10)]
     public int scoreValueOnDeath;
 
     public Animator animator;
-
-    public GameObject waveSB;
-    public GameObject waveGB;
 
     public BossHealthBar bossHealthBar;
     public GameObject displayHealthBar;
 
     [SerializeField] private HitFlash hitFlash;
-
+    [Space(20)]
+    [Header("Audio Clips")]
     [SerializeField] private AudioClip enemyHitSoundEffect;
     [SerializeField] private AudioClip enemyDeathSoundEffect;
-
     [SerializeField] private AudioClip transformEffect;
     [SerializeField] private AudioClip phase2Effect;
     [SerializeField] private AudioClip phase3Effect;
 
+
+    private Transform player;
+    private bool hasEnteredLineOfSight = false;
+    private bool transformationFinished = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,15 +65,31 @@ public class SisterBoss : MonoBehaviour
                 animator.SetTrigger("Entry");
                 StartCoroutine(FinishedAnimation());
                 hasEnteredLineOfSight = true;
+                
             }
         }
-
-        //Waves Enabler
-        if (hasEnteredLineOfSight == true)
+        if (hasEnteredLineOfSight)
         {
-            waveSB.SetActive(true);
-            waveGB.SetActive(true);
+            if (canYellowCross)
+            {
+                StartCoroutine(fireCrosses());
+            }
         }
+    }
+
+    private IEnumerator fireCrosses()
+    {
+        canYellowCross = false;
+
+        for(int i = 0; i < yellowCrossCount; i++)
+        {
+            yield return new WaitForSeconds(1f);
+            GameObject temp = Instantiate(yellowCross);
+            temp.transform.position = player.transform.position;
+        }
+
+        yield return new WaitForSeconds(crossCoolDown);
+        canYellowCross = true;
     }
 
     private IEnumerator FinishedAnimation()
@@ -175,4 +196,6 @@ public class SisterBoss : MonoBehaviour
             canFireYellow = true;
         }
     }
+
+
 }

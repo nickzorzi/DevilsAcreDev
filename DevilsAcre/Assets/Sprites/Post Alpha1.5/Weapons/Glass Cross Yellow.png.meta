@@ -290,6 +290,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Glass Cross Yellow_8
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 44
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b30bd6edae2c1f4eb98c65cf15a9113
+      internalID: -1857542448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -309,6 +330,7 @@ TextureImporter:
       Glass Cross Yellow_5: -1780615209
       Glass Cross Yellow_6: -1996293142
       Glass Cross Yellow_7: -2088221498
+      Glass Cross Yellow_8: -1857542448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
