@@ -7204,22 +7204,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1342923424164427088, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
-      propertyPath: dialogues.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342923424164427088, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
-      propertyPath: dialogueID.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342923424164427088, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
-      propertyPath: dialogues.Array.data[0].name
-      value: test
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342923424164427088, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
-      propertyPath: dialogues.Array.data[1].name
-      value: HelloThere
-      objectReference: {fileID: 0}
     - target: {fileID: 7256899676002316318, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10

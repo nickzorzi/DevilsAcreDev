@@ -937,6 +937,7 @@ MonoBehaviour:
   source: {fileID: 5391962812008876108}
   textSFX: {fileID: 8300000, guid: 2c27e0f020620d1439d65d3b752725de, type: 3}
   buttonSFX: {fileID: 8300000, guid: 8f7dade61c5cee742bbe8b6378ca33a6, type: 3}
+  isRunning: 0
 --- !u!82 &5391962812008876108
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1442,6 +1443,11 @@ MonoBehaviour:
   canQuickfire: 0
   lastScene: 2
   lastWave: 0
+  dialogues:
+  - name: test
+    hasPlayed: 0
+  - name: HelloThere
+    hasPlayed: 0
 --- !u!1 &8978946142223855595
 GameObject:
   m_ObjectHideFlags: 0

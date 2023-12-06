@@ -8307,7 +8307,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 984794918}
-  - component: {fileID: 984794917}
   - component: {fileID: 984794916}
   m_Layer: 0
   m_Name: Test
@@ -8335,19 +8334,6 @@ MonoBehaviour:
   - {fileID: 1416040408}
   - {fileID: 727499819}
   - {fileID: 598197157}
---- !u!114 &984794917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984794915}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee0566df8f63867438a3b0173305ff54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entry: {fileID: 11400000, guid: 085def4ab04012a4092af2a3d8dd3ae4, type: 2}
 --- !u!4 &984794918
 Transform:
   m_ObjectHideFlags: 0
@@ -13744,6 +13730,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1342923424164427088, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
+      propertyPath: lastWave
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6666737226107589804, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
       propertyPath: m_IsActive
       value: 0

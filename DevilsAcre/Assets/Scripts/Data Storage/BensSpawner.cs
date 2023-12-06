@@ -42,6 +42,11 @@ public class BensSpawner : MonoBehaviour
     {
         if(currentWave >= waveData.Length)
         {
+            if(loadZone != null && !loadZone.activeSelf)
+            {
+            loadZone.SetActive(true);
+            }
+            waveCountText.text = "Cleared";
             return;
         }
         // Wave Cool Down
@@ -54,7 +59,7 @@ public class BensSpawner : MonoBehaviour
             StartCoroutine(waveCoolDown(waveWaitTime));
         }
 
-        // Wave Spawning
+
         if (!wavePaused) 
         {
             if(loadZone != null)
@@ -71,10 +76,6 @@ public class BensSpawner : MonoBehaviour
         }
 
         // Zone Loading
-        if(currentWave+1 > waveData.Length - 1 && loadZone != null)
-        {
-            loadZone.SetActive(true) ;
-        }
         else if (wavePaused && PlayerData.Instance.hasKey && loadZone != null)
         {
             loadZone.SetActive(true);
