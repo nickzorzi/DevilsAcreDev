@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class DialogueDisplay : MonoBehaviour
 {
     public static DialogueDisplay Instance;
-    
     public float delay = 0.1f;
     [Header("UI Items")]
     [SerializeField] private TextMeshProUGUI DisplayText;
@@ -22,6 +21,7 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] private AudioClip buttonSFX;
 
 
+    [HideInInspector] public bool isRunning = false;
     private DialogueEntry currentEntry;
     private int currentlyReading = 0;
     private string currentText = "";
@@ -58,7 +58,7 @@ public class DialogueDisplay : MonoBehaviour
             source.volume = SoundManager.Instance.GetEffectVolume() - 0.4f;
             source.mute = SoundManager.Instance.CheckForMute();
         }
-
+        isRunning = true;
         DialogueUI.gameObject.SetActive(true);
         currentEntry = entry;
         currentlyReading = 0;
@@ -69,6 +69,7 @@ public class DialogueDisplay : MonoBehaviour
     
     public void CloseDialogue()
     {
+        isRunning = false;
         DialogueUI.gameObject.SetActive(false);
     }
 

@@ -23,7 +23,11 @@ public class PlayerData : MonoBehaviour
     [Header("Other Data")]
     public string lastScene;
     public int lastWave = 0;
-
+    [Space(10)]
+    [Header("Dialogue Bools")]
+    public DialogueID[] dialogues;
+   
+    
     private void Awake()
     {
         // Singleton Paradox Killer
@@ -52,5 +56,18 @@ public class PlayerData : MonoBehaviour
         canQuickfire = false;
     }
 
+    public void ResetDialogues()
+    {
+        for (int i = 0; i < dialogues.Length; i++)
+        {
+            dialogues[i].hasPlayed = false;
+        }
+    }
 
+    [System.Serializable]
+    public struct DialogueID
+    {
+        public string name;
+        public bool hasPlayed;
+    }
 }
