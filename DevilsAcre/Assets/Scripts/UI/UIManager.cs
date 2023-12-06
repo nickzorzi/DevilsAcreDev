@@ -33,8 +33,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private AudioClip gameOverSound;
     [SerializeField] private AudioClip selectSound;
     [SerializeField] private AudioClip confirmSound;
-    [Header("Audio Source")]
-    [SerializeField] private AudioSource menuSounds;
     private void Start()
     {
         scoreManager = FindObjectOfType<Score>();
@@ -42,8 +40,6 @@ public class UIManager : MonoBehaviour
         playerController = FindObjectOfType<PlayerController>();
         projectile = FindObjectOfType<Projectile>();
 
-        menuSounds.volume = SoundManager.Instance.GetEffectVolume();
-        menuSounds.ignoreListenerPause = true;
 
 
         #region Update Data Between Scenes
@@ -72,17 +68,14 @@ public class UIManager : MonoBehaviour
 
     public void playEffect(AudioClip sound)
     {
-        menuSounds.volume = SoundManager.Instance.GetEffectVolume();
-        menuSounds.mute = SoundManager.Instance.CheckForMute();
-        menuSounds.PlayOneShot(sound);
+        SoundManager.Instance.PlaySound(sound);
     }
 
     public void playEffectSlider(AudioClip clip)
     {
-        menuSounds.volume = SoundManager.Instance.GetEffectVolume();
-        if(!SoundManager.Instance.CheckForMute() && !menuSounds.isPlaying)
+        if(!SoundManager.Instance.CheckForMute() && !SoundManager.Instance.CheckForPlaying())
         {
-            menuSounds.PlayOneShot(clip);
+            SoundManager.Instance.PlaySound(clip);
         }
     }
 

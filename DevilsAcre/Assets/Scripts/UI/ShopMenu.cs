@@ -10,13 +10,12 @@ public class ShopMenu : MonoBehaviour
     public GameObject shopMenuUI;
     public GameObject shopNotiUI;
 
+    [Header("Audio")]
     [SerializeField] private AudioClip shopOpenSound;
     [SerializeField] private AudioClip shopCloseSound;
 
-    void Start()
-    {
-        
-    }
+
+
 
     void Update()
     {
@@ -63,6 +62,7 @@ public class ShopMenu : MonoBehaviour
         shopMenuUI.SetActive(false);
         ShopIsOpen = false;
         Time.timeScale = 1f;
+        AudioListener.pause = false;
         SoundManager.Instance.PlaySound(shopCloseSound);
     }
 
@@ -71,6 +71,7 @@ public class ShopMenu : MonoBehaviour
         shopMenuUI.SetActive(true);
         ShopIsOpen = true;
         Time.timeScale = 0f;
+        AudioListener.pause = true;
         SoundManager.Instance.PlaySound(shopOpenSound);
     }
 }

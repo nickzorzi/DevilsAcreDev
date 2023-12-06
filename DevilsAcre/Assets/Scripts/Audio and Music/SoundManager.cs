@@ -14,7 +14,6 @@ public class SoundManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -23,6 +22,8 @@ public class SoundManager : MonoBehaviour
         }
         #endregion
 
+        // _musicSource.ignoreListenerPause = true;
+        _effectsSource.ignoreListenerPause = true;
     }
 
     // Called to Play the Effect Sound
@@ -40,6 +41,11 @@ public class SoundManager : MonoBehaviour
     public bool CheckForMute()
     {
         return _effectsSource.mute;
+    }
+    
+    public bool CheckForPlaying()
+    {
+        return _effectsSource.isPlaying;
     }
 
     public float GetMusicVolume()

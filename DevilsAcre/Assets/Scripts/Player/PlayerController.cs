@@ -191,11 +191,8 @@ public class PlayerController : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.E))
             {
-                if (!canAxe)
-                {
-                    
-                }
-                else if (canAxe)
+
+                if (canAxe)
                 {
                     if (axeFire)
                     {
@@ -205,11 +202,8 @@ public class PlayerController : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.F))
             {
-                if (!canMolotov)
-                {
-                    
-                }
-                else if (canMolotov)
+
+                if (canMolotov)
                 {
                     if (molotovFire)
                     {
