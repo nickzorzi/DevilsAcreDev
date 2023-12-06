@@ -302,7 +302,7 @@ MonoBehaviour:
   lineOfSight: 5
   health: 40
   deathEffect: {fileID: 8438092220845912813, guid: 2abeebd83d402f04b846d481c7cb77c9, type: 3}
-  scoreValueOnDeath: 1000
+  scoreValueOnDeath: 10000
   canFireRed: 0
   canFireBlue: 0
   canFireYellow: 0

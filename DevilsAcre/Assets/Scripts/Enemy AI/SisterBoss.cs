@@ -56,7 +56,7 @@ public class SisterBoss : MonoBehaviour
     private bool transformationFinished = false;
     
     
-    private bool test = true;
+    // private bool test = true;
     // Start is called before the first frame update
     void Start()
     {

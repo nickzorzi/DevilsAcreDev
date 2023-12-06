@@ -38,6 +38,14 @@ public class ShopMenu : MonoBehaviour
         if (!inRange)
         {
             shopNotiUI.SetActive(false);
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                if (ShopIsOpen)
+                {
+                    CloseShop();
+                }
+            }
         }
     }
 

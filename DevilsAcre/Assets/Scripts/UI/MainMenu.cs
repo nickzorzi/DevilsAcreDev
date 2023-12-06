@@ -14,27 +14,37 @@ public class MainMenu : MonoBehaviour
 
    public void PlayGame()
    {
-      SceneManager.LoadScene(4);
-      // Score.scoreValue = 0;
+      SceneManager.LoadScene("Tutorial");
+        Score.scoreValue = 0;
+        Coin.coinValue = 0;
 
-      // Projectile.damage = 1;
-      // playerController.damage = 1;
-      // playerController.speed = 5f;
-      // playerController.timeBetweenShots = 1f;
+        PlayerData.Instance.lastWave = 0;
+        PlayerData.Instance.hasKey = false;
+        PlayerData.Instance.ResetBools();
 
-      // PauseMenu.GameIsPaused = false;
+        Projectile.damage = 1;
+        playerController.damage = 1;
+        playerController.speed = 5f;
+        playerController.timeBetweenShots = 1f;
 
-      // PlayerController.allowLevelMenu = true;
-      // PlayerController.allowVictoryMenu = true;
+        playerController.dashSpeed = 0;
+        playerController.dashCooldown = 0;
+        playerController.dashDuration = 0f;
 
-      // playerController.canDash = false;
+        PauseMenu.GameIsPaused = false;
 
-      // uiManager.shoot1xUI.SetActive(true);
-      // uiManager.shoot2xUI.SetActive(false);
-      // uiManager.shoot125xUI.SetActive(false);
-      // uiManager.dashUI.SetActive(false);
+        PlayerController.allowLevelMenu = true;
+        PlayerController.allowVictoryMenu = true;
 
-      // AudioListener.pause = false;
+        playerController.canDash = false;
+
+        AudioListener.pause = false;
+        uiManager.shoot1xUI.SetActive(true);
+        uiManager.shoot2xUI.SetActive(false);
+        uiManager.shoot125xUI.SetActive(false);
+        uiManager.dashUI.SetActive(false);
+        uiManager.axeUI.SetActive(false);
+        uiManager.molotovUI.SetActive(false);
    }
     public void PlayGame2()
     {

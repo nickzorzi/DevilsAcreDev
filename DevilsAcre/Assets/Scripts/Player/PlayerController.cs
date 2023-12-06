@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
     public float dashDuration;
     public float dashCooldown;
     public bool isDashing;
-    public bool canDash = true;
+    public bool canDash = false;
 
     [Header("iFrames")]
     [SerializeField] private float iFramesDuration;
@@ -225,7 +225,7 @@ public class PlayerController : MonoBehaviour
             allowLevelMenu = false;
         }
 
-        if (Score.scoreValue >= 3000 && allowVictoryMenu == true) //1090 default
+        if (Score.scoreValue >= 10000 && allowVictoryMenu == true) //1090 default
         {
             // Invoke the Victory event
             OnVictory?.Invoke();
