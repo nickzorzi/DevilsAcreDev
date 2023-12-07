@@ -109,6 +109,7 @@ public class SisterBoss : MonoBehaviour
                 }
             }
         }
+        
     }
 
     private IEnumerator fireCrosses(GameObject prefab,int crossCount,float crossCoolDown,bool crossType)

@@ -327,10 +327,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   weapon: {fileID: 482034276125020835}
-  offset: -183
+  offset: 180
   rb: {fileID: 5228063551813382762}
   shotPoint: {fileID: 5786654219464240884}
   projectile: {fileID: 229954896343132167, guid: 9712f2c21c0c74e418936e4204080b1d, type: 3}
+  noShooting: 0
   timeBetweenShots: 1
   maxHealth: 5
   currentHealth: 0
@@ -348,13 +349,15 @@ MonoBehaviour:
   dashSoundEffect: {fileID: 8300000, guid: 4e349dc959014a845b9aa317d1c2b7f0, type: 3}
   playerAxe: {fileID: 3938020771325188288, guid: d4cf808afb1b1eb40bd2ca387f78688d, type: 3}
   canAxe: 0
+  axeFire: 1
   playerMolotov: {fileID: 2848521465471244836, guid: bff278bef3ba6f24f8eab0814d13ca90, type: 3}
   canMolotov: 0
+  molotovFire: 1
   dashSpeed: 0
   dashDuration: 0
   dashCooldown: 0
   isDashing: 0
-  canDash: 1
+  canDash: 0
   iFramesDuration: 1
   numberOfFlashes: 4
   isInv: 0

@@ -13302,6 +13302,10 @@ PrefabInstance:
       value: -182
       objectReference: {fileID: 0}
     - target: {fileID: 2434759510410868014, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
+      propertyPath: canDash
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434759510410868014, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1416162950}

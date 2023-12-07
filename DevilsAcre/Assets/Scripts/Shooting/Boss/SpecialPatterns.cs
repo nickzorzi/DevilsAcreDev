@@ -44,11 +44,11 @@ public class SpecialPatterns : MonoBehaviour
         isFiring = true;
         for(int i = 0; i < amount; i++)
         {
-            int topLine = Random.Range(0, 2); // 0 or 2
+            int DetermineLine = Random.Range(0, 5); // 0 or 4
             List<GameObject> hearts = new List<GameObject>();
             SoundManager.Instance.PlaySound(redShootEffect);
 
-            if (topLine == 0) // top line
+            if (DetermineLine == 0) // top line
             {
                 for( int j = 0; j < 9; j++)
                 {
@@ -63,7 +63,7 @@ public class SpecialPatterns : MonoBehaviour
                 }
 
             }
-            else // bottom line
+            else if(DetermineLine == 1)// bottom line
             {
                 for (int j = 0; j < 9; j++)
                 {
@@ -74,6 +74,34 @@ public class SpecialPatterns : MonoBehaviour
                     GameObject temp = Instantiate(warningLine);
                     temp.transform.position = RightPivot.transform.position + (Vector3.left * 2) * j + Vector3.left*.5f;
                     temp.transform.rotation = Quaternion.Euler(0f, 0f, 180);
+                    Destroy(temp, 1f);
+                }
+            }
+            else if (DetermineLine == 2)// Right line
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    hearts.Add(BulletPoolRed.bulletPoolInstance.GetBullet());
+                    hearts[j].transform.position = RightPivot.transform.position + (Vector3.up * 2) * j + Vector3.up * .5f;
+                    hearts[j].SetActive(true);
+                    hearts[j].transform.rotation = Quaternion.Euler(0f, 0f, 270);
+                    GameObject temp = Instantiate(warningLine);
+                    temp.transform.position = RightPivot.transform.position + (Vector3.up * 2) * j + Vector3.up * .5f;
+                    temp.transform.rotation = Quaternion.Euler(0f, 0f, 270);
+                    Destroy(temp, 1f);
+                }
+            }
+            else
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    hearts.Add(BulletPoolRed.bulletPoolInstance.GetBullet());
+                    hearts[j].transform.position = LeftPivot.transform.position + (Vector3.down * 2) * j + Vector3.down * .5f;
+                    hearts[j].SetActive(true);
+                    hearts[j].transform.rotation = Quaternion.Euler(0f, 0f, 90);
+                    GameObject temp = Instantiate(warningLine);
+                    temp.transform.position = LeftPivot.transform.position + (Vector3.down * 2) * j + Vector3.down * .5f;
+                    temp.transform.rotation = Quaternion.Euler(0f, 0f, 90);
                     Destroy(temp, 1f);
                 }
             }
