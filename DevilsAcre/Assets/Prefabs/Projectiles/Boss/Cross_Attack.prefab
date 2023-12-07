@@ -207,7 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundedCross: {fileID: -1857542448, guid: 9305fc3286fdde548a1cb67eb37ee4ec, type: 3}
   childPos: {fileID: 7622163826264579764}
-  speed: 2
+  speed: 7
   dropTime: 3
   moveSpeed: 7
   redVersion: 0

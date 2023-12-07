@@ -7,6 +7,9 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+    [SerializeField] private GameObject CheatUI;
+    public bool CheaterMode;
+
 
     [SerializeField] private AudioClip pauseSound;
     [SerializeField] private AudioClip unpauseSound;
@@ -37,9 +40,21 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+
+    private void OnDisable()
+    {
+        if (GameIsPaused) { GameIsPaused = false; }
+    }
+
     public void Resume()
     {
         Cursor.SetCursor(customCursor, cursorOffset, CursorMode.Auto);
+
+        if (CheaterMode)
+        {
+            CheatUI.SetActive(false);
+        }
+
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         /*Time.fixedDeltaTime = 0.02f;*/
@@ -53,6 +68,12 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
+        if(CheaterMode)
+        {
+            CheatUI.SetActive(true);
+        }
+
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         /*Time.fixedDeltaTime = 0f;*/
@@ -61,5 +82,10 @@ public class PauseMenu : MonoBehaviour
 
         AudioListener.pause = true;
 
+    }
+
+    public void turnOnCheats()
+    {
+        CheaterMode = true;
     }
 }

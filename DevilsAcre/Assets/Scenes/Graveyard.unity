@@ -10050,11 +10050,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1342923424164427088, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
       propertyPath: canAxe
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1342923424164427088, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
       propertyPath: canMolotov
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7256899676002316318, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
       propertyPath: m_LocalPosition.x

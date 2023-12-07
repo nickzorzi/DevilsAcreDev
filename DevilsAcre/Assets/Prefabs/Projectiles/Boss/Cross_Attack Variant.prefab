@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8124304233303867664, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
       propertyPath: moveSpeed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8124304233303867664, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
       propertyPath: redVersion

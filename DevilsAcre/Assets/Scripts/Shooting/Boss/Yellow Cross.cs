@@ -33,7 +33,7 @@ public class YellowCross : MonoBehaviour
         SoundManager.Instance.PlaySound(Startclip);
 
         Invoke("coolDownDone", dropTime);
-        Destroy(this.gameObject, dropTime + 3);
+        
     }
 
 
@@ -50,6 +50,7 @@ public class YellowCross : MonoBehaviour
             {
                 childPos.GetComponent<Animator>().enabled = false;
                 childPos.GetComponent<SpriteRenderer>().sprite = groundedCross;
+                Destroy(gameObject,3f);
                 StartCoroutine(fade());
                 col.enabled = true;
             }
@@ -68,9 +69,10 @@ public class YellowCross : MonoBehaviour
 
     IEnumerator fade()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
         for(int i = 0; i < 10; i++)
         {
+            yield return new WaitForSeconds(.5f);
             Color temp = gameObject.GetComponent<SpriteRenderer>().color;
             temp.a -= .1f;
             gameObject.GetComponent<SpriteRenderer>().color = temp;
@@ -78,8 +80,8 @@ public class YellowCross : MonoBehaviour
             temp.a -= .1f;
             childPos.GetComponent<SpriteRenderer>().color = temp;
             
-            yield return new WaitForSeconds(1f);
         }
+        
     }
 
     private void coolDownDone()
