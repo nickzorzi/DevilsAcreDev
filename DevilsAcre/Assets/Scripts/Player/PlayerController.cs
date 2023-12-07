@@ -189,7 +189,7 @@ public class PlayerController : MonoBehaviour
                     Instantiate(projectile, shotPoint.position, shotPoint.rotation);
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
 
                 if (canAxe)
@@ -200,7 +200,7 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F))
             {
 
                 if (canMolotov)
