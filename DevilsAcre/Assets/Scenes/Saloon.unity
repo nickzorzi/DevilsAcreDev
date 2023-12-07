@@ -10230,8 +10230,8 @@ MonoBehaviour:
   - {fileID: 1326330618}
   - {fileID: 1774835322}
   - {fileID: 1795933926}
-  waveWaitTime: 3
-  keyWaveWaitTime: 6
+  waveWaitTime: 5
+  keyWaveWaitTime: 9
   waveData:
   - name: Wave 1
     isKeyWave: 0
