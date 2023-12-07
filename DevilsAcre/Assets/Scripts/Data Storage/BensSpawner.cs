@@ -15,7 +15,7 @@ public class BensSpawner : MonoBehaviour
     [Header("Wave config")]
     [SerializeField] private float waveWaitTime = 2;
     [SerializeField] private float keyWaveWaitTime = 5;
-
+    [SerializeField] private GameObject signObject;
     [SerializeField] private WaveData[] waveData;
 
     
@@ -44,7 +44,11 @@ public class BensSpawner : MonoBehaviour
         {
             if(loadZone != null && !loadZone.activeSelf)
             {
-            loadZone.SetActive(true);
+                loadZone.SetActive(true);
+                if (signObject != null)
+                {
+                    signObject.SetActive(true);
+                }
             }
             waveCountText.text = "Cleared";
             return;
@@ -66,6 +70,10 @@ public class BensSpawner : MonoBehaviour
             {
                 loadZone.SetActive(false);
             }
+            if (signObject != null)
+            {
+                signObject.SetActive(false);
+            }
             Spawner();  
         }
 
@@ -79,6 +87,11 @@ public class BensSpawner : MonoBehaviour
         else if (wavePaused && PlayerData.Instance.hasKey && loadZone != null)
         {
             loadZone.SetActive(true);
+            
+            if (signObject != null)
+            {
+                signObject.SetActive(true);
+            }
         }
     }
 
@@ -154,6 +167,7 @@ public class BensSpawner : MonoBehaviour
 
     private IEnumerator waveCoolDown(float time)
     {
+        
         yield return new WaitForSeconds(time);
         wavePaused = false;
     }
