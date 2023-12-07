@@ -66,11 +66,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8124304233303867664, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
       propertyPath: dropTime
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8124304233303867664, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8124304233303867664, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
       propertyPath: redVersion
