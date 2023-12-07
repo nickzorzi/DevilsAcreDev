@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public GameObject projectile;
 
     public bool noShooting = false;
+    public bool noShootZone = false;
 
     public float timeBetweenShots;
     private float nextShotTime;
@@ -175,7 +176,9 @@ public class PlayerController : MonoBehaviour
         float angle = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg;
         weapon.rotation = Quaternion.Euler(0f, 0f, angle + offset);
 
-        if (!noShooting)
+        if (!noShootZone)
+        {
+            if (!noShooting)
         {
             // Shooting
             if (Input.GetMouseButtonDown(0))
@@ -211,6 +214,7 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
+        }
         }
 
         //  Animator

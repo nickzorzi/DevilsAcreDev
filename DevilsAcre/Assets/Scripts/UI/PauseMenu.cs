@@ -6,6 +6,8 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
+    public PlayerController playerController;
+
     public GameObject pauseMenuUI;
     [SerializeField] private GameObject CheatUI;
     public bool CheaterMode;
@@ -20,6 +22,8 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
+        playerController = FindObjectOfType<PlayerController>();
+        
         // Crosshair
         cursorOffset = new Vector2(customCursor.width / 2, customCursor.height / 2);
         Cursor.SetCursor(customCursor, cursorOffset, CursorMode.Auto);
@@ -63,6 +67,8 @@ public class PauseMenu : MonoBehaviour
         AudioListener.pause = false;
 
         SoundManager.Instance.PlaySound(unpauseSound);
+
+        playerController.noShooting = false;
     }
 
     void Pause()
@@ -82,6 +88,7 @@ public class PauseMenu : MonoBehaviour
 
         AudioListener.pause = true;
 
+        playerController.noShooting = true;
     }
 
     public void turnOnCheats()

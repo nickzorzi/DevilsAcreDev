@@ -1659,6 +1659,10 @@ PrefabInstance:
       propertyPath: noShooting
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2434759510410868014, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
+      propertyPath: noShootZone
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3095670157194776975, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
       propertyPath: m_Name
       value: Player
