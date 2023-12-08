@@ -261,7 +261,14 @@ public class UIManager : MonoBehaviour
 
     public void PlayerAxe()
     {
-        if (Coin.coinValue >= 14 && !playerController.canAxe)
+        if (PlayerData.Instance.canAxe)
+        {
+            axeUI.SetActive(true);
+            playerController.canAxe = true;
+            Debug.Log("Data Successfully Transfered");
+            return;
+        }
+        else if (Coin.coinValue >= 14 && !playerController.canAxe)
         {
             if (playerController != null)
             {
@@ -270,23 +277,26 @@ public class UIManager : MonoBehaviour
                 PlayerData.Instance.canAxe = true;
                 Coin.coinValue -= 14;
                 Debug.Log("Bought Axe");
-
                 SoundManager.Instance.PlaySound(selectSound);
+
+                return;
             }
         }
-        else if(PlayerData.Instance.canAxe)
-        {
-            axeUI.SetActive(true);
-            playerController.canAxe = true;
-            Debug.Log("Data Successfully Transfered");
-            return;
-        }
+
             Debug.Log("Not Enough Money");
     }
 
     public void PlayerMolotov()
     {
-        if (Coin.coinValue >= 14 && !playerController.canMolotov)
+
+        if (PlayerData.Instance.canMolotov)
+        {
+            molotovUI.SetActive(true);
+            playerController.canMolotov = true;
+            Debug.Log("Data Successfully Transfered");
+            return;
+        }
+        else if (Coin.coinValue >= 14 && !playerController.canMolotov)
         {
             if (playerController != null)
             {
@@ -295,17 +305,12 @@ public class UIManager : MonoBehaviour
                 PlayerData.Instance.canMolotov = true;
                 Coin.coinValue -= 14;
                 Debug.Log("Bought Molotov");
-
                 SoundManager.Instance.PlaySound(selectSound);
+
+                return;
             }
         }
-        else if(PlayerData.Instance.canMolotov)
-        {
-            molotovUI.SetActive(true);
-            playerController.canMolotov = true;
-            Debug.Log("Data Successfully Transfered");
-            return;
-        }
+        
             Debug.Log("Not Enough Money");
     }
 

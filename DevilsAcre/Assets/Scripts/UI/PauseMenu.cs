@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
     [SerializeField] private GameObject CheatUI;
-    public bool CheaterMode;
+    public static bool CheaterMode;
 
 
     [SerializeField] private AudioClip pauseSound;
@@ -47,7 +47,7 @@ public class PauseMenu : MonoBehaviour
 
     private void OnDisable()
     {
-        if (GameIsPaused) { GameIsPaused = false; }
+        if (GameIsPaused) { Resume(); }
     }
 
     public void Resume()

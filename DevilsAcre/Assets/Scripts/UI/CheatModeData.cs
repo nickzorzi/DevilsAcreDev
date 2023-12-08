@@ -59,7 +59,7 @@ public class CheatModeData : MonoBehaviour
         PlayerData.Instance.hasKey = hasKey;
         
         
-        Coin.coinValue += coinAmount;
+        Coin.coinValue = coinAmount;
         PlayerData.Instance.currentHealth = health;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
