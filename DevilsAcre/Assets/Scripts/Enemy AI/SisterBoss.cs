@@ -191,13 +191,13 @@ public class SisterBoss : MonoBehaviour
             canFireBlue = true;
         }
 
-        if (health <=5)
+        if (health <=10)
         {
             yellowCrossCount = 6;
             yellowCrossCoolDown = 2;
             canFireYellowCross = true;
         }
-        else if (health <= 15)
+        else if (health <= 30)
         {
             canFireRed = false;
             canFireYellow = true;
@@ -210,12 +210,12 @@ public class SisterBoss : MonoBehaviour
                 phase3Triggered = true;
             }
         }
-        else if(health <= 20)
+        else if(health <= 40)
         {
             canFireYellowCross = false;
             canFireRedCross = true;
         }
-        else if (health <= 25)
+        else if (health <= 50)
         {
             canFireRed = true;
             canFireYellow = false;
@@ -229,11 +229,11 @@ public class SisterBoss : MonoBehaviour
                 phase2Triggered = true;
             }
         }
-        else if (health <= 30)
+        else if (health <= 60)
         {
             canFireYellowCross = true;
         }
-        else if (health <= 35)
+        else if (health <= 70)
         {
             canFireRed = false;
             canFireYellow = true;

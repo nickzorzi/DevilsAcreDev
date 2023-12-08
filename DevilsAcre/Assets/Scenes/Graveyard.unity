@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineOfSight: 5
-  health: 40
+  health: 80
   deathEffect: {fileID: 8438092220845912813, guid: 2abeebd83d402f04b846d481c7cb77c9, type: 3}
   scoreValueOnDeath: 10000
   canFireRed: 0
@@ -10116,6 +10116,14 @@ PrefabInstance:
     - target: {fileID: 488074284759438314, guid: b7b5ac83ecb9a3542b33777c27ad6932, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493220354711603635, guid: b7b5ac83ecb9a3542b33777c27ad6932, type: 3}
+      propertyPath: m_Value
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493220354711603635, guid: b7b5ac83ecb9a3542b33777c27ad6932, type: 3}
+      propertyPath: m_MaxValue
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 1667959544139840748, guid: b7b5ac83ecb9a3542b33777c27ad6932, type: 3}
       propertyPath: m_AnchorMax.y
