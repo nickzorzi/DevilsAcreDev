@@ -151,7 +151,7 @@ public class BensSpawner : MonoBehaviour
 
         waveData[currentWave].Enemies[selectedEnemy].spawnCoolDown = true;
         waveData[currentWave].Enemies[selectedEnemy].spawnCount--;
-        
+        yield return new WaitForSeconds(Random.Range(0,2f));
 
         //Debug.Log("Spawn " + waveData[currentWave].Enemies[selectedEnemy].EnemyPrefab.name + " " + waveData[currentWave].Enemies[selectedEnemy].spawnCount);
 
