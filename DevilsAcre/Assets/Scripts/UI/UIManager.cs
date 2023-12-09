@@ -11,6 +11,9 @@ public class UIManager : MonoBehaviour
     public GameObject levelUpMenu;
     public GameObject victoryMenu;
 
+    [Header("UI Bools")]
+    public bool uiOpen = false;
+
     [Header("UI Objects")]
     public GameObject shoot1xUI;
     public GameObject shoot2xUI;
@@ -33,6 +36,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private AudioClip gameOverSound;
     [SerializeField] private AudioClip selectSound;
     [SerializeField] private AudioClip confirmSound;
+
     private void Start()
     {
         scoreManager = FindObjectOfType<Score>();
@@ -106,7 +110,7 @@ public class UIManager : MonoBehaviour
     {
         levelUpMenu.SetActive(true);
         AudioListener.pause = true;
-
+        uiOpen = true;
         playEffect(levelUpSound);
     }
 
@@ -114,6 +118,7 @@ public class UIManager : MonoBehaviour
     {
         levelUpMenu.SetActive(false);
         Debug.Log("Disabled Level Up Menu");
+        uiOpen = false;
         Time.timeScale = 1f;
         AudioListener.pause = false;
     }

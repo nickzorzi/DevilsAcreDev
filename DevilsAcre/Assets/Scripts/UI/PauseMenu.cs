@@ -7,6 +7,8 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public PlayerController playerController;
+    public UIManager uiManager;
+    public ShopMenu shopMenu;
 
     public GameObject pauseMenuUI;
     [SerializeField] private GameObject CheatUI;
@@ -19,10 +21,11 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Texture2D customCursor;
     private Vector2 cursorOffset;
 
-
     void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
+        shopMenu = FindObjectOfType<ShopMenu>();
+        uiManager = FindObjectOfType<UIManager>();
         
         // Crosshair
         cursorOffset = new Vector2(customCursor.width / 2, customCursor.height / 2);
@@ -31,15 +34,18 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (!uiManager.uiOpen && !ShopMenu.ShopIsOpen)
         {
-            if (GameIsPaused)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Resume();
-            }
-            else
-            {
-                Pause();
+                if (GameIsPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
         }
     }
