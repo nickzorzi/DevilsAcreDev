@@ -11591,6 +11591,7 @@ MonoBehaviour:
   - {fileID: 1814122289}
   - {fileID: 1814122288}
   - {fileID: 1814122287}
+  - {fileID: 1416040408}
 --- !u!4 &1754214272
 Transform:
   m_ObjectHideFlags: 0
@@ -11667,6 +11668,56 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1416040410}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1812263757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1812263759}
+  - component: {fileID: 1812263758}
+  m_Layer: 0
+  m_Name: KeyPickupDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1812263758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812263757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20dd64df012c68e4da61c5f63bd65ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThisID: KeyPickupDialogue
+  entry: {fileID: 11400000, guid: 10e441aa355b6264598f423b439de04e, type: 2}
+  turnOffItemsDuring:
+  - {fileID: 1190800844}
+  - {fileID: 1416040408}
+  playerData: {fileID: 0}
+--- !u!4 &1812263759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812263757}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.034443647, y: -0.024926782, z: 0.04566291}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1814122287 stripped
 GameObject:
@@ -13497,4 +13548,5 @@ SceneRoots:
   - {fileID: 1416040410}
   - {fileID: 984794918}
   - {fileID: 1754214272}
+  - {fileID: 1812263759}
   - {fileID: 1567320551}
