@@ -20,7 +20,7 @@ public class PlayAnEntry : MonoBehaviour
 
         }
 
-
+        
         OnandOff();
         DialogueDisplay.Instance.TurnOnDialogue(entry);
     }
@@ -41,6 +41,7 @@ public class PlayAnEntry : MonoBehaviour
 
             }
             gameObject.SetActive(false);
+            
         }
     }
 
