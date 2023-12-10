@@ -50,7 +50,14 @@ public class RedHearts : MonoBehaviour
     {
         if (hitInfo.GetComponent<CapsuleCollider2D>() != null)
         {
-            gameObject.SetActive(false);
+            if (hitInfo.tag == "MolotovSpread")
+            {
+
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 }

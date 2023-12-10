@@ -301,14 +301,14 @@ public class UIManager : MonoBehaviour
             Debug.Log("Data Successfully Transfered");
             return;
         }
-        else if (Coin.coinValue >= 14 && !playerController.canMolotov)
+        else if (Coin.coinValue >= 6 && !playerController.canMolotov)
         {
             if (playerController != null)
             {
                 molotovUI.SetActive(true);
                 playerController.canMolotov = true;
                 PlayerData.Instance.canMolotov = true;
-                Coin.coinValue -= 14;
+                Coin.coinValue -= 6;
                 Debug.Log("Bought Molotov");
                 SoundManager.Instance.PlaySound(selectSound);
 
