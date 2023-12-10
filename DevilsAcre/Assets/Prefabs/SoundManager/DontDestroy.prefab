@@ -1442,7 +1442,7 @@ MonoBehaviour:
   canDoubleEdged: 0
   canQuickfire: 0
   lastScene: 2
-  lastWave: 6
+  lastWave: 0
   dialogues:
   - name: ShopEntry
     hasPlayed: 0

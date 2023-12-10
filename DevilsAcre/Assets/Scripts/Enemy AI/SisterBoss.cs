@@ -50,6 +50,7 @@ public class SisterBoss : MonoBehaviour
     [SerializeField] private AudioClip phase2Effect;
     [SerializeField] private AudioClip phase3Effect;
 
+    [Space(10)]
 
     private Transform player;
     private bool hasEnteredLineOfSight = false;

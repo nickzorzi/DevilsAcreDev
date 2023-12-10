@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2558644f3371e3498aaeab8fbed1583, type: 3}
-  m_Name: GraveyardEntry
+  m_Name: SaloonToTown
   m_EditorClassIdentifier: 
   entries:
   - name: Narrator
     icon: {fileID: 0}
-    description: "The wanderer opens the gate to the town\u2019s graveyard.\r\nHe
-      begins to head towards the church beside the small resting place, fully knowing
-      the great evil waiting within."
+    description: 'With the occupants dead, he leaves to continue his search.
+
+      Walking
+      further through the town, the wanderer finds no sign of its inhabitants.'
   - name: Narrator
     icon: {fileID: 0}
-    description: "Unexpectedly, a lone figure was in the center of the barren land
-      praying in front of a gravestone.\r\nHe was surprised to find a sister of the
-      church in such a dangerous place.\r"
+    description: 'The streets were empty and the buildings were boarded up.
+
+      Surprisingly,
+      a light illuminated through the windows of a shop..'

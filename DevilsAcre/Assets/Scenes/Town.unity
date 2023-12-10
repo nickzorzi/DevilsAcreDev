@@ -5175,6 +5175,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1026538036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7970997346217184839, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
+  m_PrefabInstance: {fileID: 1026538031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1044013135
 GameObject:
   m_ObjectHideFlags: 0
@@ -6794,6 +6799,7 @@ MonoBehaviour:
   - {fileID: 603421221}
   - {fileID: 1099122361}
   - {fileID: 686534808}
+  alreadyPlayed: 0
 --- !u!114 &1432744707 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3134319369799325700, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
@@ -7413,6 +7419,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
+--- !u!114 &1773474182 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2656257631251358771, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
+  m_PrefabInstance: {fileID: 1773474181}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1781588649 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4279618753627105174, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
@@ -7424,6 +7441,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1794091070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1794091073}
+  - component: {fileID: 1794091072}
+  - component: {fileID: 1794091071}
+  - component: {fileID: 1794091074}
+  m_Layer: 0
+  m_Name: EntryFromSaloon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1794091071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794091070}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753424c92330e05488df7bf1242406e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThisID: SaloonToTownEntry
+  entry: {fileID: 11400000, guid: 1b956b770a6da8e4a92f505e19f288bd, type: 2}
+  turnOffItemsDuring:
+  - {fileID: 603421221}
+  - {fileID: 1099122361}
+  - {fileID: 686534808}
+  - {fileID: 1026538036}
+  - {fileID: 294765661}
+  alreadyPlayed: 0
+--- !u!114 &1794091072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794091070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb77396e6de5384e905463fbf83ea86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedScene: Saloon
+  turnThisOn: {fileID: 1794091071}
+--- !u!4 &1794091073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794091070}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.032527372, y: -0.16125105, z: 0.04954585}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1794091074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794091070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55252bfa15b46424aa22389f0a9afb4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIToChange: {fileID: 1773474182}
 --- !u!1 &1837345776
 GameObject:
   m_ObjectHideFlags: 0
@@ -8315,6 +8414,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &2100700303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2100700306}
+  - component: {fileID: 2100700305}
+  - component: {fileID: 2100700304}
+  m_Layer: 0
+  m_Name: EntryFromShop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2100700304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100700303}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753424c92330e05488df7bf1242406e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThisID: ShopToTownEntry
+  entry: {fileID: 11400000, guid: 240b8229a5489444a9f6ace80952f741, type: 2}
+  turnOffItemsDuring:
+  - {fileID: 294765661}
+  - {fileID: 603421221}
+  - {fileID: 1099122361}
+  - {fileID: 686534808}
+  - {fileID: 1026538036}
+  alreadyPlayed: 0
+--- !u!114 &2100700305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100700303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb77396e6de5384e905463fbf83ea86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedScene: Shop
+  turnThisOn: {fileID: 2100700304}
+--- !u!4 &2100700306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100700303}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.032527372, y: -0.16125105, z: 0.04954585}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1596914859169654810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8387,3 +8554,5 @@ SceneRoots:
   - {fileID: 828017336}
   - {fileID: 1773474181}
   - {fileID: 1352436518}
+  - {fileID: 1794091073}
+  - {fileID: 2100700306}

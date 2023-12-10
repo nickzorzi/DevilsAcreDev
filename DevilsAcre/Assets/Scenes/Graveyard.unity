@@ -3613,6 +3613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1088218242}
   - component: {fileID: 1088218241}
+  - component: {fileID: 1088218243}
   m_Layer: 0
   m_Name: GraveyardEntryDialogue
   m_TagString: Untagged
@@ -3633,11 +3634,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThisID: GraveyardEntry
-  entry: {fileID: 11400000, guid: 28945abeb9dadb2428ed4e8b5282a2af, type: 2}
+  entry: {fileID: 11400000, guid: 478b7000368ab134089483fb1a255f38, type: 2}
   turnOffItemsDuring:
   - {fileID: 7644135264778759958}
   - {fileID: 7644135264778759957}
   - {fileID: 1609571587}
+  alreadyPlayed: 0
 --- !u!4 &1088218242
 Transform:
   m_ObjectHideFlags: 0
@@ -3653,6 +3655,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1088218243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088218240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55252bfa15b46424aa22389f0a9afb4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIToChange: {fileID: 2127945725}
 --- !u!1 &1102689834
 GameObject:
   m_ObjectHideFlags: 0
@@ -5428,6 +5443,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1547860297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1547860299}
+  - component: {fileID: 1547860298}
+  m_Layer: 0
+  m_Name: TalkToSisterDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1547860298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547860297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753424c92330e05488df7bf1242406e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThisID: TalkToSister
+  entry: {fileID: 11400000, guid: 28945abeb9dadb2428ed4e8b5282a2af, type: 2}
+  turnOffItemsDuring:
+  - {fileID: 7644135264778759958}
+  - {fileID: 7644135264778759957}
+  - {fileID: 1609571587}
+  alreadyPlayed: 0
+--- !u!4 &1547860299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547860297}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.04954585}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1558919450
 GameObject:
   m_ObjectHideFlags: 0
@@ -7277,6 +7343,87 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1997356888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1997356889}
+  - component: {fileID: 1997356891}
+  - component: {fileID: 1997356890}
+  m_Layer: 12
+  m_Name: DialogueZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1997356889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997356888}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.04954585}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1997356890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997356888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4db8c4b9846bce4ca943d1fc71ce48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueStart: {fileID: 1547860297}
+--- !u!58 &1997356891
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997356888}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 5
 --- !u!1 &2011068081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3882610028618873945, guid: b7b5ac83ecb9a3542b33777c27ad6932, type: 3}
@@ -10152,6 +10299,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
+--- !u!114 &2127945725 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2656257631251358771, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
+  m_PrefabInstance: {fileID: 2127945724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7644135264778759956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10414,3 +10572,5 @@ SceneRoots:
   - {fileID: 1835897698}
   - {fileID: 2127945724}
   - {fileID: 1088218242}
+  - {fileID: 1997356889}
+  - {fileID: 1547860299}
