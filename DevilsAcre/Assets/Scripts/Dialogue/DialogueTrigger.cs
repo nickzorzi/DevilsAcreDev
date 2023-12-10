@@ -11,7 +11,6 @@ public class DialogueTrigger : MonoBehaviour
 
     private bool needsOpen = true;
 
-    public PlayerData playerData;
 
     void Start()
     {
@@ -20,7 +19,7 @@ public class DialogueTrigger : MonoBehaviour
 
     void Update()
     {
-        if (playerData.hasKey && needsOpen)
+        if (PlayerData.Instance.hasKey && needsOpen)
         {
             DialogueTriggered();
             needsOpen = false;

@@ -74,7 +74,7 @@ public class ShopMenu : MonoBehaviour
         SoundManager.Instance.PlaySound(shopCloseSound);
     }
 
-    void OpenShop()
+    public void OpenShop()
     {
         shopMenuUI.SetActive(true);
         ShopIsOpen = true;

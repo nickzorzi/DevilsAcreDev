@@ -8,12 +8,14 @@ public class PlayAnEntry : MonoBehaviour
     [SerializeField] private DialogueEntry entry;
     [SerializeField] private GameObject[] turnOffItemsDuring;
 
+    [HideInInspector] public bool alreadyPlayed;
 
     private void Start()
     {
         for(int i = 0; i < PlayerData.Instance.dialogues.Length; i++)
         {
             if (PlayerData.Instance.dialogues[i].name == ThisID && PlayerData.Instance.dialogues[i].hasPlayed) {
+                alreadyPlayed = true;
                 gameObject.SetActive(false);
                 return;
             }
@@ -50,11 +52,7 @@ public class PlayAnEntry : MonoBehaviour
     {
         foreach (GameObject obj in turnOffItemsDuring)
         {
-            if(obj.GetComponent<PlayerController>())
-            {
-                obj.GetComponent<PlayerController>().enabled = !obj.GetComponent<PlayerController>().enabled;
-                continue;
-            }
+
 
             obj.SetActive(!obj.activeSelf);
 

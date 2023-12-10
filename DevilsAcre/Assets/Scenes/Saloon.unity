@@ -6299,6 +6299,10 @@ PrefabInstance:
       propertyPath: waveManager
       value: 
       objectReference: {fileID: 2047108702}
+    - target: {fileID: 638584852820988829, guid: 7902018dee86fe34c861845586419968, type: 3}
+      propertyPath: DialogueStart
+      value: 
+      objectReference: {fileID: 1277030303}
     - target: {fileID: 4388857809235133462, guid: 7902018dee86fe34c861845586419968, type: 3}
       propertyPath: m_Name
       value: GraveyardKey
@@ -8870,6 +8874,55 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1711272901}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1277030303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277030305}
+  - component: {fileID: 1277030304}
+  m_Layer: 0
+  m_Name: KeyGrabDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1277030304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277030303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753424c92330e05488df7bf1242406e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThisID: KeyPickup
+  entry: {fileID: 11400000, guid: 10e441aa355b6264598f423b439de04e, type: 2}
+  turnOffItemsDuring:
+  - {fileID: 1190800844}
+  - {fileID: 1416040408}
+--- !u!4 &1277030305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277030303}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 664.21124, y: 284.35764, z: -3.329123}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1323569929
 GameObject:
@@ -11669,56 +11722,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1416040410}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1812263757
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1812263759}
-  - component: {fileID: 1812263758}
-  m_Layer: 0
-  m_Name: KeyPickupDialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1812263758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812263757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20dd64df012c68e4da61c5f63bd65ebc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ThisID: KeyPickupDialogue
-  entry: {fileID: 11400000, guid: 10e441aa355b6264598f423b439de04e, type: 2}
-  turnOffItemsDuring:
-  - {fileID: 1190800844}
-  - {fileID: 1416040408}
-  playerData: {fileID: 0}
---- !u!4 &1812263759
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812263757}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.034443647, y: -0.024926782, z: 0.04566291}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1814122287 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7970997346217184839, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
@@ -13349,18 +13352,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1342923424164427088, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
-      propertyPath: lastWave
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6666737226107589804, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6932463801125443418, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.86279297
-      objectReference: {fileID: 0}
     - target: {fileID: 7256899676002316318, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -13548,5 +13539,5 @@ SceneRoots:
   - {fileID: 1416040410}
   - {fileID: 984794918}
   - {fileID: 1754214272}
-  - {fileID: 1812263759}
   - {fileID: 1567320551}
+  - {fileID: 1277030305}

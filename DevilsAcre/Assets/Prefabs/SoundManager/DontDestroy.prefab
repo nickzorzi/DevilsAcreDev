@@ -795,7 +795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.6666667}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.27450982}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1273,7 +1273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 106.1301, y: 10.1}
+  m_AnchoredPosition: {x: 106.1301, y: -0.86279297}
   m_SizeDelta: {x: 147.3847, y: 138.5603}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8992324843947388209
@@ -1442,11 +1442,19 @@ MonoBehaviour:
   canDoubleEdged: 0
   canQuickfire: 0
   lastScene: 2
-  lastWave: 0
+  lastWave: 6
   dialogues:
-  - name: test
+  - name: ShopEntry
     hasPlayed: 0
-  - name: HelloThere
+  - name: KeyPickup
+    hasPlayed: 0
+  - name: Intro
+    hasPlayed: 0
+  - name: SaloonEntry
+    hasPlayed: 0
+  - name: GraveyardEntry
+    hasPlayed: 0
+  - name: FirstBuy
     hasPlayed: 0
 --- !u!1 &8978946142223855595
 GameObject:

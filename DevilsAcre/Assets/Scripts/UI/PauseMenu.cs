@@ -77,7 +77,7 @@ public class PauseMenu : MonoBehaviour
         playerController.noShooting = false;
     }
 
-    void Pause()
+    public void Pause()
     {
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
