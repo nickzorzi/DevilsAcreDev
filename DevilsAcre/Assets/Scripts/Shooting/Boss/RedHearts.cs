@@ -52,5 +52,9 @@ public class RedHearts : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        else
+        {
+            Debug.Log(hitInfo.name);
+        }
     }
 }
