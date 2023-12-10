@@ -21,13 +21,10 @@ MonoBehaviour:
     description: I am Sister Yonarah..
   - name: Sister Yonarah
     icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
-    description: 'You must have faced many hardships during your journey.
+    description: 'You must have faced many hardships during your journey. But there
+      is no need to fret.
 
-      But
-      there is no need to fret.
-
-      You can lay down your arms and rest your weary
-      soul...
+      You can lay down your arms and rest your weary soul...
 
 '
   - name: Sister Yonarah

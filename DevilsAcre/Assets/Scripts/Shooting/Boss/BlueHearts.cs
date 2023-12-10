@@ -22,7 +22,14 @@ public class BlueHearts : MonoBehaviour
         // Check if the collided object has a CapsuleCollider2D component
         if (hitInfo.GetComponent<CapsuleCollider2D>() != null)
         {
-            Destroy(gameObject);
+            if (hitInfo.tag == "MolotovSpread")
+            {
+
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
