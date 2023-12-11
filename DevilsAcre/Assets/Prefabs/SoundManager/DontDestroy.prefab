@@ -1456,6 +1456,12 @@ MonoBehaviour:
     hasPlayed: 0
   - name: FirstBuy
     hasPlayed: 0
+  - name: SaloonExit
+    hasPlayed: 0
+  - name: ShopExit
+    hasPlayed: 0
+  - name: TalkToSister
+    hasPlayed: 0
 --- !u!1 &8978946142223855595
 GameObject:
   m_ObjectHideFlags: 0

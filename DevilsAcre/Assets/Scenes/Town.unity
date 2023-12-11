@@ -7472,7 +7472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753424c92330e05488df7bf1242406e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisID: SaloonToTownEntry
+  ThisID: SaloonExit
   entry: {fileID: 11400000, guid: 1b956b770a6da8e4a92f505e19f288bd, type: 2}
   turnOffItemsDuring:
   - {fileID: 603421221}
@@ -8444,7 +8444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753424c92330e05488df7bf1242406e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisID: ShopToTownEntry
+  ThisID: ShopExit
   entry: {fileID: 11400000, guid: 240b8229a5489444a9f6ace80952f741, type: 2}
   turnOffItemsDuring:
   - {fileID: 294765661}
