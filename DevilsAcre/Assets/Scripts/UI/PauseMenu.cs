@@ -34,7 +34,7 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (!uiManager.uiOpen && !ShopMenu.ShopIsOpen)
+        if (!uiManager.uiOpen && !ShopMenu.ShopIsOpen && !playerController.isDead)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {

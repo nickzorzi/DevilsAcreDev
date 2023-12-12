@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public bool noShooting = false;
     public bool noShootZone = false;
 
+    public bool isDead = false;
+
     public float timeBetweenShots;
     private float nextShotTime;
 
@@ -349,6 +351,7 @@ public class PlayerController : MonoBehaviour
         if (currentHealth <= 0)
         {
             // deathSoundEffect.Play();
+            isDead = true;
             SoundManager.Instance.PlaySound(deathSoundEffect);
             currentHealth = 0;
             Debug.Log("You're Dead!");
