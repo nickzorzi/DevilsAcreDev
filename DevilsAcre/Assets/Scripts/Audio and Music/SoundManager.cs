@@ -6,7 +6,13 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
-    [SerializeField] private AudioSource _musicSource, _effectsSource;
+    [SerializeField] private AudioSource _musicSource, _effectsSource, newMusicSource;
+
+    void Start()
+    {
+        SetMusic(newMusicSource);
+    }
+
     private void Awake()
     {
         // Singleton Paradox Killer
@@ -105,5 +111,20 @@ public class SoundManager : MonoBehaviour
     public void gameUnPaused()
     {
         _musicSource.pitch = 1;
+    }
+
+    public void SetMusic(AudioSource newMusicSource)
+    {
+        // Stop the current music
+        _musicSource.Stop();
+
+        // Copy relevant properties from the new AudioSource to the existing one
+        _musicSource.clip = newMusicSource.clip;
+        _musicSource.volume = newMusicSource.volume;
+        _musicSource.pitch = newMusicSource.pitch;
+        _musicSource.loop = newMusicSource.loop;
+
+        // Play the new music
+        _musicSource.Play();
     }
 }
