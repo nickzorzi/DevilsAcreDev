@@ -212,7 +212,7 @@ public class SisterBoss : MonoBehaviour
             canFireBlue = true;
         }
 
-        if (health <=2)
+        if (health <=3)
         {
             canFireRed = false;
             canFireYellow = false;

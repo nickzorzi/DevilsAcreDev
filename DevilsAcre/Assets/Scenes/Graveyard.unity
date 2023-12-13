@@ -7770,6 +7770,7 @@ MonoBehaviour:
   turnOffItemsDuring:
   - {fileID: 1609571587}
   - {fileID: 7644135264778759958}
+  - {fileID: 7644135264778759959}
   alreadyPlayed: 0
 --- !u!4 &2055722148
 Transform:
@@ -10934,6 +10935,11 @@ GameObject:
 --- !u!1 &7644135264778759958 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2531461924212055290, guid: b7b5ac83ecb9a3542b33777c27ad6932, type: 3}
+  m_PrefabInstance: {fileID: 7644135264778759956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7644135264778759959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5521783042266244698, guid: b7b5ac83ecb9a3542b33777c27ad6932, type: 3}
   m_PrefabInstance: {fileID: 7644135264778759956}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
