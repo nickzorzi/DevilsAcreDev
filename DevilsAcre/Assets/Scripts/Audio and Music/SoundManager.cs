@@ -6,12 +6,8 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
-    [SerializeField] private AudioSource _musicSource, _effectsSource, newMusicSource;
+    [SerializeField] private AudioSource _musicSource, _effectsSource;
 
-    void Start()
-    {
-        SetMusic(newMusicSource);
-    }
 
     private void Awake()
     {
@@ -113,18 +109,10 @@ public class SoundManager : MonoBehaviour
         _musicSource.pitch = 1;
     }
 
-    public void SetMusic(AudioSource newMusicSource)
+    public void SetMusic(AudioClip song)
     {
-        // Stop the current music
         _musicSource.Stop();
-
-        // Copy relevant properties from the new AudioSource to the existing one
-        _musicSource.clip = newMusicSource.clip;
-        _musicSource.volume = newMusicSource.volume;
-        _musicSource.pitch = newMusicSource.pitch;
-        _musicSource.loop = newMusicSource.loop;
-
-        // Play the new music
+        _musicSource.clip = song;
         _musicSource.Play();
     }
 }
