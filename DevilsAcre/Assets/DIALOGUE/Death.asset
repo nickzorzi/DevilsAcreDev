@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entries:
   - name: Narrator
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
     description: 'The graveyard has turned silent.
 
       There are no more outlaws
@@ -32,17 +32,17 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: b63f13ef2b27818458c243394df1ab77, type: 3}
     description: "He understands\u2026\r\n*cough*\r\nand has mercy on me\u2026\n\u2026"
   - name: Narrator
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
     description: 'The woman no longer had any strength and fell in the middle of
       the silent graveyard.
 
       The wanderer knelt from his wounds and exhaustion.'
   - name: Narrator
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
     description: "He lays down and closes his eyes.\r\nHe doesn\u2019t know when
       he will wake up."
   - name: Narrator
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
     description: 'But, he knows that the curse will soon disappear.
 
       He knows

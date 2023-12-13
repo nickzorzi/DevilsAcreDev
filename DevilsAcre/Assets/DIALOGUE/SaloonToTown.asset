@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entries:
   - name: Narrator
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
     description: 'Walking further through the town, the wanderer finds no sign of
       its inhabitants.
 
       The streets were empty and the buildings were boarded
       up.'
   - name: Narrator
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
     description: Surprisingly, a light illuminated through the windows of a shop.

@@ -123,7 +123,6 @@ public class SisterBoss : MonoBehaviour
     private IEnumerator fireCrosses(GameObject prefab,int crossCount,float crossCoolDown,bool crossType)
     {
         
-
         for(int i = 0; i < crossCount; i++)
         {
             yield return new WaitForSeconds(1f);
@@ -205,9 +204,6 @@ public class SisterBoss : MonoBehaviour
             canFireRedCross = false;
             canFireYellowCross = false;
 
-            yellowCrossCount = 0;
-            yellowCrossCoolDown = 0;
-
             StartCoroutine(Death());
         }
 
@@ -216,7 +212,15 @@ public class SisterBoss : MonoBehaviour
             canFireBlue = true;
         }
 
-        if (health <=10)
+        if (health <=2)
+        {
+            canFireRed = false;
+            canFireYellow = false;
+            canFireLinePattern = false;
+            canFireRedCross = false;
+            canFireYellowCross = false;
+        }
+        else if (health <=10)
         {
             if (!phase6Triggered)
             {
