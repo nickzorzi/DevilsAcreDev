@@ -301,13 +301,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineOfSight: 5
   health: 80
-  deathEffect: {fileID: 8438092220845912813, guid: 2abeebd83d402f04b846d481c7cb77c9, type: 3}
   scoreValueOnDeath: 10000
   canFireRed: 0
   canFireBlue: 0
   canFireYellow: 0
   phase2Triggered: 0
   phase3Triggered: 0
+  phase4Triggered: 0
+  phase5Triggered: 0
+  phase6Triggered: 0
   yellowCross: {fileID: 8012854208588533303, guid: a93fcf292970b4e4fae37bc87718f55b, type: 3}
   yellowCrossCount: 3
   yellowCrossCoolDown: 2.5
@@ -322,8 +324,7 @@ MonoBehaviour:
   enemyHitSoundEffect: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
   enemyDeathSoundEffect: {fileID: 8300000, guid: aa7527f19fed0494a80612b33a37bad9, type: 3}
   transformEffect: {fileID: 8300000, guid: 3d2f2e1f38a116d488fe0099bd250c37, type: 3}
-  phase2Effect: {fileID: 8300000, guid: 7dbc38b5716ce7e438036d01f5caa2ad, type: 3}
-  phase3Effect: {fileID: 8300000, guid: 7dbc38b5716ce7e438036d01f5caa2ad, type: 3}
+  phaseEffect: {fileID: 8300000, guid: 140db229e5434c04db366bd3d885386c, type: 3}
 --- !u!95 &87228672
 Animator:
   serializedVersion: 5
@@ -5359,6 +5360,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1539314935
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3096692795875591279, guid: 872e3e184b720f34488b4f63d2a3e265, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.10875934
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096692795875591279, guid: 872e3e184b720f34488b4f63d2a3e265, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.057695247
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096692795875591279, guid: 872e3e184b720f34488b4f63d2a3e265, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.21912242
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096692795875591279, guid: 872e3e184b720f34488b4f63d2a3e265, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096692795875591279, guid: 872e3e184b720f34488b4f63d2a3e265, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096692795875591279, guid: 872e3e184b720f34488b4f63d2a3e265, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096692795875591279, guid: 872e3e184b720f34488b4f63d2a3e265, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096692795875591279, guid: 872e3e184b720f34488b4f63d2a3e265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096692795875591279, guid: 872e3e184b720f34488b4f63d2a3e265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096692795875591279, guid: 872e3e184b720f34488b4f63d2a3e265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216261259991679872, guid: 872e3e184b720f34488b4f63d2a3e265, type: 3}
+      propertyPath: m_Name
+      value: MusicSetter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 872e3e184b720f34488b4f63d2a3e265, type: 3}
 --- !u!1 &1545817728
 GameObject:
   m_ObjectHideFlags: 0
@@ -10587,3 +10645,4 @@ SceneRoots:
   - {fileID: 1088218242}
   - {fileID: 1997356889}
   - {fileID: 1547860299}
+  - {fileID: 1539314935}

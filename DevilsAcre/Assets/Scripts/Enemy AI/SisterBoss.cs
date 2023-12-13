@@ -8,7 +8,6 @@ public class SisterBoss : MonoBehaviour
     [Header("Enemy Stats")]
     public float lineOfSight;
     public int health;
-    public GameObject deathEffect;
     public int scoreValueOnDeath;
 
 
@@ -17,6 +16,9 @@ public class SisterBoss : MonoBehaviour
     [HideInInspector] public bool canFireYellow = false;
     [HideInInspector] public bool phase2Triggered = false;
     [HideInInspector] public bool phase3Triggered = false;
+    [HideInInspector] public bool phase4Triggered = false;
+    [HideInInspector] public bool phase5Triggered = false;
+    [HideInInspector] public bool phase6Triggered = false;
     private bool canFireYellowCross = false;
     private bool canFireRedCross = false;
     private bool canFireLinePattern = false;
@@ -47,8 +49,7 @@ public class SisterBoss : MonoBehaviour
     [SerializeField] private AudioClip enemyHitSoundEffect;
     [SerializeField] private AudioClip enemyDeathSoundEffect;
     [SerializeField] private AudioClip transformEffect;
-    [SerializeField] private AudioClip phase2Effect;
-    [SerializeField] private AudioClip phase3Effect;
+    [SerializeField] private AudioClip phaseEffect;
 
     [Space(10)]
 
@@ -167,6 +168,18 @@ public class SisterBoss : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position,lineOfSight);
     }
 
+    IEnumerator Death()
+    {
+        animator.SetTrigger("Death");
+        SoundManager.Instance.PlaySound(phaseEffect);
+        SoundManager.Instance.PlaySound(enemyDeathSoundEffect);
+        CinemachineShake.Instance.ShakeCamera(3f, 1f); //Camera Shake
+        displayHealthBar.SetActive(false);
+        yield return new WaitForSeconds(4);
+        Score.scoreValue += scoreValueOnDeath;
+        yield return null;
+    }
+
     void TakeDamage(int damageAmount)
     {
         health -= damageAmount; 
@@ -175,16 +188,14 @@ public class SisterBoss : MonoBehaviour
 
         if (health <= 0)
         {
-            SoundManager.Instance.PlaySound(enemyDeathSoundEffect);
+            canFireBlue = false;
+            canFireRed = false;
+            canFireYellow = false;
+            canFireLinePattern = false;
+            canFireRedCross = false;
+            canFireYellowCross = false;
 
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-
-            CinemachineShake.Instance.ShakeCamera(3f, 1f); //Camera Shake
-
-            Destroy(gameObject);
-
-            //SCORE VALUE SYSTEM
-            Score.scoreValue += scoreValueOnDeath;
+            StartCoroutine(Death());
         }
 
         if(health % 2 == 0 ) // fires every 2 damage
@@ -194,41 +205,64 @@ public class SisterBoss : MonoBehaviour
 
         if (health <=10)
         {
+            if (!phase6Triggered)
+            {
+                animator.SetTrigger("Phase6");
+                SoundManager.Instance.PlaySound(phaseEffect);
+                phase6Triggered = true;
+            }
+
             yellowCrossCount = 6;
             yellowCrossCoolDown = 2;
             canFireYellowCross = true;
         }
+        else if (health <= 20)
+        {
+            if (!phase5Triggered)
+            {
+                animator.SetTrigger("Phase5");
+                SoundManager.Instance.PlaySound(phaseEffect);
+                phase5Triggered = true;
+            }
+        }
         else if (health <= 30)
         {
+            if (!phase4Triggered)
+            {
+                animator.SetTrigger("Phase4");
+                SoundManager.Instance.PlaySound(phaseEffect);
+                phase4Triggered = true;
+            }
+
             canFireRed = false;
             canFireYellow = true;
             canFireLinePattern = true;
-            
-            if (!phase3Triggered)
-            {
-                animator.SetTrigger("Phase3");
-                SoundManager.Instance.PlaySound(phase3Effect);
-                phase3Triggered = true;
-            }
         }
         else if(health <= 40)
         {
+            if (!phase3Triggered)
+            {
+                animator.SetTrigger("Phase3");
+                SoundManager.Instance.PlaySound(phaseEffect);
+                phase3Triggered = true;
+            }
+
             canFireYellowCross = false;
             canFireRedCross = true;
         }
         else if (health <= 50)
         {
+            if (!phase2Triggered)
+            {
+                animator.SetTrigger("Phase2");
+                SoundManager.Instance.PlaySound(phaseEffect);
+                phase2Triggered = true;
+            }
+
             canFireRed = true;
             canFireYellow = false;
 
             canFireLinePattern = false;
-
-            if (!phase2Triggered)
-            {
-                animator.SetTrigger("Phase2");
-                SoundManager.Instance.PlaySound(phase2Effect);
-                phase2Triggered = true;
-            }
         }
         else if (health <= 60)
         {

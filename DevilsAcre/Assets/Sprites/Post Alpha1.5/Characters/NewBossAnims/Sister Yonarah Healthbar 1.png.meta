@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b63f13ef2b27818458c243394df1ab77
+guid: 79f4570aeb6491d4a8cf97479e6a2171
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sister Yonarah Healthbar 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 82
+        width: 104
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89c0bb25c58fb840adbfd13e0923b38
+      internalID: 2076831778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sister Yonarah Healthbar 1_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 82
+        width: 104
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2641ff09d91bb94daacd949cd37b7ac
+      internalID: 1920664256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sister Yonarah Healthbar 1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 104
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72dae0a5c07ab11448acf7203b833d31
+      internalID: 1045256176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sister Yonarah Healthbar 1_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 104
+        height: 82
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b4f0a5565aaea4aa1d11caa09cc4ca
+      internalID: 1263403211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +216,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sister Yonarah Healthbar 1_0: 2076831778
+      Sister Yonarah Healthbar 1_1: 1920664256
+      Sister Yonarah Healthbar 1_2: 1045256176
+      Sister Yonarah Healthbar 1_3: 1263403211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
