@@ -102,7 +102,6 @@ public class DialogueDisplay : MonoBehaviour
         {
             source.PlayOneShot(buttonSFX);
         }
-
         if(textIsRunning)
         {
             textSFXSpeed *= 10;

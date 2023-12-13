@@ -1569,6 +1569,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1624105928835132919, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 558042774}
     - target: {fileID: 2483586378725151687, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2344,6 +2348,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3095670157194776975, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
   m_PrefabInstance: {fileID: 928376542}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &558042774 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2434759510410868014, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
+  m_PrefabInstance: {fileID: 928376542}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558042765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db47c5100ac3ff4abb9fe3d07f637b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &613788805
 GameObject:
   m_ObjectHideFlags: 0
@@ -8413,17 +8428,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
---- !u!114 &1835521439 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2656257631251358771, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
-  m_PrefabInstance: {fileID: 1835521438}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1835521440 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1236249126369326240, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
@@ -10152,7 +10156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55252bfa15b46424aa22389f0a9afb4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIToChange: {fileID: 1835521439}
 --- !u!1 &2134581092
 GameObject:
   m_ObjectHideFlags: 0
