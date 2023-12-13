@@ -1160,10 +1160,11 @@ MonoBehaviour:
   m_text: "Attributions For 3rd Party Assets\n----------------------------------------------\nGashisoft
     GXSCC. ( Famicom (NES) MIDI emulator )\r\n[ MIDI ] Anonymous, Dark Souls 1 -
     The Lord of Cinder \r\n[ Original ] Motoi Sakuraba, Dark Souls 1 - The Lord of
-    Cinder \nBoom.wav - JomelleJager\r\nBig drums.Mid distant.Very long tail_2_x2(6lrs).wav
-    - newlocknew\r\nPower Up Buff Positive / Level Up - EminYILDIRIM\r\nTossing a
-    thing at someone - pfranzen\r\nFreeze Cast - JustInvoke\r\nWandering.wav - Lost_Dream\r\nglass-shattering_03.ogg
-    - C_Rogers\r\nMolotov Cocktail/Fiery Explosion - SilverIllusionist\r\nFire_Burning_02.flac
+    Cinder\n[MIDI] Piper Weiss, Nier Automata - Blissful Death (DUET) \nBoom.wav
+    - JomelleJager\r\nBig drums.Mid distant.Very long tail_2_x2(6lrs).wav - newlocknew\r\nPower
+    Up Buff Positive / Level Up - EminYILDIRIM\r\nTossing a thing at someone - pfranzen\r\nFreeze
+    Cast - JustInvoke\r\nWandering.wav - Lost_Dream\r\nglass-shattering_03.ogg -
+    C_Rogers\r\nMolotov Cocktail/Fiery Explosion - SilverIllusionist\r\nFire_Burning_02.flac
     - Foleyhaven\r\nGlass shattering - logant547\r\nwood_17a_boots_walk.wav - sturmankin\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

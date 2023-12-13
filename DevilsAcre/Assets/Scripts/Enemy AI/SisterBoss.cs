@@ -205,6 +205,9 @@ public class SisterBoss : MonoBehaviour
             canFireRedCross = false;
             canFireYellowCross = false;
 
+            yellowCrossCount = 0;
+            yellowCrossCoolDown = 0;
+
             StartCoroutine(Death());
         }
 
