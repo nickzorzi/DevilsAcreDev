@@ -5,24 +5,19 @@ using UnityEngine.UI;
 
 public class BlackOut : MonoBehaviour
 {
-    [SerializeField] private Image UIToChange;
 
 
     private Color prevColor;
 
-
-
-
-
     private void OnEnable()
     {
-        prevColor = UIToChange.color;
-        UIToChange.color = Color.black;
+        prevColor = DialogueDisplay.Instance.DialogueUI.GetComponent<Image>().color;
+        DialogueDisplay.Instance.DialogueUI.GetComponent<Image>().color = Color.black;
     }
 
 
     private void OnDisable()
     {
-        UIToChange.color = prevColor;
+        DialogueDisplay.Instance.DialogueUI.GetComponent<Image>().color = prevColor;
     }
 }

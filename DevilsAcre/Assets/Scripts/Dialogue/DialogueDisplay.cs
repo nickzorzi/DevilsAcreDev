@@ -13,7 +13,7 @@ public class DialogueDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI NameText;
     [SerializeField] private GameObject characterIcon;
     [Header("UI Container")]
-    [SerializeField] private GameObject DialogueUI;
+    public GameObject DialogueUI;
     [Header("Sound Effects")]
     [SerializeField] private int textSFXSpacing = 1;
     [SerializeField] private AudioSource source;
