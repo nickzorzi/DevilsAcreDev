@@ -50,12 +50,18 @@ public class SisterBoss : MonoBehaviour
     [SerializeField] private AudioClip enemyDeathSoundEffect;
     [SerializeField] private AudioClip transformEffect;
     [SerializeField] private AudioClip phaseEffect;
+    [SerializeField] private AudioClip phaseEffect2;
 
     [Space(10)]
 
     private Transform player;
     private bool hasEnteredLineOfSight = false;
     private bool transformationFinished = false;
+
+    [Space(10)]
+    [SerializeField] private GameObject DialogueDeath;
+    [SerializeField] private GameObject SetMusic;
+    [SerializeField] private GameObject VictoryZone;
     
     
     // private bool test = true;
@@ -175,8 +181,12 @@ public class SisterBoss : MonoBehaviour
         SoundManager.Instance.PlaySound(enemyDeathSoundEffect);
         CinemachineShake.Instance.ShakeCamera(3f, 1f); //Camera Shake
         displayHealthBar.SetActive(false);
-        yield return new WaitForSeconds(4);
-        Score.scoreValue += scoreValueOnDeath;
+        yield return new WaitForSeconds(0.7f);
+        SetMusic.SetActive(true);
+        DialogueDeath.SetActive(true);
+        // Score.scoreValue += scoreValueOnDeath;
+        yield return new WaitForSeconds(1);
+        VictoryZone.SetActive(true);
         yield return null;
     }
 
@@ -208,7 +218,7 @@ public class SisterBoss : MonoBehaviour
             if (!phase6Triggered)
             {
                 animator.SetTrigger("Phase6");
-                SoundManager.Instance.PlaySound(phaseEffect);
+                SoundManager.Instance.PlaySound(phaseEffect2);
                 phase6Triggered = true;
             }
 
@@ -221,7 +231,7 @@ public class SisterBoss : MonoBehaviour
             if (!phase5Triggered)
             {
                 animator.SetTrigger("Phase5");
-                SoundManager.Instance.PlaySound(phaseEffect);
+                SoundManager.Instance.PlaySound(phaseEffect2);
                 phase5Triggered = true;
             }
         }
@@ -230,7 +240,7 @@ public class SisterBoss : MonoBehaviour
             if (!phase4Triggered)
             {
                 animator.SetTrigger("Phase4");
-                SoundManager.Instance.PlaySound(phaseEffect);
+                SoundManager.Instance.PlaySound(phaseEffect2);
                 phase4Triggered = true;
             }
 

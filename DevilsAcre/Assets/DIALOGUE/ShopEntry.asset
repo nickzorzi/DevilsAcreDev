@@ -15,15 +15,15 @@ MonoBehaviour:
   entries:
   - name: Narrator
     icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
-    description: He enters and is greeted by a strange merchant.
+    description: 'He enters and is greeted by a strange sight.
+
+      A hooded figure
+      was behind the counter.
+
+      The merchant noticed his hesitation.'
   - name: Shopkeeper
     icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
-    description: Welcome fellow traveler and customer, take a rest and have a look
-      through all my wares...
+    description: Do not be afraid...
   - name: Shopkeeper
     icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
-    description: "Even if all the townsfolk have fled, there\u2019s always an opportunity
-      to make money!"
-  - name: Narrator
-    icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
-    description: The wanderer ponders if the merchant has gone insane.
+    description: I only intend to take your money, nothing more.

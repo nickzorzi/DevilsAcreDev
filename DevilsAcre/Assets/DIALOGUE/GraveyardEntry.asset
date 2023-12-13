@@ -15,11 +15,13 @@ MonoBehaviour:
   entries:
   - name: Narrator
     icon: {fileID: 0}
-    description: "The wanderer opens the gate to the town\u2019s graveyard.\r\nHe
-      begins to head towards the church beside the small resting place, fully knowing
-      the great evil waiting within."
+    description: "He begins to approach the town\u2019s church through the graveyard,
+      fully knowing the great evil waiting within..."
   - name: Narrator
     icon: {fileID: 0}
     description: "Unexpectedly, a lone figure was in the center of the barren land
-      praying in front of a gravestone.\r\nHe was surprised to find a sister of the
-      church in such a dangerous place.\r"
+      praying in front of a gravestone.\r"
+  - name: Narrator
+    icon: {fileID: 0}
+    description: "He was surprised to find a sister of the church in such a dangerous
+      place.\r\nShe turned to face him.\r"

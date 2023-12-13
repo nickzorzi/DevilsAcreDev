@@ -15,7 +15,8 @@ MonoBehaviour:
   entries:
   - name: Narrator
     icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
-    description: This looks to be a key to the graveyard next to the church...
+    description: With the occupants dead, he loots the corpses and finds a key...
   - name: Narrator
     icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
-    description: With this key, the wanderer can exit the saloon when its safe.
+    description: Thinking that it will serve a future purpose, he pockets the key
+      and continues his search.

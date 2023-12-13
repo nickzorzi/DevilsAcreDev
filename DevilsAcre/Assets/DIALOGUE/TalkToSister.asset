@@ -29,9 +29,5 @@ MonoBehaviour:
 '
   - name: Sister Yonarah
     icon: {fileID: 21300000, guid: b63f13ef2b27818458c243394df1ab77, type: 3}
-    description: 'This town is now cleansed of its filth.
-
-      Now rest, and let
-      me alleviate your suffering.
-
-'
+    description: "This town is now cleansed of its filth.\nNow rest\u2026\r\nand
+      let me alleviate your suffering.\n"

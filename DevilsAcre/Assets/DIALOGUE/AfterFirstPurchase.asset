@@ -15,5 +15,5 @@ MonoBehaviour:
   entries:
   - name: Shopkeeper
     icon: {fileID: 0}
-    description: "Don\u2019t hesitate, buy all that your heart desires. Besides,\u2026
-      better to be prepared for what lies ahead."
+    description: "Don\u2019t hesitate, buy all that your heart desires.\r\nBesides\u2026\r\nBetter
+      to be prepared for what lies ahead."

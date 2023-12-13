@@ -173,6 +173,8 @@ public class UIManager : MonoBehaviour
         AudioListener.pause = false;
         SoundManager.Instance.PlaySound(confirmSound);
 
+        PlayerData.Instance.ResetDialogues();
+
         PlayerData.Instance.lastWave = 0;
         PlayerData.Instance.hasKey = false;
         PlayerData.Instance.ResetBools();

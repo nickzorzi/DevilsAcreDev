@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2558644f3371e3498aaeab8fbed1583, type: 3}
+  m_Name: Death
+  m_EditorClassIdentifier: 
+  entries:
+  - name: Narrator
+    icon: {fileID: 21300000, guid: b63f13ef2b27818458c243394df1ab77, type: 3}
+    description: 'The graveyard has turned silent.
+
+      There are no more outlaws
+      left to fight.
+
+      The demon who has tormented has fallen.'
+  - name: Sister Yonarah
+    icon: {fileID: 21300000, guid: b63f13ef2b27818458c243394df1ab77, type: 3}
+    description: "Traveler\u2026\r\nI wasn\u2019t able to accomplish my goal.\r\nBut
+      I have no regrets..."
+  - name: Sister Yonarah
+    icon: {fileID: 21300000, guid: b63f13ef2b27818458c243394df1ab77, type: 3}
+    description: "Sacrifices needed to be made.\r\n*cough*\r\nI hope\u2026"
+  - name: Sister Yonarah
+    icon: {fileID: 21300000, guid: b63f13ef2b27818458c243394df1ab77, type: 3}
+    description: "He understands\u2026\r\n*cough*\r\nand has mercy on me\u2026\n\u2026"
+  - name: Narrator
+    icon: {fileID: 0}
+    description: 'The woman no longer had any strength and fell in the middle of
+      the silent graveyard.
+
+      The wanderer knelt from his wounds and exhaustion.'
+  - name: Narrator
+    icon: {fileID: 0}
+    description: "He lays down and closes his eyes.\r\nHe doesn\u2019t know when
+      he will wake up."
+  - name: Narrator
+    icon: {fileID: 0}
+    description: 'But, he knows that the curse will soon disappear.
+
+      He knows
+      that has found peace.'
