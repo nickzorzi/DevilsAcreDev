@@ -188,17 +188,10 @@ public class UIManager : MonoBehaviour
 
     public void CurseDoubleEdged()
     {
-        // Debug.Log("projectile =" + projectile);
-        // Debug.Log("playerController =" + playerController);
-        // if (projectile != null)
-        // {
-        //     projectile.damage = 2;
-        // }
-        Projectile.damage = 2;
-
         if (playerController != null)
         {
             playerController.damage = 2;
+            Projectile.damage = 2;
 
             DisableLevelUpMenu();
             Debug.Log("Curse of Double Edged Selected");
@@ -213,6 +206,10 @@ public class UIManager : MonoBehaviour
             AudioListener.pause = false;
 
             SoundManager.Instance.PlaySound(selectSound);
+        }
+        else
+        {
+            Debug.LogError("No PlayerController");
         }
     }
 
@@ -236,6 +233,10 @@ public class UIManager : MonoBehaviour
             AudioListener.pause = false;
 
             SoundManager.Instance.PlaySound(selectSound);
+        }
+        else
+        {
+            Debug.LogError("No PlayerController");
         }
     }
 
@@ -263,6 +264,10 @@ public class UIManager : MonoBehaviour
             AudioListener.pause = false;
 
             SoundManager.Instance.PlaySound(selectSound);
+        }
+        else
+        {
+            Debug.LogError("No PlayerController");
         }
     }
 
