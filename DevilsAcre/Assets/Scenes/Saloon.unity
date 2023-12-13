@@ -6655,6 +6655,10 @@ PrefabInstance:
       propertyPath: levelUpMenu
       value: 
       objectReference: {fileID: 414713090}
+    - target: {fileID: 1624105928835132919, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 5586530764966998007}
     - target: {fileID: 1842955748171055975, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -15532,6 +15536,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
+--- !u!114 &5586530764966998007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2434759510410868014, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
+  m_PrefabInstance: {fileID: 5586530764966998006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190800844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db47c5100ac3ff4abb9fe3d07f637b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -41,7 +41,7 @@ public class UIManager : MonoBehaviour
     {
         scoreManager = FindObjectOfType<Score>();
         coinManager = FindObjectOfType<Coin>();
-        playerController = FindObjectOfType<PlayerController>();
+        // playerController = FindObjectOfType<PlayerController>();
         projectile = FindObjectOfType<Projectile>();
 
 
