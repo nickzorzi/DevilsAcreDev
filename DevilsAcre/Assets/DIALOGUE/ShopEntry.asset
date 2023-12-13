@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entries:
   - name: Narrator
-    icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
+    icon: {fileID: 0}
     description: 'He enters and is greeted by a strange sight.
 
       A hooded figure
@@ -22,8 +22,8 @@ MonoBehaviour:
 
       The merchant noticed his hesitation.'
   - name: Shopkeeper
-    icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
+    icon: {fileID: 21300000, guid: 028084e640f764447833317f1ff302d3, type: 3}
     description: Do not be afraid...
   - name: Shopkeeper
-    icon: {fileID: 21300000, guid: b3f4ab50dde6b9740b3212962344e90a, type: 3}
+    icon: {fileID: 21300000, guid: 028084e640f764447833317f1ff302d3, type: 3}
     description: I only intend to take your money, nothing more.
