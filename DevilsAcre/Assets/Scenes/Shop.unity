@@ -1882,6 +1882,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3095670157194776975, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
   m_PrefabInstance: {fileID: 951490467}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &951490469 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2434759510410868014, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
+  m_PrefabInstance: {fileID: 951490467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951490468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db47c5100ac3ff4abb9fe3d07f637b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &958546144
 GameObject:
   m_ObjectHideFlags: 0
@@ -4703,6 +4714,10 @@ PrefabInstance:
       propertyPath: gameOverSound
       value: 
       objectReference: {fileID: 8300000, guid: 463ebc55e2d32154abac5f72c8336fca, type: 3}
+    - target: {fileID: 1624105928835132919, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 951490469}
     - target: {fileID: 2483586378725151687, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -333,6 +333,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
+--- !u!114 &54342685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2434759510410868014, guid: fe4f73a7df197f348bc18f71e72bfad9, type: 3}
+  m_PrefabInstance: {fileID: 54342684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294765661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db47c5100ac3ff4abb9fe3d07f637b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &96265612 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 157670659755504874, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
@@ -4622,6 +4633,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1624105928835132919, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 54342685}
     - target: {fileID: 1708423880379472496, guid: cb26f46c0a214564983315d61456ad9d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7443,10 +7458,6 @@ PrefabInstance:
       propertyPath: newMusicSource
       value: 
       objectReference: {fileID: 1773474183}
-    - target: {fileID: 6666737226107589804, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7256899676002316318, guid: a686ccb9b3a18a640bbd38f0182c72d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -7523,7 +7534,6 @@ GameObject:
   - component: {fileID: 1794091073}
   - component: {fileID: 1794091072}
   - component: {fileID: 1794091071}
-  - component: {fileID: 1794091074}
   m_Layer: 0
   m_Name: EntryFromSaloon
   m_TagString: Untagged
@@ -7581,18 +7591,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1794091074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794091070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55252bfa15b46424aa22389f0a9afb4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1837345776
 GameObject:
   m_ObjectHideFlags: 0
