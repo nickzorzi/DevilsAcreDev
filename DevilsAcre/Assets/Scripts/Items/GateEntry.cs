@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class GateEntry : MonoBehaviour
 {
-    public bool isFading;
-    public SpriteRenderer gateRenderer;
-    private float delay = 0.1f;
-
-    public IEnumerator Fade()
+    private bool isFading;
+    [SerializeField] private float fadeSpeed = .2f;
+    [SerializeField] private AudioClip unlockSFX;
+    IEnumerator fade()
     {
         isFading = true;
-
-        for(float i = gateRenderer.color.a; i > 0 ; i--)
+        for (int i = 0; i < 10; i++)
         {
-            Color temp = gateRenderer.color;
-            temp.a = i;
-            gateRenderer.color = temp;
-            yield return new WaitForSeconds(delay);
-
+            yield return new WaitForSeconds(fadeSpeed);
+            Color temp = gameObject.GetComponent<SpriteRenderer>().color;
+            temp.a -= .1f;
+            gameObject.GetComponent<SpriteRenderer>().color = temp;
         }
+
         Destroy(this.gameObject);
     }
 
@@ -27,8 +25,14 @@ public class GateEntry : MonoBehaviour
     {
         if(collision.CompareTag("Player") && PlayerData.Instance.hasKey && !isFading)
         {
-            StartCoroutine(Fade());
-            
+            StartCoroutine(fade());
+
+            if(unlockSFX != null)
+            {
+            SoundManager.Instance.PlaySound(unlockSFX);
+            }
         }
     }
 }
+
+

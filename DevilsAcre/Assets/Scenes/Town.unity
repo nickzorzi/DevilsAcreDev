@@ -7954,8 +7954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c6f91b0854e2c4f8fe65965b2a499b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFading: 0
-  gateRenderer: {fileID: 1908763081}
+  fadeSpeed: 0.1
+  unlockSFX: {fileID: 0}
 --- !u!61 &1908763083
 BoxCollider2D:
   m_ObjectHideFlags: 0
