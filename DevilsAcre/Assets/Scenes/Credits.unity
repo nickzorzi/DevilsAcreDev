@@ -530,9 +530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaff63430a7338945aa5e54b0f054237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  playerController: {fileID: 0}
-  uiManager: {fileID: 0}
 --- !u!1001 &965431693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1098,7 +1095,8 @@ MonoBehaviour:
     Up Buff Positive / Level Up - EminYILDIRIM\r\nTossing a thing at someone - pfranzen\r\nFreeze
     Cast - JustInvoke\r\nWandering.wav - Lost_Dream\r\nglass-shattering_03.ogg -
     C_Rogers\r\nMolotov Cocktail/Fiery Explosion - SilverIllusionist\r\nFire_Burning_02.flac
-    - Foleyhaven\r\nGlass shattering - logant547\r\nwood_17a_boots_walk.wav - sturmankin\n"
+    - Foleyhaven\r\nGlass shattering - logant547\r\nwood_17a_boots_walk.wav - sturmankin\nGate_Open_00.wav
+    - LittleRobotSoundFactory\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

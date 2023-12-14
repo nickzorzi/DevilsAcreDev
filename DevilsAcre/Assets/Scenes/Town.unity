@@ -7955,7 +7955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeSpeed: 0.1
-  unlockSFX: {fileID: 0}
+  unlockSFX: {fileID: 8300000, guid: 0bea95393e2b0a347a56915819bf097b, type: 3}
 --- !u!61 &1908763083
 BoxCollider2D:
   m_ObjectHideFlags: 0
