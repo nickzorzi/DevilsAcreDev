@@ -280,14 +280,14 @@ public class UIManager : MonoBehaviour
             Debug.Log("Data Successfully Transfered");
             return;
         }
-        else if (Coin.coinValue >= 14 && !playerController.canAxe)
+        else if (Coin.coinValue >= 12 && !playerController.canAxe)
         {
             if (playerController != null)
             {
                 axeUI.SetActive(true);
                 playerController.canAxe = true;
                 PlayerData.Instance.canAxe = true;
-                Coin.coinValue -= 14;
+                Coin.coinValue -= 12;
                 Debug.Log("Bought Axe");
                 SoundManager.Instance.PlaySound(selectSound);
 
